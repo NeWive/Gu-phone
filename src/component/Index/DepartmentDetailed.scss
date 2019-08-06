@@ -1,0 +1,38 @@
+@import "../../sassMixin/cleatFixMixin";
+@import "../../sassMixin/fontMixin";
+.department_detailed {
+  cursor: default;
+  .close_button_box {
+      @include clearFix;
+      #CloseButton {
+        right: 38px;
+        top: 35px;
+        cursor: pointer;
+        float: right;
+        position: absolute;
+      }
+  }
+  .title_box {
+      margin-top: 31px;
+      margin-bottom: 55px;
+      .title {
+        p {
+          &:first-child {
+            @include detailedTitleSmall;
+          }
+
+          &:last-child {
+            @include detailedTitleLarge;
+          }
+        }
+      }
+  }
+  .content {
+    p {
+      opacity: 0;
+      @include detailedContent;
+    }
+    margin-left: 84px;
+    margin-right: 90px;
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+#Navigator {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* 触发 hasLayout */
+  zoom: 1; }
+  #Navigator:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #Navigator .container {
+    width: 1300px;
+    margin: 0 auto;
+    height: 100%; }
+    #Navigator .container .logo_box {
+      float: left; }
+    #Navigator .container .sel_box {
+      float: right;
+      padding-top: 37px; }
+    #Navigator .container .logo_box, #Navigator .container .sel_box {
+      vertical-align: middle; }
+
+/*# sourceMappingURL=Navigator.css.map */

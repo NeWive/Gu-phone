@@ -1,0 +1,12 @@
+.circle {
+  width: 140px;
+  height: 140px;
+  border: 14px solid #00A8EC;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=Circle.css.map */

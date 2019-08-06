@@ -1,0 +1,10 @@
+@import "../sassMixin/fontMixin";
+@import "../sassMixin/radiusMixin";
+.button_blue {
+  @include buttonFont;
+  background: #58C4FF;
+  @include radius(15px);
+  width: 163px;
+  height: 37px;
+  border: 0;
+}

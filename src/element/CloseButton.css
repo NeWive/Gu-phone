@@ -1,0 +1,23 @@
+#CloseButton {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  cursor: pointer; }
+  #CloseButton .close_button_box {
+    top: 20px;
+    position: absolute; }
+    #CloseButton .close_button_box .edge {
+      top: 3px;
+      float: left;
+      width: 45px;
+      border: 2px solid #929292;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px; }
+      #CloseButton .close_button_box .edge:first-child {
+        transform: rotate(45deg);
+        margin-bottom: -4px; }
+      #CloseButton .close_button_box .edge:last-child {
+        transform: rotate(-45deg); }
+
+/*# sourceMappingURL=CloseButton.css.map */

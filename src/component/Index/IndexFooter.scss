@@ -1,0 +1,36 @@
+@import "../../sassMixin/containerMixin";
+#IndexFooter {
+  margin-top: 15px;
+  .container {
+    @include containerMixin;
+    .logo_box {
+      #Logo {
+        display: inline-block;
+        vertical-align: middle;
+        .icon_box {
+          .left {
+            background: #FBEBCA;
+            &:after {
+              background: #FACA5F;
+            }
+          }
+          .right {
+            background: #FFAB00;
+          }
+        }
+        .name_box {
+          //display: none;
+          .Eng {
+            color: #FFAB00;
+          }
+          .CN {
+            display: none;
+          }
+        }
+      }
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+}

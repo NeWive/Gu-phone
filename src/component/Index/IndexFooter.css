@@ -1,0 +1,23 @@
+#IndexFooter {
+  margin-top: 15px; }
+  #IndexFooter .container {
+    width: 1300px;
+    margin: 0 auto;
+    height: 100%; }
+    #IndexFooter .container .logo_box #Logo {
+      display: inline-block;
+      vertical-align: middle; }
+      #IndexFooter .container .logo_box #Logo .icon_box .left {
+        background: #FBEBCA; }
+        #IndexFooter .container .logo_box #Logo .icon_box .left:after {
+          background: #FACA5F; }
+      #IndexFooter .container .logo_box #Logo .icon_box .right {
+        background: #FFAB00; }
+      #IndexFooter .container .logo_box #Logo .name_box .Eng {
+        color: #FFAB00; }
+      #IndexFooter .container .logo_box #Logo .name_box .CN {
+        display: none; }
+    #IndexFooter .container .logo_box span {
+      vertical-align: middle; }
+
+/*# sourceMappingURL=IndexFooter.css.map */

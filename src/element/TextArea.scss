@@ -1,0 +1,11 @@
+@import "../sassMixin/radiusMixin";
+@import "../sassMixin/fontMixin";
+.join_us_textarea {
+  padding-left: 16px;
+  width: 422px;
+  height: 166px;
+  background: #E6E6E6;
+  @include radius(15px);
+  @include joinUsPlaceHolder;
+  border: 0;
+}

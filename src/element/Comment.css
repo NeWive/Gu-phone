@@ -1,0 +1,18 @@
+#Comment {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #B7E6FF;
+  padding: 20px 15px 13px 19px; }
+  #Comment .textarea_box textarea {
+    background: #FFFFFF; }
+  #Comment .validate_box {
+    margin-top: 13px; }
+    #Comment .validate_box a, #Comment .validate_box input {
+      vertical-align: middle; }
+    #Comment .validate_box a {
+      margin-right: 15px; }
+    #Comment .validate_box button {
+      float: right; }
+
+/*# sourceMappingURL=Comment.css.map */

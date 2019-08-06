@@ -1,0 +1,42 @@
+@import "../../sassMixin/cleatFixMixin";
+@import "../../sassMixin/fontMixin";
+#Status {
+  @include clearFix;
+  .input_email_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 113px;
+    .join_us_input {
+      margin-right: 16px;
+    }
+  }
+  .status_detailed {
+    float: left;
+    margin-right: 88px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .img {
+      margin-bottom: 22px;
+    }
+    .description {
+      text-align: center;
+      .stage {
+        margin-bottom: 10px;
+        @include stageMessage;
+      }
+      .result {
+        @include statusMessage;
+      }
+      .refused {
+        color: #D60E47
+      }
+      .passed {
+        color: #58C4FF
+      }
+      .pending {
+        color: #A8A8A8
+      }
+    }
+  }
+}

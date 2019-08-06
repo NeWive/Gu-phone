@@ -1,0 +1,57 @@
+@charset "UTF-8";
+#HistoriesContainer {
+  width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  height: 268px;
+  background: #B7E6FF;
+  position: relative;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+  #HistoriesContainer .window {
+    height: 100%;
+    position: relative; }
+    #HistoriesContainer .window .container {
+      height: 100%;
+      /* 触发 hasLayout */
+      zoom: 1; }
+      #HistoriesContainer .window .container:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      #HistoriesContainer .window .container .sel {
+        margin-top: 33px;
+        vertical-align: middle;
+        text-align: left;
+        display: inline-block;
+        width: 324px;
+        height: 74%;
+        border-right: 1px solid #FFFFFF; }
+        #HistoriesContainer .window .container .sel .detailed {
+          margin-top: 32px;
+          margin-left: 60px;
+          margin-right: 60px; }
+          #HistoriesContainer .window .container .sel .detailed .title span {
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: normal;
+            font-family: SourceHanSansCN;
+            line-height: 36px; }
+          #HistoriesContainer .window .container .sel .detailed .content span {
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: normal;
+            font-family: SourceHanSansCN;
+            line-height: 36px; }
+  #HistoriesContainer .blue_arrow_box {
+    left: 108px;
+    position: absolute;
+    z-index: 1; }
+    #HistoriesContainer .blue_arrow_box .blue_arrow {
+      border: 12px solid #FFFFFF;
+      border-top-color: #B7E6FF; }
+
+/*# sourceMappingURL=HistoriesContainer.css.map */

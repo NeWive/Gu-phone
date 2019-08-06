@@ -1,0 +1,19 @@
+@import "../sassMixin/radiusMixin";
+@import "../sassMixin/cleatFixMixin";
+#UpArrow {
+  @include clearFix;
+  .edge {
+    width: 51px;
+    @include radius(3px);
+    border: 2px solid #FFFFFF;
+  }
+  .left {
+    float: left;
+    transform: rotate(-30deg);
+  }
+  .right {
+    margin-left: -9px;
+    float: right;
+    transform: rotate(30deg);
+  }
+}

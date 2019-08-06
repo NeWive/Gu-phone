@@ -1,0 +1,10 @@
+@import "../../sassMixin/cleatFixMixin";
+#CommentChild {
+  @include clearFix;
+  .display_table_box {
+    float: left;
+  }
+  .comment_table_box {
+    float: right;
+  }
+}

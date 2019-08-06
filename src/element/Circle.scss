@@ -1,0 +1,10 @@
+@import "../sassMixin/radiusMixin";
+.circle {
+  width: 140px;
+  height: 140px;
+  border: 14px solid #00A8EC;
+  @include radius(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

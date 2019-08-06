@@ -1,0 +1,28 @@
+@import "../sassMixin/cleatFixMixin";
+@import "../sassMixin/radiusMixin";
+#CloseButton {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  .close_button_box {
+    top: 20px;
+    position: absolute;
+    //@include clearFix;
+    .edge {
+      top: 3px;
+      float: left;
+      width: 45px;
+      border: 2px solid #929292;
+      @include radius(2px);
+      &:first-child {
+        transform: rotate(45deg);
+        margin-bottom: -4px;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

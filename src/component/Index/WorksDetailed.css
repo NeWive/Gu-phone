@@ -1,0 +1,56 @@
+#WorksDetailed {
+  position: relative;
+  height: 300px; }
+  #WorksDetailed .name {
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: SourceHanSansCN;
+    line-height: 36px;
+    z-index: 999;
+    padding: 23px 0 20px 0; }
+  #WorksDetailed .window {
+    position: relative;
+    overflow: hidden;
+    height: 390px; }
+    #WorksDetailed .window .images {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      height: 299px;
+      width: 4500px;
+      left: -1593px; }
+      #WorksDetailed .window .images .sel {
+        padding: 23px 19px 26px 19px;
+        background: #B7E6FF;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        margin: 0;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        z-index: 5; }
+        #WorksDetailed .window .images .sel .img {
+          position: relative; }
+          #WorksDetailed .window .images .sel .img img {
+            position: relative;
+            width: 493px;
+            height: 250px;
+            z-index: 6; }
+      #WorksDetailed .window .images .center {
+        margin-left: -220px;
+        margin-right: -194px;
+        z-index: 7;
+        position: relative;
+        padding: 43px 27px 45px 30px;
+        background: #19AEFF; }
+        #WorksDetailed .window .images .center .img img {
+          width: 595px;
+          height: 302px; }
+  #WorksDetailed .detailed .button_box {
+    width: 163px;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=WorksDetailed.css.map */

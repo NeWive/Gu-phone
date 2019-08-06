@@ -1,0 +1,37 @@
+@import "../sassMixin/fontMixin";
+.SelPanel {
+  padding-top: 50px;
+  margin-bottom: 73px;
+  .title_box {
+    text-align: center;
+    .up {
+      .left {
+        @include selTitleLeft;
+      }
+      .right {
+        @include selTitleRight;
+      }
+    }
+    .down {
+      span {
+        @include selTitleDown
+      }
+    }
+  }
+  .detailed_box {
+    margin: 64px 83px 66px 71px;
+    .detailed {
+      @include selDetailed;
+    }
+  }
+}
+.aboutUs {
+  .detailed_box {
+    .detailed {
+      margin-bottom: 30px;
+    }
+  }
+}
+.comments {
+  padding-top: 225px;
+}

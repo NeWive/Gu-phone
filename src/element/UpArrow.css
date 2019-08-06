@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#UpArrow {
+  /* 触发 hasLayout */
+  zoom: 1; }
+  #UpArrow:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #UpArrow .edge {
+    width: 51px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 2px solid #FFFFFF; }
+  #UpArrow .left {
+    float: left;
+    transform: rotate(-30deg); }
+  #UpArrow .right {
+    margin-left: -9px;
+    float: right;
+    transform: rotate(30deg); }
+
+/*# sourceMappingURL=UpArrow.css.map */

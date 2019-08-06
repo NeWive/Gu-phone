@@ -1,0 +1,11 @@
+@import '../sassMixin/radiusMixin';
+@import "../sassMixin/fontMixin";
+.join_us_input {
+  width: 422px;
+  height: 37px;
+  background: #E6E6E6;
+  @include radius(15px);
+  padding: 0 0 0 16px;
+  border: 0;
+  @include joinUsPlaceHolder;
+}

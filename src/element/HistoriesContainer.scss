@@ -1,0 +1,53 @@
+@import "../sassMixin/cleatFixMixin";
+@import "../sassMixin/radiusMixin";
+@import "../sassMixin/containerMixin";
+@import "../sassMixin/fontMixin";
+#HistoriesContainer {
+  @include containerMixin;
+  height: 268px;
+  background: #B7E6FF;
+  position: relative;
+  @include radius(20px);
+  .window {
+    height: 100%;
+    position: relative;
+    .container{
+      height: 100%;
+      @include clearFix;
+      .sel {
+        margin-top: 33px;
+        vertical-align: middle;
+        text-align: left;
+        display: inline-block;
+        width: 324px;
+        height: 74%;
+        border-right: 1px solid #FFFFFF;
+        .detailed {
+          margin-top: 32px;
+          margin-left: 60px;
+          margin-right: 60px;
+          .title {
+            span {
+              @include detailedTitleSmall;
+            }
+          }
+
+          .content {
+            span {
+              @include departmentName;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blue_arrow_box {
+    left: 108px;
+    position: absolute;
+    z-index: 1;
+    .blue_arrow {
+      border: 12px solid #FFFFFF;
+      border-top-color: #B7E6FF;
+    }
+  }
+}

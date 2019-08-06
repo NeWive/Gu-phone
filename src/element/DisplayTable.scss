@@ -1,0 +1,58 @@
+@import "../sassMixin/radiusMixin";
+@import "../sassMixin/fontMixin";
+#DisplayTable {
+  height: 342px;
+  position: relative;
+  .window {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    .container {
+      //position: absolute;
+      .comment_sel {
+        padding-top: 14px;
+        padding-bottom: 26px;
+        @include radius(20px);
+        background: #B7E6FF;
+        margin-bottom: 15px;
+        width: 604px;
+        height: 64px;
+        .content_box {
+          height: 51px;
+          margin-left: 29px;
+          span {
+            @include commentContent;
+          }
+        }
+        .time_box {
+          margin-right: 17px;
+          margin-bottom: 13px;
+          text-align: right;
+          span {
+            @include commentsTime;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .scroll {
+    display: inline-block;
+    width: 11px;
+    height: 342px;
+    background: #B7E6FF;
+    @include radius(4px);
+    margin-left: 10px;
+    cursor: pointer;
+    .scroll_panel {
+      cursor: pointer;
+      @include radius(4px);
+      width: 11px;
+      background: #79D0FF;
+      //height: 11px;
+      position: absolute;
+    }
+  }
+}

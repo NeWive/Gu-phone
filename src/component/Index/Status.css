@@ -1,0 +1,46 @@
+@charset "UTF-8";
+#Status {
+  /* 触发 hasLayout */
+  zoom: 1; }
+  #Status:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #Status .input_email_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 113px; }
+    #Status .input_email_box .join_us_input {
+      margin-right: 16px; }
+  #Status .status_detailed {
+    float: left;
+    margin-right: 88px; }
+    #Status .status_detailed:last-child {
+      margin-right: 0; }
+    #Status .status_detailed .img {
+      margin-bottom: 22px; }
+    #Status .status_detailed .description {
+      text-align: center; }
+      #Status .status_detailed .description .stage {
+        margin-bottom: 10px;
+        color: #000000;
+        font-size: 24px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 30px; }
+      #Status .status_detailed .description .result {
+        color: #000000;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 30px; }
+      #Status .status_detailed .description .refused {
+        color: #D60E47; }
+      #Status .status_detailed .description .passed {
+        color: #58C4FF; }
+      #Status .status_detailed .description .pending {
+        color: #A8A8A8; }
+
+/*# sourceMappingURL=Status.css.map */

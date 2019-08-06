@@ -1,0 +1,24 @@
+.right {
+  position: relative; }
+  .right .short_edge, .right .long_edge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #00A8EC;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+  .right .short_edge {
+    transform: rotate(-45deg);
+    width: 60px;
+    height: 12px;
+    left: -20px;
+    top: -6px; }
+  .right .long_edge {
+    transform: rotate(45deg);
+    width: 30px;
+    height: 12px;
+    left: -31px;
+    top: 2px; }
+
+/*# sourceMappingURL=Right.css.map */

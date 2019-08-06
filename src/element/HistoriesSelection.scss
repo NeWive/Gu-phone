@@ -1,0 +1,17 @@
+@import "../sassMixin/fontMixin";
+#HistoriesSelection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 73px;
+  .button_blue {
+    z-index: 10;
+    margin-top: 18px;
+    margin-right: 25px;
+    width: 240px;
+    height: 41px;
+    @include departmentName;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

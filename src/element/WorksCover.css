@@ -1,0 +1,24 @@
+#WorksCover {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0 auto; }
+  #WorksCover .works_cover_box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    z-index: 9000;
+    width: 652px;
+    height: 390px;
+    background: #19aeff;
+    opacity: 0; }
+
+/*# sourceMappingURL=WorksCover.css.map */

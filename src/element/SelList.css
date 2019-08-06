@@ -1,0 +1,34 @@
+#SelList .list {
+  display: flex;
+  justify-content: space-between; }
+  #SelList .list li {
+    display: inline-block;
+    margin-right: 85px;
+    vertical-align: middle; }
+    #SelList .list li a {
+      vertical-align: middle;
+      display: block;
+      color: #6B6B6B;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 18px; }
+  #SelList .list .comment {
+    margin-right: 59px; }
+  #SelList .list .joinUs {
+    margin-right: 0; }
+    #SelList .list .joinUs a {
+      padding-top: 10px;
+      line-height: 20px;
+      margin-top: -13px;
+      text-align: center;
+      color: #FFFFFF;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      background: #00A8EC;
+      width: 89px;
+      height: 29px;
+      vertical-align: middle; }
+
+/*# sourceMappingURL=SelList.css.map */

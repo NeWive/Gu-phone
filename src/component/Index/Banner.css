@@ -1,0 +1,92 @@
+#Banner {
+  z-index: -1;
+  width: 100%;
+  height: 886px;
+  position: relative;
+  padding-bottom: 92px;
+  background: url("../../static/banner.jpg") no-repeat; }
+  #Banner .code {
+    position: absolute;
+    left: 815px;
+    top: 410px;
+    letter-spacing: 4px; }
+    #Banner .code .function {
+      color: #32ADEC;
+      font-size: 36px;
+      font-weight: bold;
+      font-family: Consolas;
+      line-height: 48px; }
+      #Banner .code .function .args {
+        color: #E29E28;
+        font-size: 36px;
+        font-weight: normal;
+        font-family: Consolas;
+        line-height: 48px; }
+    #Banner .code .annotation {
+      color: #232323;
+      font-size: 36px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 48px;
+      color: #FFFFFF; }
+  #Banner .arrow_box {
+    position: absolute;
+    bottom: 132px;
+    left: 50%;
+    margin-left: -50.5px;
+    margin-bottom: 18px; }
+  #Banner .arrow_box_motion {
+    animation: arrow_box_mov 2s;
+    -moz-animation: arrow_box_mov 2s;
+    /* Firefox */
+    -webkit-animation: arrow_box_mov 2s;
+    /* Safari and Chrome */
+    -o-animation: arrow_box_mov 2s;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite; }
+  #Banner .arrow_box_motion_delay {
+    animation: arrow_box_mov 2s;
+    -moz-animation: arrow_box_mov 2s;
+    /* Firefox */
+    -webkit-animation: arrow_box_mov 2s;
+    /* Safari and Chrome */
+    -o-animation: arrow_box_mov 2s;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s; }
+  #Banner .words_box {
+    position: absolute;
+    bottom: 92px;
+    left: 50%;
+    margin-left: -35.5px; }
+    #Banner .words_box p {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: "SourceHanSansCN";
+      line-height: 48px; }
+
+@keyframes arrow_box_mov {
+  0% {
+    opacity: 1;
+    bottom: 132px; }
+  99% {
+    opacity: 0;
+    bottom: 172px; }
+  100% {
+    opacity: 0;
+    bottom: 132px; } }
+@-moz-keyframes arrow_box_mov {}
+@-webkit-keyframes arrow_box_mov {}
+@-o-keyframes arrow_box_mov {}
+
+/*# sourceMappingURL=Banner.css.map */

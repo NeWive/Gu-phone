@@ -1,0 +1,21 @@
+@import "../sassMixin/radiusMixin";
+#WorksCover {
+  @include radius(20px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  .works_cover_box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    @include radius(20px);
+    z-index: 9000;
+    width: 652px;
+    height: 390px;
+    background: rgb(25, 174, 255);
+    opacity: 0;
+  }
+}

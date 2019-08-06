@@ -1,0 +1,32 @@
+@charset "UTF-8";
+#successful {
+  margin-top: 70px; }
+  #successful .container {
+    /* 触发 hasLayout */
+    zoom: 1; }
+    #successful .container:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #successful .container .circle_box, #successful .container .message {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 195px; }
+    #successful .container .message {
+      margin-right: 0; }
+      #successful .container .message .success {
+        color: #00A8Ec;
+        font-size: 48px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 60px; }
+      #successful .container .message .wait {
+        color: #00A8Ec;
+        font-size: 30px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 60px; }
+
+/*# sourceMappingURL=Successful.css.map */

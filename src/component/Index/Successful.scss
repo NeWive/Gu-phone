@@ -1,0 +1,22 @@
+@import "./../../sassMixin/fontMixin";
+@import "../../sassMixin/cleatFixMixin";
+#successful {
+  margin-top: 70px;
+  .container {
+    @include clearFix;
+    .circle_box, .message {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 195px;
+    }
+    .message {
+      margin-right: 0;
+      .success {
+        @include successMessage;
+      }
+      .wait {
+        @include waitMessage;
+      }
+    }
+  }
+}

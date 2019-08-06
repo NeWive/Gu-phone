@@ -1,0 +1,22 @@
+#IndexBody {
+  width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  background: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+  #IndexBody .SelPanel .detailed_box .detailed {
+    text-align: center; }
+  #IndexBody .SelPanel:first-child .detailed_box .detailed {
+    text-align: left;
+    text-indent: 2em; }
+  #IndexBody .departments .title_container {
+    position: absolute;
+    left: 0;
+    right: 0; }
+  #IndexBody .departments #DepartmentChild {
+    margin-top: 262px;
+    margin-bottom: 69px; }
+
+/*# sourceMappingURL=IndexBody.css.map */

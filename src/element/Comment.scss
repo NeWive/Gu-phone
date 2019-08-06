@@ -1,0 +1,23 @@
+@import "../sassMixin/radiusMixin";
+#Comment {
+  @include radius(20px);
+  background: #B7E6FF;
+  padding: 20px 15px 13px 19px;
+  .textarea_box {
+    textarea {
+      background: #FFFFFF;
+    }
+  }
+  .validate_box {
+    margin-top: 13px;
+    a, input {
+      vertical-align: middle;
+    }
+    a {
+      margin-right: 15px;
+    }
+    button {
+      float: right;
+    }
+  }
+}

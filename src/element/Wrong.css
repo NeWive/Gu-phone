@@ -1,0 +1,20 @@
+.wrong {
+  position: relative; }
+  .wrong .edge {
+    width: 60px;
+    height: 12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #D60E47;
+    position: absolute; }
+    .wrong .edge:first-child {
+      left: -28px;
+      top: -5px;
+      transform: rotate(45deg); }
+    .wrong .edge:last-child {
+      left: -28px;
+      top: -5px;
+      transform: rotate(-45deg); }
+
+/*# sourceMappingURL=Wrong.css.map */

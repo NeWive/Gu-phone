@@ -1,0 +1,39 @@
+.SelPanel {
+  padding-top: 50px;
+  margin-bottom: 73px; }
+  .SelPanel .title_box {
+    text-align: center; }
+    .SelPanel .title_box .up .left {
+      color: #32ADEC;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 36px; }
+    .SelPanel .title_box .up .right {
+      color: #8B8B8B;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 36px; }
+    .SelPanel .title_box .down span {
+      color: #E29E28;
+      font-size: 36px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 36px; }
+  .SelPanel .detailed_box {
+    margin: 64px 83px 66px 71px; }
+    .SelPanel .detailed_box .detailed {
+      color: #232323;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 30px; }
+
+.aboutUs .detailed_box .detailed {
+  margin-bottom: 30px; }
+
+.comments {
+  padding-top: 225px; }
+
+/*# sourceMappingURL=SelTitlePanel.css.map */

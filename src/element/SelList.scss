@@ -1,0 +1,37 @@
+@import "../sassMixin/cleatFixMixin";
+@import "../sassMixin/fontMixin";
+@import "../sassMixin/radiusMixin";
+#SelList {
+  .list {
+    display: flex;
+    justify-content: space-between;
+    li {
+      display: inline-block;
+      margin-right: 85px;
+      vertical-align: middle;
+      a {
+        vertical-align: middle;
+        display: block;
+        @include naviFont;
+      }
+    }
+    .comment {
+      margin-right: 59px;
+    }
+    .joinUs {
+      margin-right: 0;
+      a {
+        padding-top: 10px;
+        line-height: 20px;
+        margin-top: -13px;
+        text-align: center;
+        color: #FFFFFF;
+        @include radius(20px);
+        background: #00A8EC;
+        width: 89px;
+        height: 29px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

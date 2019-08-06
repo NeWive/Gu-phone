@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.department_detailed {
+  cursor: default; }
+  .department_detailed .close_button_box {
+    /* 触发 hasLayout */
+    zoom: 1; }
+    .department_detailed .close_button_box:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    .department_detailed .close_button_box #CloseButton {
+      right: 38px;
+      top: 35px;
+      cursor: pointer;
+      float: right;
+      position: absolute; }
+  .department_detailed .title_box {
+    margin-top: 31px;
+    margin-bottom: 55px; }
+    .department_detailed .title_box .title p:first-child {
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 36px; }
+    .department_detailed .title_box .title p:last-child {
+      color: #FFFFFF;
+      font-size: 36px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 36px; }
+  .department_detailed .content {
+    margin-left: 84px;
+    margin-right: 90px; }
+    .department_detailed .content p {
+      opacity: 0;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 30px; }
+
+/*# sourceMappingURL=DepartmentDetailed.css.map */

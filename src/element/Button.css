@@ -1,0 +1,15 @@
+.button_blue {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: SourceHanSansCN;
+  line-height: 36px;
+  background: #58C4FF;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 163px;
+  height: 37px;
+  border: 0; }
+
+/*# sourceMappingURL=Button.css.map */

@@ -1,0 +1,34 @@
+@import '../../sassMixin/containerMixin';
+@import '../../sassMixin/radiusMixin';
+#IndexBody {
+  @include containerMixin;
+  background: white;
+  @include radius(20px);
+  .SelPanel {
+    .detailed_box {
+      .detailed {
+        text-align: center;
+      }
+    }
+    &:first-child {
+
+      .detailed_box {
+        .detailed {
+          text-align: left;
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+  .departments {
+    .title_container {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    #DepartmentChild {
+      margin-top: 262px;
+      margin-bottom: 69px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../sassMixin/radiusMixin";
+@import "../../sassMixin/cleatFixMixin";
+@import "../../sassMixin/fontMixin";
+#JoinUs {
+  opacity: 0;
+  .popLayer {
+    background: gray;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 999;
+    opacity: 0.5;
+  }
+
+  .popBox {
+    background: transparent;
+    margin: auto;
+    z-index: 999;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    .form_box {
+      width: 1300px;
+      height: 721px;
+      margin: 179px auto;
+      background: #FFFFFF;
+      @include radius(20px);
+      .button_box {
+        padding-top: 35px;
+        padding-right: 38px;
+        @include clearFix;
+        #CloseButton {
+          float: right;
+        }
+      }
+      .form_sel {
+        display: flex;
+        justify-content: center;
+
+        .form_sel_box {
+          @include clearFix;
+          li {
+            float: left;
+            a {
+              display: inline-block;
+              text-align: center;
+              width: 148px;
+              height: 42px;
+              @include radius(21px);
+              span {
+                @include joinUsUnSelected;
+                line-height: 44px;
+              }
+              &:first-child {
+                margin-right: 63px;
+              }
+              &:last-child {
+                margin-left: 63px;
+              }
+            }
+            .selected {
+              background: #00A8EC;
+              span {
+                @include joinUsSelSelected;
+                line-height: 44px;
+              }
+            }
+          }
+        }
+      }
+      .mode_func {
+        margin-top: 107px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .popBox, .popLayer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+}

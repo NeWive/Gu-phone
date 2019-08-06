@@ -1,0 +1,63 @@
+@charset "UTF-8";
+#AboutUsChild {
+  display: flex;
+  justify-content: center;
+  margin-top: 53px;
+  margin-bottom: 65px;
+  /* 触发 hasLayout */
+  zoom: 1; }
+  #AboutUsChild:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #AboutUsChild .ElementPanel {
+    margin-right: 64px;
+    float: left; }
+    #AboutUsChild .ElementPanel .up {
+      /* 触发 hasLayout */
+      zoom: 1;
+      margin: 37px 0 45px 0; }
+      #AboutUsChild .ElementPanel .up:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      #AboutUsChild .ElementPanel .up .left, #AboutUsChild .ElementPanel .up .right {
+        vertical-align: middle;
+        float: left; }
+      #AboutUsChild .ElementPanel .up .left {
+        width: 76px;
+        height: 76px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background: #46B2ED url("../../static/icon.png") no-repeat center;
+        margin-right: 32px; }
+      #AboutUsChild .ElementPanel .up .right .title span {
+        color: #32ADEC;
+        font-size: 24px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 36px; }
+      #AboutUsChild .ElementPanel .up .right .feature span {
+        color: #E29E28;
+        font-size: 36px;
+        font-weight: normal;
+        font-family: SourceHanSansCN;
+        line-height: 36px; }
+    #AboutUsChild .ElementPanel .down p {
+      color: #232323;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: SourceHanSansCN;
+      line-height: 30px; }
+    #AboutUsChild .ElementPanel .up, #AboutUsChild .ElementPanel .down {
+      margin-left: 32px;
+      margin-right: 32px; }
+    #AboutUsChild .ElementPanel:last-child {
+      margin-right: 0; }
+
+/*# sourceMappingURL=AboutUsChild.css.map */
