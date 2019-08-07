@@ -23,14 +23,13 @@ class ElementPanel extends PureComponent {
                                     ) : ''
                                 )
                             }case 'MemberChild': {
-                                console.log(`isCoverOn: ${this.props.isCoverOn}`);
                                 return (
                                     this.props.isCoverOn ? (
                                         <MemberPanelCover identity={this.props.identity}/>
                                     ) : ''
                                 )
                             }default:
-                                console.log('skip');
+                                break;
                         }
                     })()
                 }

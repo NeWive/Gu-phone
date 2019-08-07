@@ -33,7 +33,7 @@ class WorksCoverDetailed extends PureComponent {
     pageHandler(index) {
         let ctx = this;
         return () => {
-            ctx.setLeftHandler(index * -1300, index);
+            ctx.setLeftHandler(index * - 1300, index);
         }
     }
     setLeftHandler(left, index) {
@@ -48,7 +48,6 @@ class WorksCoverDetailed extends PureComponent {
         let j = 0;
         for(let i = 0; i < total / 6; i++) {
             let tempArr = [];
-            console.log(1);
             for(let temp = 0; j < total && temp < 6; j++, temp++) {
                 tempArr.push({
                     name: '爱特展示网',

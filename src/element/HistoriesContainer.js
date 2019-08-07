@@ -16,9 +16,27 @@ function map(state) {
 class HistoriesContainer extends PureComponent {
     constructor(props){
         super(props);
+        this.state = {
+            index: 0,
+            marginLeft: 0,
+        };
         this.timer = null;
         this.wait = 10;
         this.restHandler = this.restHandler.bind(this);
+        this.pageHandler = this.pageHandler.bind(this);
+        this.setLeftHandler = this.setLeftHandler.bind(this);
+    }
+    setLeftHandler(marginLeft, index) {
+        this.setState({
+            marginLeft: marginLeft,
+            index: index,
+        })
+    }
+    pageHandler(index) {
+        let ctx = this;
+        return () => {
+            ctx.setLeftHandler(index * - 1300, index);
+        }
     }
     restHandler() {
         if(this.timer) {
@@ -38,6 +56,9 @@ class HistoriesContainer extends PureComponent {
             this.props.requestHandler();
         }, this.wait);
     }
+    componentDidMount() {
+        this.setLeftHandler(0, 0);
+    }
     render() {
         return (
             <div id="HistoriesContainer" style={{
@@ -50,38 +71,65 @@ class HistoriesContainer extends PureComponent {
                                 opacity: spring(this.props.end, {
                                     precision: 0.4,
                                 }),
+                                marginLeft: spring(this.state.marginLeft)
                             }} defaultStyle={{
                                 opacity: this.props.start,
+                                marginLeft: 0,
                             }}>
                                 {
-                                    ({opacity}) => (
+                                    ({opacity, marginLeft}) => (
                                         <div className="container" style={{
                                             opacity: opacity,
+                                            marginLeft: marginLeft,
                                         }}>
                                             {
                                                 this.props.histories.map(
-                                                    (item, index) => (
-                                                        <div className={'sel'} key={index}>
-                                                            <div className="detailed">
-                                                                <div className="title">
-                                                            <span>
-                                                                {
-                                                                    item.title
-                                                                }
-                                                            </span>
-                                                                </div>
-                                                                <div className="content">
-                                                            <span>
-                                                                {
-                                                                    item.content
-                                                                }
-                                                            </span>
-                                                                </div>
-                                                            </div>
+                                                    (fItem, index) => (
+                                                        <div className={'father_item'} key={`father_item${index}`}>
+                                                            {
+                                                                fItem.map((item, index) => (
+                                                                    <div className={'sel'}
+                                                                         key={index}
+                                                                        style={
+                                                                            fItem.length <= 1 ? {
+                                                                                borderLeft: '1px solid #FFFFFF',
+                                                                                borderRight: '1px solid #FFFFFF',
+                                                                            } : {}
+                                                                        }>
+                                                                        <div className="detailed">
+                                                                            <div className="title">
+                                                                                <span>
+                                                                                {
+                                                                                    item.title
+                                                                                }
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="content">
+                                                                                <span>
+                                                                                    {
+                                                                                        item.content
+                                                                                    }
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                ))
+                                                            }
                                                         </div>
                                                     )
                                                 )
                                             }
+                                            <div className="page_selection">
+                                                {
+                                                    this.props.histories.length > 1 ? (
+                                                        this.props.histories.map((item, index) => (
+                                                            <div className={`selection ${this.state.index === index ? 'selected' : ''}`}
+                                                                 key={index}
+                                                                 onClick={this.pageHandler(index)}/>
+                                                        ))
+                                                    ) : ''
+                                                }
+                                            </div>
                                         </div>
                                     )
                                 }

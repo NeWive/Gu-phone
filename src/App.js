@@ -17,7 +17,7 @@ class App extends React.Component {
     render() {
         return (
             <Switch>
-                <Route path={'/test'} component={this.componentsMap['test']}/>
+                {/*<Route path={'/test'} component={this.componentsMap['test']}/>*/}
                 {
                     routeConfig.map((item) => (
                         <Route path={item.pattern} component={this.componentsMap[item.type]} key={item.type}/>

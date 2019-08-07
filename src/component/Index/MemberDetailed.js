@@ -18,26 +18,6 @@ function map(state) {
 class MemberDetailed extends PureComponent {
     constructor(props) {
         super(props);
-        this.tempData = [
-            {
-                img: android,
-                name: '你爸爸1',
-                description: '我是你爸爸'
-            },
-            {
-                img: android,
-                name: '你爸爸2',
-                description: '我是你爸爸'
-            }, {
-                img: android,
-                name: '你爸爸3',
-                description: '我是你爸爸'
-            }, {
-                img: android,
-                name: '你爸爸4',
-                description: '我是你爸爸'
-            }
-        ];
         this.state = {
             departments: ['UI', '前端', '程序', '安卓', '游戏'],
             index: 0,
@@ -47,6 +27,8 @@ class MemberDetailed extends PureComponent {
             start: 0,
             end: 1,
             selectedIndex: -1,
+            marginLeft: 0,
+            currentPage: 0,
         };
         this.setIsListReady = this.setIsListReady.bind(this);
         this.setIsMemberReady = this.setIsMemberReady.bind(this);
@@ -57,6 +39,20 @@ class MemberDetailed extends PureComponent {
         this.exchangeOpacity = this.exchangeOpacity.bind(this);
         this.memberHandler = this.memberHandler.bind(this);
         this.setMember = this.setMember.bind(this);
+        this.pageHandler = this.pageHandler.bind(this);
+        this.setMarginLeft = this.setMarginLeft.bind(this);
+    }
+    setMarginLeft(marginLeft, currentPage) {
+        this.setState({
+            marginLeft: marginLeft,
+            currentPage: currentPage,
+        });
+    }
+    pageHandler(index) {
+        let ctx = this;
+        return () => {
+            ctx.setMarginLeft(index * -1091, index);
+        }
     }
     memberHandler() {
         let pages = [];
@@ -64,7 +60,7 @@ class MemberDetailed extends PureComponent {
         let j = 0;
         for(let i = 0; i < total/4; i++) {
             let tempArr = [];
-            for(let temp = 0; j < total && temp < 6; j++, temp++) {
+            for(let temp = 0; j < total && temp < 4; j++, temp++) {
                 tempArr.push({
                     img: android,
                     name: `你爸爸${j}`,
@@ -167,8 +163,12 @@ class MemberDetailed extends PureComponent {
                     {
                         this.state.isListReady ? (
                             <Motion
-                                style={{opacity: spring(this.state.end)}}
-                                defaultStyle={{opacity: this.state.start}}
+                                style={{
+                                    opacity: spring(this.state.end),
+                                }}
+                                defaultStyle={{
+                                    opacity: this.state.start,
+                                }}
                             >
                                 {
                                     ({opacity}) => (
@@ -206,79 +206,84 @@ class MemberDetailed extends PureComponent {
                             <div className="memberList">
                                 {
                                     this.state.isMemberReady ? (
-                                        <Motion
-                                            style={{opacity: spring(this.state.end)}}
-                                            defaultStyle={{opacity: this.state.start}}
-                                        >
-                                            {
-                                                ({opacity}) => (
-                                                    <div
-                                                        className="memberList_container"
-                                                        style={{opacity: opacity}}>
-                                                        {
-                                                            this.state.currentDepartMembers.map((item, index) => (
-                                                                <div className="father_item"
-                                                                     key={`father_item${index}`}>
-                                                                    {
-                                                                        item.map((item, index) => (
-                                                                            <div className="child_item">
-                                                                                <a href={"javascript: void(0)"}>
-                                                                                    <div className="img">
-                                                                                        <img src={item.img} alt={''}/>
-                                                                                    </div>
-                                                                                    <div className="name">
+                                        <div>
+                                            <Motion
+                                                style={{
+                                                    opacity: spring(this.state.end),
+                                                    marginLeft: spring(this.state.marginLeft),
+                                                }}
+                                                defaultStyle={{
+                                                    opacity: this.state.start,
+                                                    marginLeft: this.state.marginLeft,
+                                                }}
+                                            >
+                                                {
+                                                    ({
+                                                         opacity, marginLeft,
+                                                    }) => (
+                                                        <div
+                                                            className="memberList_container"
+                                                            style={{
+                                                                opacity: opacity,
+                                                                marginLeft: marginLeft,
+                                                            }}>
+                                                            {
+                                                                this.state.currentDepartMembers.map((item, index) => (
+                                                                    <div className="father_item"
+                                                                         key={`father_item${index}`}>
+                                                                        {
+                                                                            item.map((item, index) => (
+                                                                                <div className="child_item">
+                                                                                    <a href={"javascript: void(0)"}>
+                                                                                        <div className="img">
+                                                                                            <img src={item.img}
+                                                                                                 alt={''}/>
+                                                                                        </div>
+                                                                                        <div className="name">
                                                                                 <span>
                                                                                     {
                                                                                         item.name
                                                                                     }
                                                                                 </span>
-                                                                                    </div>
-                                                                                    <div className="description">
+                                                                                        </div>
+                                                                                        <div className="description">
                                                                                 <span>
                                                                                     {
                                                                                         item.description
                                                                                     }
                                                                                 </span>
-                                                                                    </div>
-                                                                                </a>
-                                                                            </div>
-                                                                        ))
-                                                                    }
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            ))
+                                                                        }
+                                                                    </div>
+                                                                ))
+                                                            }
+                                                        </div>
+                                                    )
+                                                }
+                                            </Motion>
+                                            {
+                                                console.log(this.state.currentDepartMembers.length)
+                                            }
+                                            {
+                                                this.state.currentDepartMembers.length > 1 ? (
+                                                    <div className="page_selection">
+                                                        {
+                                                            this.state.currentDepartMembers.map((item, index) => (
+                                                                <div
+                                                                    className={`selection ${this.state.currentPage === index ? 'selected' : ''}`}
+                                                                    key={index}
+                                                                    onClick={this.pageHandler(index)}>
+
                                                                 </div>
                                                             ))
                                                         }
-                                                        <ul>
-                                                            {
-                                                                this.state.currentDepartMembers.map((item) => (
-                                                                    <li key={item.name}>
-                                                                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,no-script-url */}
-                                                                        <a href={"javascript: void(0)"}>
-                                                                            <div className="img">
-                                                                                <img src={item.img} alt={''}/>
-                                                                            </div>
-                                                                            <div className="name">
-                                                                                <span>
-                                                                                    {
-                                                                                        item.name
-                                                                                    }
-                                                                                </span>
-                                                                            </div>
-                                                                            <div className="description">
-                                                                                <span>
-                                                                                    {
-                                                                                        item.description
-                                                                                    }
-                                                                                </span>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                ))
-                                                            }
-                                                        </ul>
                                                     </div>
-                                                )
+                                                ) : ''
                                             }
-                                        </Motion>
+                                        </div>
                                     ) : (
                                         <div className={'loading'}>
                                             <Loading/>

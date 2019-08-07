@@ -98,7 +98,8 @@ class DisplayTable extends PureComponent {
                         }}>
                         {
                             this.state.comments.map((item, index) => (
-                                <div className="comment_sel">
+                                <div className="comment_sel"
+                                    key={index}>
                                     <div className="content_box">
                                         <span>
                                             {

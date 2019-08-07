@@ -10,18 +10,30 @@
   @include radius(20px);
   .window {
     height: 100%;
+    overflow: hidden;
+    //width: ;
     position: relative;
     .container{
+      width: 2600px;
       height: 100%;
       @include clearFix;
+      .father_item {
+        width: 1300px;
+        float: left;
+        display: flex;
+        justify-content: center;
+      }
       .sel {
         margin-top: 33px;
         vertical-align: middle;
         text-align: left;
         display: inline-block;
         width: 324px;
-        height: 74%;
+        height: 185px;
         border-right: 1px solid #FFFFFF;
+        &:last-child {
+          border: 0;
+        }
         .detailed {
           margin-top: 32px;
           margin-left: 60px;
@@ -39,6 +51,31 @@
           }
         }
       }
+    }
+  }
+  .page_selection {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    .selection {
+      cursor: pointer;
+      width: 58px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 10px;
+      background: #FFFFFF;
+      opacity: 0.5;
+      @include radius(7px);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .selected {
+      background: #FFFFFF;
+      opacity: 1;
     }
   }
   .blue_arrow_box {

@@ -198,43 +198,50 @@
 // }
 // export default testPage;
 
-import { spring, TransitionMotion } from "react-motion/lib/react-motion";
-import React from 'react';
-class Demo extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            items: [{key: 'a', size: 10}, {key: 'b', size: 20}, {key: 'c', size: 30}],
-        };
-        this.willLeave = this.willLeave.bind(this);
-    }
-    componentDidMount() {
-        this.setState({
-            items: [{key: 'a', size: 10}, {key: 'b', size: 20}], // remove c.
-        });
-    }
-    willLeave() {
-        // triggered when c's gone. Keeping c until its width/height reach 0.
-        return {width: spring(0), height: spring(0)};
-    }
-    render() {
-        return (
-            <TransitionMotion
-                willLeave={this.willLeave}
-                styles={this.state.items.map(item => ({
-                    key: item.key,
-                    style: {width: item.size, height: item.size},
-                }))}>
-                {interpolatedStyles =>
-                    // first render: a, b, c. Second: still a, b, c! Only last one's a, b.
-                    <div>
-                        {interpolatedStyles.map(config => {
-                            return <div key={config.key} style={{...config.style, border: '1px solid'}} />
-                        })}
-                    </div>
-                }
-            </TransitionMotion>
-        );
-    }
-}
-export default Demo;
+// import { spring, TransitionMotion } from "react-motion/lib/react-motion";
+// import React from 'react';
+// class Demo extends React.Component{
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             items: [{key: 'a', size: 10}, {key: 'b', size: 20}, {key: 'c', size: 30}],
+//         };
+//         this.willLeave = this.willLeave.bind(this);
+//     }
+//     componentDidMount() {
+//         this.setState({
+//             items: [{key: 'a', size: 10}, {key: 'b', size: 20}], // remove c.
+//         });
+//     }
+//     willLeave() {
+//         // triggered when c's gone. Keeping c until its width/height reach 0.
+//         return {width: spring(0), height: spring(0)};
+//     }
+//     render() {
+//         return (
+//             <TransitionMotion
+//                 willLeave={this.willLeave}
+//                 styles={this.state.items.map(item => ({
+//                     key: item.key,
+//                     style: {width: item.size, height: item.size},
+//                 }))}>
+//                 {interpolatedStyles =>
+//                     // first render: a, b, c. Second: still a, b, c! Only last one's a, b.
+//                     <div>
+//                         {interpolatedStyles.map(config => {
+//                             return <div key={config.key} style={{...config.style, border: '1px solid'}} />
+//                         })}
+//                     </div>
+//                 }
+//             </TransitionMotion>
+//         );
+//     }
+// }
+// export default Demo;
+
+// const test = async () => {
+//     console.log(1);
+// };
+// test().then(r => {
+//     console.log('successful')
+// });

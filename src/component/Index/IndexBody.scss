@@ -31,4 +31,12 @@
       margin-bottom: 69px;
     }
   }
+  .members {
+    #MembersChild {
+      position: relative;
+      .ElementPanel {
+        padding-left: 56px;
+      }
+    }
+  }
 }

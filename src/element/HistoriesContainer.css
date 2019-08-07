@@ -11,10 +11,12 @@
   border-radius: 20px; }
   #HistoriesContainer .window {
     height: 100%;
+    overflow: hidden;
     position: relative; }
     #HistoriesContainer .window .container {
+      width: 2600px;
       height: 100%;
-      /* 触发 hasLayout */
+      /* 瑙﹀彂 hasLayout */
       zoom: 1; }
       #HistoriesContainer .window .container:after {
         content: " ";
@@ -22,14 +24,21 @@
         height: 0;
         clear: both;
         visibility: hidden; }
+      #HistoriesContainer .window .container .father_item {
+        width: 1300px;
+        float: left;
+        display: flex;
+        justify-content: center; }
       #HistoriesContainer .window .container .sel {
         margin-top: 33px;
         vertical-align: middle;
         text-align: left;
         display: inline-block;
         width: 324px;
-        height: 74%;
+        height: 185px;
         border-right: 1px solid #FFFFFF; }
+        #HistoriesContainer .window .container .sel:last-child {
+          border: 0; }
         #HistoriesContainer .window .container .sel .detailed {
           margin-top: 32px;
           margin-left: 60px;
@@ -46,6 +55,29 @@
             font-weight: normal;
             font-family: SourceHanSansCN;
             line-height: 36px; }
+  #HistoriesContainer .page_selection {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px; }
+    #HistoriesContainer .page_selection .selection {
+      cursor: pointer;
+      width: 58px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 10px;
+      background: #FFFFFF;
+      opacity: 0.5;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px; }
+      #HistoriesContainer .page_selection .selection:last-child {
+        margin-right: 0; }
+    #HistoriesContainer .page_selection .selected {
+      background: #FFFFFF;
+      opacity: 1; }
   #HistoriesContainer .blue_arrow_box {
     left: 108px;
     position: absolute;

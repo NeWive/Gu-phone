@@ -16,22 +16,30 @@ class HistoryChild extends PureComponent {
         super(props);
         this.state = {
             histories: [
-                {
-                    title: '部门拆分',
-                    content: 'UI设计，前端开发',
-                },
-                {
-                    title: '新增成员',
-                    content: '6人',
-                },
-                {
-                    title: '项目上线',
-                    content: '中国海洋大学iGEM比赛团队展示页面',
-                },
-                {
-                    title: '项目上线',
-                    content: '海洋技术系网站上线运营',
-                }
+                [
+                    {
+                        title: '部门拆分',
+                        content: 'UI设计，前端开发',
+                    },
+                    {
+                        title: '新增成员',
+                        content: '6人',
+                    },
+                    {
+                        title: '项目上线',
+                        content: '中国海洋大学iGEM比赛团队展示页面',
+                    },
+                    {
+                        title: '项目上线',
+                        content: '海洋技术系网站上线运营',
+                    },
+                ],
+                [
+                    {
+                        title: '项目上线',
+                        content: '海洋技术系网站上线运营',
+                    }
+                ]
             ],
             start: 0,
             end: 1,
