@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+先安装依赖
+
+```bash
+npm install
+```
+
+依赖安装成功后
+
+```bash
+npm start
+```
+
+启动本地服务器后访问[http://localhost:3000](http://localhost:3000/)
+
+使用了create-react-app, 代码热加载，修改后浏览器自动刷新
+
 ## Available Scripts
 
 In the project directory, you can run:
