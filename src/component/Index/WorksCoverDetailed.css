@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #WorksCoverDetailed .close_button_box {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1; }
   #WorksCoverDetailed .close_button_box:after {
     content: " ";
@@ -21,13 +21,13 @@
     color: #FFFFFF;
     font-size: 24px;
     font-weight: normal;
-    font-family: SourceHanSansCN;
+    font-family: SourceHanSansCN-Regular;
     line-height: 36px; }
   #WorksCoverDetailed .title_box .children span {
     color: #FFFFFF;
     font-size: 36px;
     font-weight: normal;
-    font-family: SourceHanSansCN;
+    font-family: SourceHanSansCN-Regular;
     line-height: 36px; }
 #WorksCoverDetailed .works_window .content {
   width: 1300px;
@@ -40,7 +40,7 @@
     position: absolute;
     width: 2600px;
     height: 590px;
-    /* 触发 hasLayout */
+    /* 瑙﹀彂 hasLayout */
     zoom: 1; }
     #WorksCoverDetailed .works_window .content .container:after {
       content: " ";
@@ -51,7 +51,7 @@
     #WorksCoverDetailed .works_window .content .container .father_item {
       width: 1300px;
       float: left;
-      /* 触发 hasLayout */
+      /* 瑙﹀彂 hasLayout */
       zoom: 1; }
       #WorksCoverDetailed .works_window .content .container .father_item:after {
         content: " ";
@@ -70,7 +70,7 @@
           color: #FFFFFF;
           font-size: 24px;
           font-weight: normal;
-          font-family: SourceHanSansCN;
+          font-family: SourceHanSansCN-Regular;
           line-height: 36px; }
         #WorksCoverDetailed .works_window .content .container .father_item .child_item:last-child {
           margin-right: 0; }

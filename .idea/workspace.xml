@@ -2,25 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb2c67bf-2ff8-4e6c-b497-fed836624bb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/HistoryChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/HistoryChild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexBody.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexBody.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexBody.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexBody.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexBody.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexBody.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/.sass-cache/fa04f7b050aa40b4ef58e025a8237e07d38f6297/fontMixin.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/.sass-cache/fa04f7b050aa40b4ef58e025a8237e07d38f6297/fontMixin.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/AboutUsChild.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/AboutUsChild.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/AboutUsChild.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/AboutUsChild.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Banner.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Banner.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentChild.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentChild.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentChild.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentChild.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexFooter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexFooter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexFooter.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexFooter.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/IndexFooter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/IndexFooter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/JoinUs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/JoinUs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/JoinUs.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/JoinUs.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/JoinUsForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/JoinUsForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/JoinUsForm.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/JoinUsForm.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/DisplayTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/DisplayTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/ElementPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/ElementPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/MembersChild.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MembersChild.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/MembersChild.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MembersChild.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Status.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Status.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Status.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Status.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Successful.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Successful.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/Successful.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/Successful.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksDetailed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksDetailed.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksDetailed.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksDetailed.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/WorksDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/WorksDetailed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Lost.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Lost.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Lost.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Lost.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/list.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/list.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/.sass-cache/fa04f7b050aa40b4ef58e025a8237e07d38f6297/fontMixin.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/.sass-cache/fa04f7b050aa40b4ef58e025a8237e07d38f6297/fontMixin.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Button.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Button.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/DisplayTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/DisplayTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/DisplayTable.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/DisplayTable.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/HistoriesContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesContainer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/HistoriesContainer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesContainer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/HistoriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/HistoriesContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/HistoriesSelection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesSelection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/HistoriesSelection.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/HistoriesSelection.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Input.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Input.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Logo.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Logo.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/SelList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/SelList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/SelList.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/SelList.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/SelTitlePanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/SelTitlePanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/SelTitlePanel.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/SelTitlePanel.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/TextArea.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/TextArea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/TextArea.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/TextArea.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sassMixin/fontMixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sassMixin/fontMixin.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,74 +70,58 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/component/Index/HistoryChild.scss">
-                  <provider selected="true" editor-type-id="text-editor" />
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/element/HistoriesContainer.scss">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="190">
-                      <caret line="32" column="39" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="39" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/component/Index/HistoryChild.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="270">
-                      <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-                      <folding>
-                        <element signature="e#0#45#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/element/HistoriesContainer.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="300">
-                      <caret line="129" column="58" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
-                      <folding>
-                        <element signature="e#0#45#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-first>
-      <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.scss">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/component/Index/WorksDetailed.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="70" column="25" lean-forward="true" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+                <state relative-caret-position="-408">
+                  <caret line="171" column="94" selection-start-line="171" selection-start-column="94" selection-end-line="171" selection-end-column="94" />
+                  <folding>
+                    <element signature="e#0#45#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/component/Index/IndexFooter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/component/Index/WorksCoverDetailed.js">
+            <entry file="file://$PROJECT_DIR$/src/config/list.config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#0#45#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="462">
+                  <caret line="244" selection-start-line="244" selection-end-line="244" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/component/Index/IndexFooter.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="792">
+                  <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/sassMixin/fontMixin.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2248">
+                  <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -127,12 +147,18 @@
         <option value="$PROJECT_DIR$/src/element/HistoriesContainer.scss" />
         <option value="$PROJECT_DIR$/src/element/HistoriesContainer.js" />
         <option value="$PROJECT_DIR$/src/component/Index/HistoryChild.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/component/Index/WorksDetailed.js" />
+        <option value="$PROJECT_DIR$/src/element/Input.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/IndexFooter.scss" />
+        <option value="$PROJECT_DIR$/src/config/list.config.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/IndexFooter.js" />
+        <option value="$PROJECT_DIR$/src/sassMixin/fontMixin.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="379" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1087" />
   </component>
@@ -154,31 +180,6 @@
               <item name="Gu-" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gu-" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gu-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gu-" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gu-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gu-" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="Index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gu-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gu-" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="element" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gu-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gu-" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,28 +226,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565086201363</updated>
-      <workItem from="1565086203711" duration="16007000" />
+      <workItem from="1565086203711" duration="20134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16007000" />
+    <option name="totallyTimeSpent" value="20134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23393045" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23393045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.33160084" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.33160084" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32848233" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32744282" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -406,6 +406,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="70" column="25" lean-forward="true" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/element/Input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/WorksDetailed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="171" column="94" selection-start-line="171" selection-start-column="94" selection-end-line="171" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/IndexFooter.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/list.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sassMixin/fontMixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2248">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/IndexFooter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

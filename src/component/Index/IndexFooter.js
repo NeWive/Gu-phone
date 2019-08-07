@@ -9,12 +9,16 @@ function IndexFooter() {
             <div className="container">
                 <div className="logo_box">
                     <Logo/>
-                    <span>Contribute the future </span>
+                    <div className="other">
+                        <span>  · Contribute the future </span>
+                    </div>
                 </div>
                 <div className="info_box">
                     {
                         groupInfoList.map((item, index) => (
-                            <p key={index}>
+                            <p key={index} style={index === 3 ? {
+                                marginBottom: 10,
+                            } : {}}>
                                 {
                                     item
                                 }

@@ -1,23 +1,62 @@
+@charset "UTF-8";
 #IndexFooter {
-  margin-top: 15px; }
+  margin-top: 15px;
+  background: #F5F5F5;
+  z-index: -1;
+  position: relative;
+  height: 157px; }
   #IndexFooter .container {
     width: 1300px;
     margin: 0 auto;
-    height: 100%; }
-    #IndexFooter .container .logo_box #Logo {
-      display: inline-block;
+    height: 100%;
+    /* 瑙﹀彂 hasLayout */
+    zoom: 1; }
+    #IndexFooter .container:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #IndexFooter .container .logo_box {
+      margin-top: 60px;
+      float: left;
       vertical-align: middle; }
-      #IndexFooter .container .logo_box #Logo .icon_box .left {
-        background: #FBEBCA; }
-        #IndexFooter .container .logo_box #Logo .icon_box .left:after {
-          background: #FACA5F; }
-      #IndexFooter .container .logo_box #Logo .icon_box .right {
-        background: #FFAB00; }
-      #IndexFooter .container .logo_box #Logo .name_box .Eng {
-        color: #FFAB00; }
-      #IndexFooter .container .logo_box #Logo .name_box .CN {
-        display: none; }
-    #IndexFooter .container .logo_box span {
-      vertical-align: middle; }
+      #IndexFooter .container .logo_box #Logo {
+        display: inline-block;
+        vertical-align: middle; }
+        #IndexFooter .container .logo_box #Logo .icon_box .left {
+          background: #FBEBCA; }
+          #IndexFooter .container .logo_box #Logo .icon_box .left:after {
+            background: #FACA5F; }
+        #IndexFooter .container .logo_box #Logo .icon_box .right {
+          background: #FFAB00; }
+        #IndexFooter .container .logo_box #Logo .name_box {
+          margin-left: 21px; }
+          #IndexFooter .container .logo_box #Logo .name_box .Eng {
+            color: #FFAB00; }
+          #IndexFooter .container .logo_box #Logo .name_box .CN {
+            display: none; }
+      #IndexFooter .container .logo_box .other {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 7px; }
+        #IndexFooter .container .logo_box .other span {
+          vertical-align: middle;
+          color: #FFFFFF;
+          font-size: 18px;
+          font-weight: normal;
+          font-family: SourceHanSansCN-Regular;
+          line-height: 0;
+          color: #FACE70; }
+    #IndexFooter .container .info_box {
+      margin-top: 38px;
+      float: right;
+      text-align: right; }
+      #IndexFooter .container .info_box p {
+        color: #A3A3A2;
+        font-size: 8px;
+        font-weight: normal;
+        font-family: SourceHanSansCN-Regular;
+        line-height: 16px; }
 
 /*# sourceMappingURL=IndexFooter.css.map */

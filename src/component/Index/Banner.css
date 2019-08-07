@@ -14,7 +14,7 @@
       color: #32ADEC;
       font-size: 36px;
       font-weight: bold;
-      font-family: Consolas;
+      font-family: Consolas-Bold;
       line-height: 48px; }
       #Banner .code .function .args {
         color: #E29E28;
@@ -26,7 +26,7 @@
       color: #232323;
       font-size: 36px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 48px;
       color: #FFFFFF; }
   #Banner .arrow_box {

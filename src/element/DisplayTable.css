@@ -22,7 +22,7 @@
           color: #555555;
           font-size: 18px;
           font-weight: normal;
-          font-family: SourceHanSansCN;
+          font-family: SourceHanSansCN-Regular;
           line-height: 30px; }
       #DisplayTable .window .container .comment_sel .time_box {
         margin-right: 17px;
@@ -32,7 +32,7 @@
           color: #555555;
           font-size: 16px;
           font-weight: normal;
-          font-family: SourceHanSansCN;
+          font-family: SourceHanSansCN-Regular;
           line-height: 36px; }
       #DisplayTable .window .container .comment_sel:last-child {
         margin-bottom: 0; }

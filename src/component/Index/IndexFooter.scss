@@ -1,9 +1,23 @@
 @import "../../sassMixin/containerMixin";
+@import "../../sassMixin/cleatFixMixin";
+@import "../../sassMixin/fontMixin";
 #IndexFooter {
   margin-top: 15px;
+  background: #F5F5F5;
+  z-index: -1;
+  position: relative;
+  height: 157px;
   .container {
     @include containerMixin;
+    @include clearFix;
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-between;
     .logo_box {
+      margin-top: 60px;
+      float: left;
+      vertical-align: middle;
+      //display: inline-block;
       #Logo {
         display: inline-block;
         vertical-align: middle;
@@ -19,7 +33,8 @@
           }
         }
         .name_box {
-          //display: none;
+          //display: none
+          margin-left: 21px;
           .Eng {
             color: #FFAB00;
           }
@@ -28,8 +43,24 @@
           }
         }
       }
-      span {
+      .other {
+        display: inline-block;
         vertical-align: middle;
+        margin-left: 7px;
+        span {
+          vertical-align: middle;
+          @include memberGroupByDepart;
+          color: #FACE70;
+        }
+      }
+    }
+    .info_box {
+      margin-top: 38px;
+      float: right;
+      //display: inline-block;
+      text-align: right;
+      p {
+        @include footer;
       }
     }
   }

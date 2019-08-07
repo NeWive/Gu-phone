@@ -242,7 +242,6 @@ const groupInfoList = [
     '山东省青岛市',
     '中国海洋大学',
     '信息科学与工程学院B505',
-    ' ',
     '@2019ITStudio All Right Reserved'
 ];
 

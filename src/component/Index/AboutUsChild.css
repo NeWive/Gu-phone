@@ -4,7 +4,7 @@
   justify-content: center;
   margin-top: 53px;
   margin-bottom: 65px;
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1; }
   #AboutUsChild:after {
     content: " ";
@@ -16,7 +16,7 @@
     margin-right: 64px;
     float: left; }
     #AboutUsChild .ElementPanel .up {
-      /* 触发 hasLayout */
+      /* 瑙﹀彂 hasLayout */
       zoom: 1;
       margin: 37px 0 45px 0; }
       #AboutUsChild .ElementPanel .up:after {
@@ -40,19 +40,19 @@
         color: #32ADEC;
         font-size: 24px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 36px; }
       #AboutUsChild .ElementPanel .up .right .feature span {
         color: #E29E28;
         font-size: 36px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 36px; }
     #AboutUsChild .ElementPanel .down p {
       color: #232323;
       font-size: 18px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 30px; }
     #AboutUsChild .ElementPanel .up, #AboutUsChild .ElementPanel .down {
       margin-left: 32px;

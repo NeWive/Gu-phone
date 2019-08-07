@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #MembersChild {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1;
   display: flex;
   justify-content: center; }
@@ -29,13 +29,13 @@
         color: #FFFFFF;
         font-size: 72px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 36px; }
     #MembersChild .ElementPanel .container .year_small span {
       color: #FFFFFF;
       font-size: 30px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 36px; }
 
 /*# sourceMappingURL=MembersChild.css.map */

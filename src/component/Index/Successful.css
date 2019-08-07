@@ -2,7 +2,7 @@
 #successful {
   margin-top: 70px; }
   #successful .container {
-    /* 触发 hasLayout */
+    /* 瑙﹀彂 hasLayout */
     zoom: 1; }
     #successful .container:after {
       content: " ";
@@ -20,13 +20,13 @@
         color: #00A8Ec;
         font-size: 48px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 60px; }
       #successful .container .message .wait {
         color: #00A8Ec;
         font-size: 30px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 60px; }
 
 /*# sourceMappingURL=Successful.css.map */

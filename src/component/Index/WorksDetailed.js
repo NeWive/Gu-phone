@@ -65,9 +65,9 @@ class WorksDetailed extends PureComponent {
             // eslint-disable-next-line no-restricted-globals
             // console.log(event.target);
             if(index === 0 || index === 8) {
-                // console.log(document.getElementById('images').style.left);
-                // document.getElementById('images').style.left = index === 0 ? `${workDetailedStyles.leftList[3]}px` : `${workDetailedStyles.leftList[5]}px`;
-                // console.log(document.getElementById('images').style.left);
+                console.log(document.getElementById('images').style.left);
+                document.getElementById('images').style.left = index === 0 ? `${workDetailedStyles.leftList[3]}px` : `${workDetailedStyles.leftList[5]}px`;
+                console.log(document.getElementById('images').style.left);
                 ctx.setIndex(index === 0 ? 3 : 5);
             }else {
                 ctx.setIndex(index);
@@ -124,7 +124,6 @@ class WorksDetailed extends PureComponent {
                                                 paddingLeft: spring(30),
                                                 marginLeft: spring(-220),
                                                 marginRight: spring(-194),
-                                                zIndex: spring(7),
                                                 width: spring(595),
                                                 height: spring(302),
                                                 imgZIndex: spring(6),
@@ -135,7 +134,6 @@ class WorksDetailed extends PureComponent {
                                                 paddingLeft: spring(19),
                                                 marginLeft: spring(0),
                                                 marginRight: spring(0),
-                                                zIndex: spring(5),
                                                 width: spring(493),
                                                 height: spring(250),
                                                 imgZIndex: spring(6),
@@ -173,7 +171,7 @@ class WorksDetailed extends PureComponent {
                                                                             position: 'relative',
                                                                             width: item.width,
                                                                             height: item.height,
-                                                                            zIndex: item.imgZIndex,
+                                                                            zIndex: item.imgZIndex + '',
                                                                         }}/>
                                                                 </div>
                                                             </div>

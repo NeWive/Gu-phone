@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #Status {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1; }
   #Status:after {
     content: " ";
@@ -28,13 +28,13 @@
         color: #000000;
         font-size: 24px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 30px; }
       #Status .status_detailed .description .result {
         color: #000000;
         font-size: 18px;
         font-weight: normal;
-        font-family: SourceHanSansCN;
+        font-family: SourceHanSansCN-Regular;
         line-height: 30px; }
       #Status .status_detailed .description .refused {
         color: #D60E47; }

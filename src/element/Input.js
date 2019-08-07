@@ -9,7 +9,7 @@ class Input extends PureComponent {
                 placeholder={this.props.placeHolder || ''}
                 style={this.props.css || {}}
                 id={this.props.id}
-                onChange={this.props.changeHandler || ''}
+                onChange={this.props.changeHandler || (()=>{})}
                 />
         )
     }

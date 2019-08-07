@@ -47,13 +47,13 @@
             color: #FFFFFF;
             font-size: 24px;
             font-weight: normal;
-            font-family: SourceHanSansCN;
+            font-family: SourceHanSansCN-Regular;
             line-height: 36px; }
           #HistoriesContainer .window .container .sel .detailed .content span {
             color: #FFFFFF;
             font-size: 30px;
             font-weight: normal;
-            font-family: SourceHanSansCN;
+            font-family: SourceHanSansCN-Regular;
             line-height: 36px; }
   #HistoriesContainer .page_selection {
     display: flex;

@@ -9,95 +9,98 @@
 }
 
 @mixin funcFont {
-  @include defaultFont(#32ADEC, 36px, bold, Consolas, 48px);
+  @include defaultFont(#32ADEC, 36px, bold, Consolas-Bold, 48px);
 }
 @mixin argsFont {
   @include defaultFont(#E29E28, 36px, normal, Consolas, 48px);
 }
 @mixin annotationFont {
-  @include defaultFont(#232323, 36px, normal, SourceHanSansCN, 48px);
+  @include defaultFont(#232323, 36px, normal, SourceHanSansCN-Regular, 48px);
 }
 @mixin buttonFont {
-  @include defaultFont(#FFFFFF, 16px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 16px, normal,                             SourceHanSansCN-Regular                            SourceHanSansCN-RegularSourceHanSansCN-Regular, 36px);
 }
 @mixin logoEngFont {
-  @include defaultFont(#000000, 38px, normal, SourceHanSansCN, 42px);
+  @include defaultFont(#000000, 38px, normal,                                                 SourceHanSansCN-Regular, 42px);
 }
 @mixin logoCNFont {
-  @include defaultFont(#000000, 30px, normal, SourceHanSansCN, 42px);
+  @include defaultFont(#000000, 30px, normal, SourceHanSansCN-Regular, 42px);
 }
 @mixin logoEngSmallFont {
-  @include defaultFont(#000000, 30px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#000000, 30px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin logoCNSmallFont {
-  @include defaultFont(#000000, 24px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#000000, 24px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin naviFont {
-  @include defaultFont(#6B6B6B, 18px, normal, SourceHanSansCN, 18px);
+  @include defaultFont(#6B6B6B, 18px, normal, SourceHanSansCN-Regular, 18px);
 }
 @mixin joinUsSelSelected {
-  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin joinUsUnSelected {
-  @include defaultFont(#232323, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#232323, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin joinUsPlaceHolder {
-  @include defaultFont(#555555, 16px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#555555, 16px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin joinUsLabel {
-  @include defaultFont(#232323, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#232323, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin successMessage {
-  @include defaultFont(#00A8Ec, 48px, normal, SourceHanSansCN, 60px);
+  @include defaultFont(#00A8Ec, 48px, normal, SourceHanSansCN-Regular, 60px);
 }
 @mixin waitMessage {
-  @include defaultFont(#00A8Ec, 30px, normal, SourceHanSansCN, 60px);
+  @include defaultFont(#00A8Ec, 30px, normal, SourceHanSansCN-Regular, 60px);
 }
 @mixin stageMessage {
-  @include defaultFont(#000000, 24px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#000000, 24px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin statusMessage {
-  @include defaultFont(#000000, 18px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#000000, 18px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin selTitleLeft {
-  @include defaultFont(#32ADEC, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#32ADEC, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin selTitleRight {
-  @include defaultFont(#8B8B8B, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#8B8B8B, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin selTitleDown {
-  @include defaultFont(#E29E28, 36px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#E29E28, 36px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin selDetailed {
-  @include defaultFont(#232323, 18px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#232323, 18px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin departmentName {
-  @include defaultFont(#FFFFFF, 30px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 30px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin detailedTitleSmall {
-  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin detailedTitleLarge {
-  @include defaultFont(#FFFFFF, 36px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 36px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin detailedContent {
-  @include defaultFont(#FFFFFF, 18px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#FFFFFF, 18px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin memberYearLarge {
-  @include defaultFont(#FFFFFF, 72px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#FFFFFF, 72px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin memberGroupByDepart {
-  @include defaultFont(#FFFFFF, 18px, normal, SourceHanSansCN, 0);
+  @include defaultFont(#FFFFFF, 18px, normal, SourceHanSansCN-Regular, 0);
 }
 @mixin memberName {
-  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#FFFFFF, 24px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin works {
-  @include defaultFont(#000000, 24px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#000000, 24px, normal, SourceHanSansCN-Regular, 36px);
 }
 @mixin commentContent {
-  @include defaultFont(#555555, 18px, normal, SourceHanSansCN, 30px);
+  @include defaultFont(#555555, 18px, normal, SourceHanSansCN-Regular, 30px);
 }
 @mixin commentsTime {
-  @include defaultFont(#555555, 16px, normal, SourceHanSansCN, 36px);
+  @include defaultFont(#555555, 16px, normal, SourceHanSansCN-Regular, 36px);
+}
+@mixin footer {
+  @include defaultFont(#A3A3A2, 8px, normal, SourceHanSansCN-Regular, 16px)
 }

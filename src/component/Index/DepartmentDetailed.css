@@ -2,7 +2,7 @@
 .department_detailed {
   cursor: default; }
   .department_detailed .close_button_box {
-    /* 触发 hasLayout */
+    /* 瑙﹀彂 hasLayout */
     zoom: 1; }
     .department_detailed .close_button_box:after {
       content: " ";
@@ -23,13 +23,13 @@
       color: #FFFFFF;
       font-size: 24px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 36px; }
     .department_detailed .title_box .title p:last-child {
       color: #FFFFFF;
       font-size: 36px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 36px; }
   .department_detailed .content {
     margin-left: 84px;
@@ -39,7 +39,7 @@
       color: #FFFFFF;
       font-size: 18px;
       font-weight: normal;
-      font-family: SourceHanSansCN;
+      font-family: SourceHanSansCN-Regular;
       line-height: 30px; }
 
 /*# sourceMappingURL=DepartmentDetailed.css.map */
