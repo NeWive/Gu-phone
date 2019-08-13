@@ -36,5 +36,6 @@
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "create-react-class": "latest"
-  }
+  },
+  "homepage": "./"
 }

@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.c98f7c24.chunk.css",
-    "main.js": "/static/js/main.49e88198.chunk.js",
-    "main.js.map": "/static/js/main.49e88198.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.579072b0.chunk.js": "/static/js/2.579072b0.chunk.js",
-    "static/js/2.579072b0.chunk.js.map": "/static/js/2.579072b0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6fcb2fec186e7b646f27daefb0eb8e7e.js": "/precache-manifest.6fcb2fec186e7b646f27daefb0eb8e7e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c98f7c24.chunk.css.map": "/static/css/main.c98f7c24.chunk.css.map",
-    "static/media/1002832.jpg": "/static/media/1002832.768b54e1.jpg",
-    "static/media/Lost.css": "/static/media/404_Cover.7100265c.jpg",
-    "static/media/818997.jpg": "/static/media/818997.b233f316.jpg",
-    "static/media/891543.png": "/static/media/891543.4af6e42f.png",
-    "static/media/Banner.css": "/static/media/banner.6fc06f84.jpg",
-    "static/media/fake_validate_img.png": "/static/media/fake_validate_img.f536e90c.png"
+    "main.css": "./static/css/main.c417f70b.chunk.css",
+    "main.js": "./static/js/main.45799658.chunk.js",
+    "main.js.map": "./static/js/main.45799658.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
+    "static/js/2.579072b0.chunk.js": "./static/js/2.579072b0.chunk.js",
+    "static/js/2.579072b0.chunk.js.map": "./static/js/2.579072b0.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.eeecca6ab526a59c51a103d41a2c9d4d.js": "./precache-manifest.eeecca6ab526a59c51a103d41a2c9d4d.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.c417f70b.chunk.css.map": "./static/css/main.c417f70b.chunk.css.map",
+    "static/media/1002832.jpg": "./static/media/1002832.768b54e1.jpg",
+    "static/media/Lost.css": "./static/media/404_Cover.7100265c.jpg",
+    "static/media/818997.jpg": "./static/media/818997.b233f316.jpg",
+    "static/media/891543.png": "./static/media/891543.4af6e42f.png",
+    "static/media/Banner.css": "./static/media/banner.6fc06f84.jpg",
+    "static/media/fake_validate_img.png": "./static/media/fake_validate_img.f536e90c.png"
   }
 }
