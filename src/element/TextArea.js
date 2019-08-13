@@ -6,7 +6,7 @@ class TextArea extends PureComponent {
             <textarea
                 className={'join_us_textarea'}
                 placeholder={this.props.placeHolder || ''}
-                onChange={this.props.changeHandler || ''}
+                onChange={this.props.changeHandler || (() =>{})}
                 id={this.props.id}
                 style={this.props.style}
             />

@@ -232,26 +232,27 @@ class MemberDetailed extends PureComponent {
                                                                     <div className="father_item"
                                                                          key={`father_item${index}`}>
                                                                         {
-                                                                            item.map((item, index) => (
-                                                                                <div className="child_item">
-                                                                                    <a href={"javascript: void(0)"}>
+                                                                            item.map((item) => (
+                                                                                <div className="child_item" key={`child_item${index}`}>
+                                                                                    {/*eslint-disable-next-line*/}
+                                                                                    <a href=''>
                                                                                         <div className="img">
                                                                                             <img src={item.img}
                                                                                                  alt={''}/>
                                                                                         </div>
                                                                                         <div className="name">
-                                                                                <span>
-                                                                                    {
-                                                                                        item.name
-                                                                                    }
-                                                                                </span>
+                                                                                            <span>
+                                                                                                {
+                                                                                                    item.name
+                                                                                                }
+                                                                                            </span>
                                                                                         </div>
                                                                                         <div className="description">
-                                                                                <span>
-                                                                                    {
-                                                                                        item.description
-                                                                                    }
-                                                                                </span>
+                                                                                            <span>
+                                                                                                {
+                                                                                                    item.description
+                                                                                                }
+                                                                                            </span>
                                                                                         </div>
                                                                                     </a>
                                                                                 </div>

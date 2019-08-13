@@ -47,7 +47,6 @@ class Index extends PureComponent{
                 <div className="index_body_box" style={{display: !this.props.motive ? 'none' : 'block'}}>
                     <IndexBody/>
                 </div>
-
             </div>
         )
     }
