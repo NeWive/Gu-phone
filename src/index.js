@@ -16,30 +16,3 @@ ReactDom.render(
     </BrowserRouter>,
     document.getElementById(`root`)
 );
-// const initState = {
-//     count: 0
-// };
-//
-// const recducers = {
-//     'INCREMENT': (state) => ({ count: state.count + 1 }),
-//     'DECREMENT': (state) => ({ count: state.count - 1 }),
-//     'RESET': () => ({ count: 0 }),
-// };
-//
-// const reducer = (state = initState, action) => {
-//     console.log('reducer', state, action);
-//     return recducers[action.type] ? (recducers[action.type])(state) : state
-// };
-//
-// const store = createStore(reducer);
-//
-// store.dispatch({ type: "INCREMENT" });
-// store.dispatch({ type: "INCREMENT" });
-// store.dispatch({ type: "DECREMENT" });
-//
-// ReactDom.render(
-//     <Provider store={store}>
-//         <Counter/>
-//     </Provider>,
-//     document.getElementById('root')
-// );
