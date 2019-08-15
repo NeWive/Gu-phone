@@ -43,7 +43,7 @@ class SelList extends PureComponent{
                         naviList.map((item) => (
                             <li className={item.name} key={item.name}>
                                 {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}
-                                <a href='javascript:void(0)' onClick={item.name === 'joinUs' ? this.clickHandler : () => { this.scrollHandler(item.top).then(r => {}) }}>
+                                <a href='' onClick={item.name === 'joinUs' ? this.clickHandler : () => { this.scrollHandler(item.top).then(r => {}) }}>
                                     {
                                         item.value
                                     }

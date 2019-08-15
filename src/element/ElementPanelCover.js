@@ -17,6 +17,9 @@ class ElementPanelCover extends PureComponent {
         this.restHandler = this.restHandler.bind(this);
     }
     restHandler() {
+        this.props.dispatch({
+            type: 'SET_IS_DEPARTMENT_READY'
+        });
         if(!this.props.isCoverMotive) {
             this.props.dispatch({
                 type: 'SET_IS_DEPARTMENT_SEL_MOTIVE'

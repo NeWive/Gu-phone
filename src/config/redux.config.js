@@ -19,6 +19,9 @@ const initState = {
     isHistoryArrowSettled: true,//当为true的时候isHistoryRequesting才能为true
     isWorksCoverOn: false,
     isWorksCoverMotive: false,
+    departmentId: -1,
+    departmentDescription: '',
+    isDepartmentReady: false,
 };
 
 const notType = {
@@ -26,6 +29,7 @@ const notType = {
     'SET_IS_COVER_MOTIVE': 'isCoverMotive',
     'OPERATING_PORTAL': 'isPortalOn',
     'SET_MOTIVE': 'motive',
+    'SET_IS_DEPARTMENT_READY': 'isDepartmentReady'
 };
 
 const directType = {
@@ -48,7 +52,8 @@ const actionType = {
     'SET_VALIDATE_CODE': 'validateCode',
     'SET_DEPARTMENT_MOTION_INDEX': 'departmentMotionIndex',
     'SET_MEMBER_MOTION_INDEX': 'memberMotionIndex',
-
+    'SET_DEPARTMENT_ID': 'departmentId',
+    'SET_DEPARTMENT_DESCRIPTION': 'departmentDescription',
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];
@@ -58,7 +63,6 @@ function updateStateHandler(state, action, type) {
             case 0:
                 state[item.type[type]] = action.value;break;
             case 1:
-                console.log(item.type[type]);
                 if(item.type[type]) {
                     state[(item.type[type]).name] = (item.type[type]).value;
                 }
@@ -86,7 +90,7 @@ const reducersHandler = (state, action) => {
 };
 
 const reducer = (state = initState, action) => {
-    console.log(`action: ${action.type}, value: ${action.value}`);
+    // console.log(`action: ${action.type}, value: ${action.value}`);
     return reducersHandler(state, action);
 };
 

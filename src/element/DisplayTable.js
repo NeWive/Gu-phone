@@ -85,7 +85,6 @@ class DisplayTable extends PureComponent {
     componentDidMount() {
         this.commentsHandler().then(r => {
             this.containerHeight = (this.state.comments.length - 2) * 119 - 15;
-            console.log(this.containerHeight);
         });
     }
     render() {

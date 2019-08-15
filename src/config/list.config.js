@@ -195,28 +195,13 @@ const featuresList = [
         content: '汇聚技术力量，解剖程序内核，研究代码本质，巧解应用难题。以逻辑洞察数据，以细节战胜漏洞。'
     }
 ];
-const departmentList = [
-    {
-        name: 'UI设计',
-        key: 'UI',
-    },
-    {
-        name: '前端开发',
-        key: 'FrontEnd Develop'
-    },
-    {
-        name: '程序开发',
-        key: 'BackEnd Develop',
-    },
-    {
-        name: '安卓开发',
-        key: 'Android Develop',
-    },
-    {
-        name: '游戏开发',
-        key: 'Game Develop',
-    }
-];
+const departmentList = new Map(
+    [['UI设计', 'UI',],
+        ['前端开发', 'FrontEnd Develop',],
+        ['程序开发', 'BackEnd Develop',],
+        ['APP开发', 'Android Develop',],
+        ['游戏开发', 'Game Develop',],]
+);
 const membersList = [
     {
         year: '14',
