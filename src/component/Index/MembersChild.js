@@ -24,6 +24,7 @@ class MembersChild extends PureComponent {
         this.clickHandler = this.clickHandler.bind(this);
         this.requestForMembersByYear = this.requestForMembersByYear.bind(this);
         this.setMemberList = this.setMemberList.bind(this);
+        this.departListByYear = [];
     }
     setMemberList(memberList) {
         this.setState({
@@ -32,8 +33,13 @@ class MembersChild extends PureComponent {
     }
     async requestForMembersByYear() {
         let { 'data': { 'member': list } } = await axios.get(urlInterfaceGroup.memberList.interface);
-        list = list.slice(0, 5);
-        this.setMemberList(list);
+        console.log(list);
+        if(list) {
+            list = list.slice(0, 5);
+            this.setMemberList(list);
+        }else {
+            this.setMemberList([]);
+        }
     }
     componentDidMount() {
         this.requestForMembersByYear();
@@ -41,7 +47,12 @@ class MembersChild extends PureComponent {
     clickHandler(index, year) {
         let ctx = this;
         return () => {
-            console.log(index);
+            console.log(year);
+            this.state.memberList.map((item) => {
+                if(item.year === year) {
+                    this.departListByYear = item.departments_id;
+                }
+            });
             ctx.props.dispatch({
                 type: 'SET_MEMBER_MOTION_INDEX',
                 value: index,
@@ -64,6 +75,7 @@ class MembersChild extends PureComponent {
                             clickHandler={this.clickHandler(index, item.year)}
                             isCoverOn={this.props.isMemberSelMotive && this.props.memberMotionIndex === index}
                             identity={'MemberChild'}
+                            memberList={this.departListByYear}
                             >
                             <div className="container">
                                 <div className="year_large">

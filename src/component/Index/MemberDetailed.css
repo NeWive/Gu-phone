@@ -61,7 +61,7 @@
         background: #FFFFFF;
         color: transparent; }
     .MemberDetailed .content .memberList {
-      margin: 117px auto 0;
+      margin: 85px auto 0;
       width: 1091px;
       overflow: hidden; }
       .MemberDetailed .content .memberList .memberList_container {
@@ -84,37 +84,41 @@
           .MemberDetailed .content .memberList .memberList_container .father_item .child_item {
             cursor: pointer;
             float: left;
-            margin-right: 130px; }
+            margin-right: 115px; }
             .MemberDetailed .content .memberList .memberList_container .father_item .child_item:last-child {
               margin-right: 0; }
-            .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .img {
-              width: 139px;
-              height: 139px;
-              position: relative;
-              -webkit-border-radius: 100%;
-              -moz-border-radius: 100%;
-              border-radius: 100%; }
-              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .img img {
-                width: 100%;
-                height: 100%; }
-            .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .name {
-              margin-top: 22px;
-              margin-bottom: 5px;
-              text-align: center; }
-              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .name span {
-                color: #FFFFFF;
-                font-size: 24px;
-                font-weight: normal;
-                font-family: SourceHanSansCN-Regular;
-                line-height: 30px; }
-            .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .description {
-              text-align: center; }
-              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .description span {
-                color: #FFFFFF;
-                font-size: 18px;
-                font-weight: normal;
-                font-family: SourceHanSansCN-Regular;
-                line-height: 30px; }
+            .MemberDetailed .content .memberList .memberList_container .father_item .child_item a {
+              cursor: default; }
+              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .img {
+                width: 139px;
+                height: 139px;
+                position: relative;
+                margin: 0 auto; }
+                .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .img img {
+                  width: 100%;
+                  height: 100%;
+                  -webkit-border-radius: 100%;
+                  -moz-border-radius: 100%;
+                  border-radius: 100%; }
+              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .name {
+                margin-top: 22px;
+                margin-bottom: 5px;
+                text-align: center; }
+                .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .name span {
+                  color: #FFFFFF;
+                  font-size: 24px;
+                  font-weight: normal;
+                  font-family: SourceHanSansCN-Regular;
+                  line-height: 30px; }
+              .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .description {
+                text-align: center;
+                width: 180px; }
+                .MemberDetailed .content .memberList .memberList_container .father_item .child_item a .description span {
+                  color: #FFFFFF;
+                  font-size: 18px;
+                  font-weight: normal;
+                  font-family: SourceHanSansCN-Regular;
+                  line-height: 30px; }
       .MemberDetailed .content .memberList .page_selection {
         padding-top: 25px;
         width: 1091px;

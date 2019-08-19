@@ -10,54 +10,25 @@ function map(state) {
         historyIndex: state.historyIndex,
         isHistoryArrowSettled: state.isHistoryArrowSettled,
         isHistoryRequesting: state.isHistoryRequesting,
+        historyByYear: state.historyByYear,
+        yearSelected: state.yearSelected,
     }
 }
 
 class HistoriesContainer extends PureComponent {
     constructor(props){
         super(props);
-        this.state = {
-            index: 0,
-            marginLeft: 0,
-        };
-        this.timer = null;
         this.wait = 10;
-        this.restHandler = this.restHandler.bind(this);
         this.pageHandler = this.pageHandler.bind(this);
-        this.setLeftHandler = this.setLeftHandler.bind(this);
-    }
-    setLeftHandler(marginLeft, index) {
-        this.setState({
-            marginLeft: marginLeft,
-            index: index,
-        })
     }
     pageHandler(index) {
         let ctx = this;
         return () => {
-            ctx.setLeftHandler(index * - 1300, index);
+            ctx.props.setLeftHandler(index * - 1300, index);
         }
-    }
-    restHandler() {
-        if(this.timer) {
-            clearTimeout(this.timer);
-            this.timer = null;
-        }
-        this.timer = setTimeout(() => {
-            console.log('arrow settled');
-            this.props.dispatch({
-                type: 'SET_IS_HISTORY_ARROW_SETTLED',
-                value: true,
-            });
-            this.props.dispatch({
-                type: 'SET_IS_HISTORY_REQUESTING',
-                value: true,
-            });
-            this.props.requestHandler();
-        }, this.wait);
     }
     componentDidMount() {
-        this.setLeftHandler(0, 0);
+        this.props.setLeftHandler(0, 0);
     }
     render() {
         return (
@@ -66,24 +37,19 @@ class HistoriesContainer extends PureComponent {
             }}>
                 <div className="window">
                     {
-                        !this.props.isHistoryRequesting ? (
+                        this.props.historyByYear ? (
                             <Motion style={{
-                                opacity: spring(this.props.end, {
-                                    precision: 0.4,
-                                }),
-                                marginLeft: spring(this.state.marginLeft)
+                                marginLeft: spring(this.props.marginLeft)
                             }} defaultStyle={{
-                                opacity: this.props.start,
                                 marginLeft: 0,
                             }}>
                                 {
-                                    ({opacity, marginLeft}) => (
+                                    ({marginLeft}) => (
                                         <div className="container" style={{
-                                            opacity: opacity,
                                             marginLeft: marginLeft,
                                         }}>
                                             {
-                                                this.props.histories.map(
+                                                this.props.historyByYear[this.props.yearSelected].map(
                                                     (fItem, index) => (
                                                         <div className={'father_item'} key={`father_item${index}`}>
                                                             {
@@ -107,7 +73,7 @@ class HistoriesContainer extends PureComponent {
                                                                             <div className="content">
                                                                                 <span>
                                                                                     {
-                                                                                        item.content
+                                                                                        item.info
                                                                                     }
                                                                                 </span>
                                                                             </div>
@@ -121,9 +87,9 @@ class HistoriesContainer extends PureComponent {
                                             }
                                             <div className="page_selection">
                                                 {
-                                                    this.props.histories.length > 1 ? (
-                                                        this.props.histories.map((item, index) => (
-                                                            <div className={`selection ${this.state.index === index ? 'selected' : ''}`}
+                                                    this.props.historyByYear[this.props.yearSelected].length > 1 ? (
+                                                        this.props.historyByYear[this.props.yearSelected].map((item, index) => (
+                                                            <div className={`selection ${this.props.index === index ? 'selected' : ''}`}
                                                                  key={index}
                                                                  onClick={this.pageHandler(index)}/>
                                                         ))
@@ -141,7 +107,7 @@ class HistoriesContainer extends PureComponent {
                     left: spring(blueArrowStyles[this.props.historyIndex])
                 }} defaultStyle={{
                     left: blueArrowStyles[0]
-                }} onRest={this.restHandler}>
+                }}>
                     {
                         ({ left }) => (
                             <div className="blue_arrow_box" style={{

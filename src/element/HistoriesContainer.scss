@@ -35,7 +35,7 @@
           border: 0;
         }
         .detailed {
-          margin-top: 32px;
+          margin-top: 30px;
           margin-left: 60px;
           margin-right: 60px;
           .title {
@@ -47,6 +47,7 @@
           .content {
             span {
               @include departmentName;
+              font-size: 18px;
             }
           }
         }

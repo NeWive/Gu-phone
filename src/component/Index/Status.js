@@ -29,10 +29,8 @@ class Status extends PureComponent {
         };
         this.onChangeHandler = setCommentHandler.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
-        this.inputListName = [ 'emailForStatus' ];
     }
     async submitHandler() {
-        let formObj = {};
         let obj = {};
         obj['value'] = this.props['emailForStatus'];
         obj['id'] = 'emailForStatus';

@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 import Loading from "../../element/Loading";
 import {Motion, spring} from 'react-motion';
 import {colorMembers} from "../../config/style.config";
-import android from '../../static/icons8-android-64.png';
+import axios from 'axios';
+import {getMembersByYear, url} from '../../config/url.config';
+import { departIdMap } from "../../config/list.config";
 import './MemberDetailed.css';
 
 function map(state) {
@@ -19,7 +21,7 @@ class MemberDetailed extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            departments: ['UI', '前端', '程序', '安卓', '游戏'],
+            // departments: [{name: 'UI', id: '3'}, { name: '前端', id: '2'}, { name: '程序', id: '1'}, { name: '安卓', id: '4'}, { name: '游戏', id: '5'}],
             index: 0,
             currentDepartMembers: [],
             isListReady: false,
@@ -54,18 +56,15 @@ class MemberDetailed extends PureComponent {
             ctx.setMarginLeft(index * -1091, index);
         }
     }
-    memberHandler() {
+    memberHandler(members) {
+        console.log(members);
         let pages = [];
-        let total = 6;
+        let total = members.length;
         let j = 0;
-        for(let i = 0; i < total/4; i++) {
+        for(let i = 0; i < total / 4; i++) {
             let tempArr = [];
             for(let temp = 0; j < total && temp < 4; j++, temp++) {
-                tempArr.push({
-                    img: android,
-                    name: `你爸爸${j}`,
-                    description: '我是你爸爸'
-                });
+                tempArr.push(members[j]);
             }
             pages.push(tempArr);
         }
@@ -111,17 +110,20 @@ class MemberDetailed extends PureComponent {
         })
     }
 
-    async changeDepartmentHandler(event) {  //模拟请求
+    async changeDepartmentHandler(event, id) {  //模拟请求
         event.stopPropagation();
         let target = event.target;
         // essential
         await this.setIsMemberReady(false);
         //
-        console.log(target);
         await this.setSelectedIndex(parseInt(target.getAttribute('indexof')));
-        setTimeout(() => {
-            this.setIsMemberReady(true);
-        }, 2000);
+        let { 'data': {list} } = await axios.get(getMembersByYear(this.props.memberCoverYear, id));
+        list.map((item) => {
+            item.image = `${url}${item.image}`;
+            return '';
+        });
+        await this.memberHandler(list);
+        this.setIsMemberReady(true);
     }
 
     setIsListReady(status) {
@@ -133,8 +135,7 @@ class MemberDetailed extends PureComponent {
     componentDidMount() {
         setTimeout(() => {
             this.setIsListReady(true);
-            this.memberHandler();
-        }, 2000)
+        }, 1000);
     }
 
     render() {
@@ -177,16 +178,16 @@ class MemberDetailed extends PureComponent {
                                             style={{opacity: opacity}}>
                                             <ul>
                                                 {
-                                                    this.state.departments.map((item, index) => (
-                                                        <li key={item}
+                                                    this.props.memberList.map((item, index) => (
+                                                        <li key={item.name}
                                                             className={this.state.selectedIndex === index ? 'selected' : ''}>
                                                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,no-script-url */}
                                                             <a href="javascript: void(0)"
                                                                style={this.state.selectedIndex === index ? {color: colorMembers[this.props.memberMotionIndex].backgroundColor} : {}}
-                                                               onClick={this.changeDepartmentHandler}
+                                                               onClick={(e) => {this.changeDepartmentHandler(e, item)}}
                                                                indexof={index}>
                                                                 {
-                                                                    item
+                                                                    departIdMap[item]
                                                                 }
                                                             </a>
                                                         </li>
@@ -233,24 +234,24 @@ class MemberDetailed extends PureComponent {
                                                                          key={`father_item${index}`}>
                                                                         {
                                                                             item.map((item) => (
-                                                                                <div className="child_item" key={`child_item${index}`}>
+                                                                                <div className="child_item" key={`${item ? item.name : ''}`}>
                                                                                     {/*eslint-disable-next-line*/}
-                                                                                    <a href=''>
+                                                                                    <a href='' onClick={(e) => {e.preventDefault();}}>
                                                                                         <div className="img">
-                                                                                            <img src={item.img}
+                                                                                            <img src={item ? item.image : ''}
                                                                                                  alt={''}/>
                                                                                         </div>
                                                                                         <div className="name">
                                                                                             <span>
                                                                                                 {
-                                                                                                    item.name
+                                                                                                    item ? item.name : ''
                                                                                                 }
                                                                                             </span>
                                                                                         </div>
                                                                                         <div className="description">
                                                                                             <span>
                                                                                                 {
-                                                                                                    item.description
+                                                                                                    item ? item.info : ''
                                                                                                 }
                                                                                             </span>
                                                                                         </div>
@@ -265,9 +266,7 @@ class MemberDetailed extends PureComponent {
                                                     )
                                                 }
                                             </Motion>
-                                            {
-                                                console.log(this.state.currentDepartMembers.length)
-                                            }
+
                                             {
                                                 this.state.currentDepartMembers.length > 1 ? (
                                                     <div className="page_selection">

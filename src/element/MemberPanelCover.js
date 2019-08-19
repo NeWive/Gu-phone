@@ -57,7 +57,7 @@ class MemberPanelCover extends PureComponent {
                             cursor: 'default',
                         }}
                              onClick={(e) => {e.stopPropagation()}}>
-                            <MemberDetailed/>
+                            <MemberDetailed memberList={this.props.memberList}/>
                         </div>
                     )
                 }

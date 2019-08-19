@@ -57,7 +57,7 @@
       }
     }
     .memberList {
-      margin: 117px auto 0;
+      margin: 85px auto 0;
       width: 1091px;
       overflow: hidden;
       .memberList_container {
@@ -73,20 +73,22 @@
           .child_item {
             cursor: pointer;
             float: left;
-            margin-right: 130px;
+            margin-right: 115px;
 
             &:last-child {
               margin-right: 0;
             }
             a {
+              cursor: default;
               .img {
                 width: 139px;
                 height: 139px;
                 position: relative;
-                @include radius(100%);
+                margin: 0 auto;
                 img {
                   width: 100%;
                   height: 100%;
+                  @include radius(100%);
                 }
               }
               .name {
@@ -99,6 +101,7 @@
               }
               .description {
                 text-align: center;
+                width: 180px;
                 span {
                   @include detailedContent;
                 }

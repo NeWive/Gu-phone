@@ -19,13 +19,16 @@ class ElementPanel extends PureComponent {
                             case 'DepartmentChild': {
                                 return (
                                     this.props.isCoverOn ? (
-                                        <ElementPanelCover identity={this.props.identity}/>
+                                        <ElementPanelCover
+                                            identity={this.props.identity}
+                                            />
                                     ) : ''
                                 )
                             }case 'MemberChild': {
                                 return (
                                     this.props.isCoverOn ? (
-                                        <MemberPanelCover identity={this.props.identity}/>
+                                        <MemberPanelCover identity={this.props.identity}
+                                                          memberList={this.props.memberList}/>
                                     ) : ''
                                 )
                             }default:

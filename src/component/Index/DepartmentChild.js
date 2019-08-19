@@ -51,7 +51,11 @@ class DepartmentChild extends PureComponent {
     }
     async requestHandler() {
         let { 'data': { list } } = await axios.get(urlInterfaceGroup.departmentList.interface);
-        await this.setDepartmentList(list);
+        if(list) {
+            await this.setDepartmentList(list);
+        }else {
+            await this.setDepartmentList([]);
+        }
         if(!this.props.departmentDescription) {
             this.requestDepartmentDetailed();
         }
@@ -73,17 +77,17 @@ class DepartmentChild extends PureComponent {
         return (
             <div id="DepartmentChild">
                 {
-                    this.state.departmentList.map((item, index) => (
+                    this.state.departmentList ? this.state.departmentList.map((item, index) => (
                         <ElementPanel
                             key={item.id}
                             name={item.id}
-                            style={colorDepartment[index]}
+                            style={colorDepartment[index] ? colorDepartment[index] : {}}
                             clickHandler={() => {
                                 this.clickHandler(index, item.id)
                             }}
                             isCoverOn={this.props.isDepartmentSelMotive && this.props.departmentMotionIndex === index}
                             identity={'DepartmentChild'}
-                            >
+                        >
                             <div className="container">
                                 <div className="logo">
                                     <img src={this.logo[`${item.id}`]} alt=""/>
@@ -95,7 +99,7 @@ class DepartmentChild extends PureComponent {
                                 </div>
                             </div>
                         </ElementPanel>
-                    ))
+                    )) : ''
                 }
             </div>
         )

@@ -5,7 +5,6 @@ import { PortalContainer } from "../element/PortalContainer";
 import JoinUs from "./Index/JoinUs";
 import { connect } from 'react-redux';
 import IndexBody from './Index/IndexBody';
-// import IndexFooter from "./Index/IndexFooter";
 import './Index.css';
 function map(state) {
     return {

@@ -6,7 +6,7 @@ let urlInterfaceGroup = {
         method: 'GET',
     },
     departmentList: {
-        interface: '/show/api/department_list/',
+        interface: '/show/api/department/',
         method: 'GET',
     },
     comment: {
@@ -49,6 +49,9 @@ let urlInterfaceGroup = {
         method: 'POST',
         body: ['name', 'phone', 'email', 'year', 'college', 'speciality', 'department_id', 'message', 'code'],
     },
+    validateImg: {
+        interface: '/captcha/',
+    }
 };
 
 const urlHandler = () => {
@@ -59,8 +62,8 @@ const urlHandler = () => {
 
 urlHandler();
 
-const getMembersByYear = (year) => (
-    `${urlInterfaceGroup.memberIntroduction.interface}?year=${year}`
+const getMembersByYear = (year, id) => (
+    `${urlInterfaceGroup.memberIntroduction.interface}?year=${year}&id=${id}`
 );
 
 const getStatusByEmail = (email) => (

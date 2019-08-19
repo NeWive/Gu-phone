@@ -21,21 +21,29 @@ class DisplayTable extends PureComponent {
         this.mouseUpHandler = this.mouseUpHandler.bind(this);
         this.mouseMoveHandler = this.mouseMoveHandler.bind(this);
         this.mouseLeaveHandler = this.mouseLeaveHandler.bind(this);
-        this.mouseEnterHandler = this.mouseEnterHandler.bind(this);
+        this.scrollHandler = this.scrollHandler.bind(this);
         this.mouseMoveLock = false;
-        this.mouseEnterLock = false;
         this.lastY = null;
         this.containerHeight = 0;
     }
-    mouseEnterHandler() {
-        this.mouseEnterLock = true;
+    scrollHandler(e) {
+        e.stopPropagation();
+        let currentY = this.state.top;
+        let y = e.nativeEvent.deltaY / 20;
+        if(currentY + y > 0 && currentY + y < 342 - this.state.height) {
+            this.setState((pre) => (
+                {
+                    top: pre.top + y,
+                    marginTop: -(pre.top + y) * this.containerHeight/342,
+                }
+            ));
+        }
     }
     mouseLeaveHandler() {
-        this.mouseEnterLock = false;
+        this.mouseMoveLock = false;
     }
     mouseMoveHandler(e) {
-        if(this.lastY && this.mouseMoveLock && this.mouseEnterLock) {
-            // console.log(`y:${e.clientY}`);
+        if(this.lastY && this.mouseMoveLock) {
             let currentY = this.state.top;
             let y = e.screenY - this.lastY;
             if(currentY + y >= 0 && currentY + y <= 342 - this.state.height) {
@@ -78,7 +86,7 @@ class DisplayTable extends PureComponent {
     render() {
         return (
             <div id="DisplayTable">
-                <div className="window">
+                <div className="window" onWheel={this.scrollHandler}>
                     <div className="container"
                         style={{
                             marginTop: this.state.marginTop,
@@ -116,7 +124,6 @@ class DisplayTable extends PureComponent {
                             onMouseDown={this.mouseDownHandler}
                             onMouseUp={this.mouseUpHandler}
                             onMouseMove={this.mouseMoveHandler}
-                            onMouseOver={this.mouseEnterHandler}
                             onMouseOut={this.mouseLeaveHandler}/>
                     </div>
                 </div>

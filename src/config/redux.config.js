@@ -29,6 +29,9 @@ const initState = {
     commentSingle: '',
     commentValidate: '',
     emailForStatus: '',
+    historyByYear: '',
+    historyYearList: [],
+    yearSelected: 2014,
 };
 
 const notType = {
@@ -67,7 +70,10 @@ const actionType = {
     'SET_WEBSITE_FOR_DISPLAY': 'websiteForDisplay',
     'SET_SINGLE_COMMENT': 'commentSingle',
     'SET_COMMENT_VALIDATE': 'commentValidate',
-    'SET_EMAIL_FOR_STATUS': 'emailForStatus'
+    'SET_EMAIL_FOR_STATUS': 'emailForStatus',
+    'SET_HISTORY_BY_YEAR': 'historyByYear',
+    'SET_HISTORY_YEAR_LIST': 'historyYearList',
+    'SET_SELECTED_YEAR': 'yearSelected',
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];

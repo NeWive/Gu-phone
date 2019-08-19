@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Button } from './Button';
-import { historyYearList } from "../config/list.config";
 import { colorMembers } from "../config/style.config";
 import { connect } from "react-redux";
 import './HistoriesSelection.css';
@@ -10,6 +9,7 @@ function map(state) {
         historyIndex: state.historyIndex,
         isHistoryArrowSettled: state.isHistoryArrowSettled,
         isHistoryRequesting: state.isHistoryRequesting,
+        historyYearList: state.historyYearList,
     }
 }
 
@@ -19,21 +19,19 @@ class HistoriesSelection extends PureComponent {
         this.clickHandler = this.clickHandler.bind(this);
         // this.restHandler = this.restHandler.bind(this);
     }
-    clickHandler(index) {
+    clickHandler(index, selectedYear) {
         return async () => {
-            this.props.dispatch({
-                type: 'SET_IS_HISTORY_ARROW_SETTLED',
-                value: false,
-            });
+            this.props.setLeftHandler(0, 0);
             this.props.dispatch({
                 type: 'SET_HISTORY_INDEX',
                 value: index,
             });
+            await this.props.dispatch({
+                type: 'SET_SELECTED_YEAR',
+                value: selectedYear,
+            });
             if(this.props.start === 0) {
-                await this.props.exchangeHandler({
-                    start: 1,
-                    end: 0,
-                });
+                await this.props.exchangeHandler(1,0);
             }
             // await this.restHandler();
         }
@@ -43,13 +41,13 @@ class HistoriesSelection extends PureComponent {
         return (
             <div id="HistoriesSelection">
                 {
-                    historyYearList.map((item, index) => (
+                    this.props.historyYearList.map((item, index) => (
                         <Button value={item}
                                 key={index}
                                 style={{
                                     backgroundColor: colorMembers[index].backgroundColor
                                 }}
-                                clickHandler={this.clickHandler(index)}/>
+                                clickHandler={this.clickHandler(index, item)}/>
                     ))
                 }
             </div>

@@ -40,7 +40,7 @@
         #HistoriesContainer .window .container .sel:last-child {
           border: 0; }
         #HistoriesContainer .window .container .sel .detailed {
-          margin-top: 32px;
+          margin-top: 30px;
           margin-left: 60px;
           margin-right: 60px; }
           #HistoriesContainer .window .container .sel .detailed .title span {
@@ -54,7 +54,8 @@
             font-size: 30px;
             font-weight: normal;
             font-family: SourceHanSansCN-Regular;
-            line-height: 36px; }
+            line-height: 36px;
+            font-size: 18px; }
   #HistoriesContainer .page_selection {
     display: flex;
     justify-content: center;

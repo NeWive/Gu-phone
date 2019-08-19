@@ -258,6 +258,15 @@ const groupInfoList = [
     '信息科学与工程学院B505',
     '@2019ITStudio All Right Reserved'
 ];
+const departIdMap = {
+    '1': '程序开发',
+    '2': '前端开发',
+    '3': 'UI设计',
+    '4': 'APP开发',
+    '5': '游戏',
+    '6': '美工',
+    '7': '系统维护',
+};
 
 export {
     featuresList,
@@ -273,4 +282,5 @@ export {
     historyYearList,
     groupInfoList,
     departmentSelectionList,
+    departIdMap,
 }
