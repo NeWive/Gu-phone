@@ -2,7 +2,7 @@
 .department_detailed {
   cursor: default; }
   .department_detailed .close_button_box {
-    /* 瑙﹀彂 hasLayout */
+    /* 触发 hasLayout */
     zoom: 1; }
     .department_detailed .close_button_box:after {
       content: " ";
@@ -32,8 +32,8 @@
       font-family: SourceHanSansCN-Regular;
       line-height: 36px; }
   .department_detailed .content {
-    margin-left: 84px;
-    margin-right: 90px; }
+    margin-left: 200px;
+    margin-right: 200px; }
     .department_detailed .content p {
       opacity: 0;
       color: #FFFFFF;

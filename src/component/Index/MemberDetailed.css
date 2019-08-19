@@ -2,7 +2,7 @@
 .MemberDetailed {
   cursor: default; }
   .MemberDetailed .close_button_box {
-    /* 瑙﹀彂 hasLayout */
+    /* 触发 hasLayout */
     zoom: 1; }
     .MemberDetailed .close_button_box:after {
       content: " ";
@@ -73,7 +73,7 @@
           display: flex;
           justify-content: center;
           margin: 0 auto;
-          /* 瑙﹀彂 hasLayout */
+          /* 触发 hasLayout */
           zoom: 1; }
           .MemberDetailed .content .memberList .memberList_container .father_item:after {
             content: " ";

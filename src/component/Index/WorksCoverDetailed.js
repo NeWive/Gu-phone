@@ -2,13 +2,12 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Motion, spring } from 'react-motion';
 import './WorksCoverDetailed.css';
-import Loading from "../../element/Loading";
-import shortCut from '../../static/891543.png';
 import {CloseButton} from "../../element/CloseButton";
 
 function map(state) {
     return {
         isWorksCoverMotive: state.isWorksCoverMotive,
+        websiteForDisplay: state.websiteForDisplay,
     }
 }
 
@@ -18,14 +17,11 @@ class WorksCoverDetailed extends PureComponent {
         this.state = {
             start: 0,
             end: 1,
-            content: '',
             left: 0,
             index: 0,
             maxTop: 0,
         };
         this.closeHandler = this.closeHandler.bind(this);
-        this.setContent = this.setContent.bind(this);
-        this.contentHandler = this.contentHandler.bind(this);
         this.exchangeState = this.exchangeState.bind(this);
         this.setLeftHandler = this.setLeftHandler.bind(this);
         this.pageHandler = this.pageHandler.bind(this);
@@ -42,33 +38,6 @@ class WorksCoverDetailed extends PureComponent {
             index: index,
         })
     }
-    contentHandler() {
-        let pages = [];//每页6个
-        let total = 7;//fake request
-        let j = 0;
-        for(let i = 0; i < total / 6; i++) {
-            let tempArr = [];
-            for(let temp = 0; j < total && temp < 6; j++, temp++) {
-                tempArr.push({
-                    name: '爱特展示网',
-                    shortCut: shortCut,
-                    url: 'http://www.bilibili.com',
-                })
-            }
-            pages.push(tempArr);
-        }
-        console.log(pages);
-        this.setContent(pages);
-    }
-    componentDidMount() {
-        setTimeout(this.contentHandler, 2000);
-    }
-
-    setContent(content) {
-        this.setState({
-            content: content,
-        })
-    }
     exchangeState() {
         this.setState((preState) => ({
             start: preState.end,
@@ -76,7 +45,14 @@ class WorksCoverDetailed extends PureComponent {
         }))
     }
     async closeHandler() {
-        await this.setContent('');
+        await this.props.dispatch({
+            type: 'SET_WEBSITE_FOR_DISPLAY',
+            value: '',
+        });
+        this.setState({
+            index: 0,
+            left: 0,
+        });
         this.props.dispatch({
             type: 'SET_IS_WORKS_COVER_MOTIVE',
             isWorksCoverMotive: false
@@ -104,7 +80,7 @@ class WorksCoverDetailed extends PureComponent {
                 </div>
                 <div className="works_window">
                     {
-                        this.state.content ? (
+                        this.props.websiteForDisplay ? (
                             <Motion defaultStyle={{
                                 opacity: this.state.start,
                                 left: 0,
@@ -123,7 +99,7 @@ class WorksCoverDetailed extends PureComponent {
                                                     left: left,
                                                 }}>
                                                 {
-                                                    this.state.content.map((item, index) => (
+                                                    this.props.websiteForDisplay.map((item, index) => (
                                                         <div className="father_item"
                                                             key={`father_item_${index}`}>
                                                             {
@@ -132,7 +108,7 @@ class WorksCoverDetailed extends PureComponent {
                                                                         key={`child_item_${index}`}
                                                                         onClick={()=>{window.location.href = childItem.url}}>
                                                                         <div className="img_box">
-                                                                            <img src={childItem.shortCut}
+                                                                            <img src={childItem.image}
                                                                                  alt=""
                                                                                 width={'330px'}
                                                                                 height={'169px'}/>
@@ -153,7 +129,7 @@ class WorksCoverDetailed extends PureComponent {
                                             </div>
                                             <div className="page_selection">
                                                 {
-                                                    this.state.content.map((item, index) => (
+                                                    this.props.websiteForDisplay.map((item, index) => (
                                                         <div className={`selection ${this.state.index === index ? 'selected' : ''}`}
                                                             key={index}
                                                             onClick={this.pageHandler(index)}/>
@@ -165,7 +141,7 @@ class WorksCoverDetailed extends PureComponent {
                                 }
                             </Motion>
                         ) : (
-                            <Loading/>
+                            ''
                         )
                     }
                 </div>

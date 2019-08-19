@@ -5,7 +5,10 @@ const mapEnglishToChinese = {
     email: '电子邮箱',
     ps: '备注留言',
     validateCode: '验证码',
-    email_for_status: '电子邮箱',
+    yourName: '姓名',
+    commentSingle: '评论',
+    commentValidate: '验证码',
+    emailForStatus: '电子邮箱',
 };
 const isEmpty = (target) => {
     return target.value === 'undefined' || target.value === null || target.value === '' ? `${mapEnglishToChinese[target.id]}不能为空` : message.pass;

@@ -7,5 +7,4 @@ export const routeConfig = [
         pattern: `/`,
         type: `app`
     },
-
 ];

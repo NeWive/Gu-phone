@@ -4,7 +4,8 @@ const initState = {
     phoneNumber: '',
     major: '',
     email: '',
-    ps: '',
+    ps: '1',
+    yourName: '',
     validateCode: '',
     zeitgeistDetail: false,
     worksDetail: false,
@@ -22,6 +23,12 @@ const initState = {
     departmentId: -1,
     departmentDescription: '',
     isDepartmentReady: false,
+    memberCoverYear: '',
+    website: [],
+    websiteForDisplay: '',
+    commentSingle: '',
+    commentValidate: '',
+    emailForStatus: '',
 };
 
 const notType = {
@@ -49,11 +56,18 @@ const actionType = {
     'SET_MAJOR': 'major',
     'SET_EMAIL': 'email',
     'SET_PS': 'ps',
+    'SET_YOUR_NAME': 'yourName',
     'SET_VALIDATE_CODE': 'validateCode',
     'SET_DEPARTMENT_MOTION_INDEX': 'departmentMotionIndex',
     'SET_MEMBER_MOTION_INDEX': 'memberMotionIndex',
     'SET_DEPARTMENT_ID': 'departmentId',
     'SET_DEPARTMENT_DESCRIPTION': 'departmentDescription',
+    'SET_MEMBER_COVER_YEAR': 'memberCoverYear',
+    'SET_WEBSITE': 'website',
+    'SET_WEBSITE_FOR_DISPLAY': 'websiteForDisplay',
+    'SET_SINGLE_COMMENT': 'commentSingle',
+    'SET_COMMENT_VALIDATE': 'commentValidate',
+    'SET_EMAIL_FOR_STATUS': 'emailForStatus'
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];

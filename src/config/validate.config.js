@@ -8,8 +8,11 @@ const validateGroup = {
     major: /^20[1][8,9]级[\u4e00-\u9fa5]{2,10}$/,
     email: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
     ps: /^.{0,80}$/,
-    validateCode: /^[0-9]{4}$/,
-    email_for_status: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+    validateCode: /^.{4}$/,
+    yourName: /^[\u4e00-\u9fa5]{2,4}$/,
+    emailForStatus: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+    commentSingle: /^.{0,80}$/,
+    commentValidate: /^.{4}$/,
 };
 
 export {

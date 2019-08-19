@@ -16,7 +16,8 @@ class SelList extends PureComponent{
         this.clickHandler = this.clickHandler.bind(this);
         this.scrollHandler = this.scrollHandler.bind(this);
     }
-    clickHandler() {
+    clickHandler(e) {
+        e.preventDefault();
         let root = document.getElementById(`root`);
         root.style.overflow = 'hidden';
         root.style.height = `${window.innerHeight}px`;
@@ -43,7 +44,7 @@ class SelList extends PureComponent{
                         naviList.map((item) => (
                             <li className={item.name} key={item.name}>
                                 {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}
-                                <a href='' onClick={item.name === 'joinUs' ? this.clickHandler : () => { this.scrollHandler(item.top).then(r => {}) }}>
+                                <a href='' onClick={item.name === 'joinUs' ? this.clickHandler : (e) => { e.preventDefault();this.scrollHandler(item.top).then(r => {}) }}>
                                     {
                                         item.value
                                     }

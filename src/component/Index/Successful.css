@@ -2,7 +2,7 @@
 #successful {
   margin-top: 70px; }
   #successful .container {
-    /* 瑙﹀彂 hasLayout */
+    /* 触发 hasLayout */
     zoom: 1; }
     #successful .container:after {
       content: " ";

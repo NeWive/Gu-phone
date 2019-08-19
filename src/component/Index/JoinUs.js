@@ -12,7 +12,8 @@ import { Motion, spring } from "react-motion/lib/react-motion";
 
 function mapStateToProps(state) {
     return {
-        isPortalOn: state.isPortalOn
+        isPortalOn: state.isPortalOn,
+        emailForStatus: state.emailForStatus,
     }
 }
 class JoinUs extends PureComponent {
@@ -108,7 +109,6 @@ class JoinUs extends PureComponent {
                                                 switch(this.state.selected) {
                                                     case 0:
                                                     {
-                                                        console.log(1);
                                                         return this.state.successful ? <Successful/> : <JoinUsForm/>;
                                                     }
                                                     case 1:

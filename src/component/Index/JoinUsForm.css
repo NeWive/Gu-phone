@@ -8,8 +8,34 @@
     line-height: 36px;
     vertical-align: middle;
     margin-right: 15px; }
-    #JoinUsForm .input_sel label img {
-      margin: 0 8px 10px 12px; }
+    #JoinUsForm .input_sel label div {
+      display: inline-block;
+      width: 75px;
+      height: 32px;
+      margin: 0 8px 0 12px;
+      position: relative; }
+      #JoinUsForm .input_sel label div img {
+        position: absolute;
+        width: 75px;
+        height: 32px;
+        cursor: pointer; }
+  #JoinUsForm .input_sel select {
+    width: 438px;
+    height: 37px;
+    background: #E6E6E6;
+    border: 0;
+    padding: 0 3px 0 16px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    vertical-align: middle;
+    color: #555555;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: SourceHanSansCN-Regular;
+    line-height: 36px; }
+    #JoinUsForm .input_sel select option {
+      border: 0; }
   #JoinUsForm .input_sel .button_blue {
     margin-left: 112px;
     vertical-align: middle;

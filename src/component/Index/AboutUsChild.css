@@ -4,7 +4,7 @@
   justify-content: center;
   margin-top: 53px;
   margin-bottom: 65px;
-  /* 瑙﹀彂 hasLayout */
+  /* 触发 hasLayout */
   zoom: 1; }
   #AboutUsChild:after {
     content: " ";
@@ -16,7 +16,7 @@
     margin-right: 64px;
     float: left; }
     #AboutUsChild .ElementPanel .up {
-      /* 瑙﹀彂 hasLayout */
+      /* 触发 hasLayout */
       zoom: 1;
       margin: 37px 0 45px 0; }
       #AboutUsChild .ElementPanel .up:after {

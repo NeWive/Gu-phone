@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import generateDate from "../function/GenerateFormatDate";
+// import generateDate from "../function/GenerateFormatDate";
+import axios from 'axios';
+import { urlInterfaceGroup } from "../config/url.config";
 import './DisplayTable.css';
 
 class DisplayTable extends PureComponent {
@@ -25,10 +27,10 @@ class DisplayTable extends PureComponent {
         this.lastY = null;
         this.containerHeight = 0;
     }
-    mouseEnterHandler(e) {
+    mouseEnterHandler() {
         this.mouseEnterLock = true;
     }
-    mouseLeaveHandler(e) {
+    mouseLeaveHandler() {
         this.mouseEnterLock = false;
     }
     mouseMoveHandler(e) {
@@ -47,10 +49,10 @@ class DisplayTable extends PureComponent {
         }
         this.lastY = e.screenY;
     }
-    mouseUpHandler(e) {
+    mouseUpHandler() {
         this.mouseMoveLock = false;
     }
-    mouseDownHandler(e) {
+    mouseDownHandler() {
         this.mouseMoveLock = true;
     }
     setHeight(height) {
@@ -59,23 +61,9 @@ class DisplayTable extends PureComponent {
         })
     }
     async commentsHandler() {
-        const comments = [
-            {
-                content: '前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有啊啊啊啊前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有学妹啦呵呵哈哈哈前端有啊啊啊啊',
-                time: generateDate(new Date()),
-            },
-            {
-                content: '蔡佬牛逼',
-                time: generateDate(new Date()),
-            },
-            {
-                content: '我是你爸爸',
-                time: generateDate(new Date()),
-            }
-        ];//临时数据
-        const commentsList = [...comments, ...comments, ...comments];
-        await this.setComments(commentsList);
-        await this.setHeight(342/commentsList.length);
+        let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
+        await this.setComments(list);
+        await this.setHeight(342/list.length);
     }
     setComments(comments) {
         this.setState({
@@ -83,7 +71,7 @@ class DisplayTable extends PureComponent {
         })
     }
     componentDidMount() {
-        this.commentsHandler().then(r => {
+        this.commentsHandler().then( () => {
             this.containerHeight = (this.state.comments.length - 2) * 119 - 15;
         });
     }

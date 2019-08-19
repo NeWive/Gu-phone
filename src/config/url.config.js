@@ -59,6 +59,17 @@ const urlHandler = () => {
 
 urlHandler();
 
+const getMembersByYear = (year) => (
+    `${urlInterfaceGroup.memberIntroduction.interface}?year=${year}`
+);
+
+const getStatusByEmail = (email) => (
+    `${urlInterfaceGroup.process.interface}?email=${email}`
+);
+
 export {
-    urlInterfaceGroup
+    urlInterfaceGroup,
+    getMembersByYear,
+    getStatusByEmail,
+    url,
 }

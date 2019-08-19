@@ -9,7 +9,36 @@ const lostPageButtonList = [
     }
 ];
 
+const departmentSelectionList = [
+    {
+        name: '程序开发',
+        value: '1',
+    },
+    {
+        name: '前端开发',
+        value: '2',
+    },
+    {
+        name: 'UI设计',
+        value: '3',
+    },
+    {
+        name: 'APP开发',
+        value: '4',
+    },
+    {
+        name: '游戏',
+        value: '5',
+    }
+];
+
 const inputList = [
+    {
+        type: 'input',
+        label: '学生姓名',
+        placeholder: '非常重要',
+        name: 'yourName',
+    },
     {
         type: 'input',
         label: '手机号码',
@@ -30,7 +59,7 @@ const inputList = [
     },
     {
         type: 'textarea',
-        label: '备注留言',
+        label: '选择部门',
         placeholder: '不超过80字',
         name: 'ps',
     },
@@ -200,7 +229,7 @@ const departmentList = new Map(
         ['前端开发', 'FrontEnd Develop',],
         ['程序开发', 'BackEnd Develop',],
         ['APP开发', 'Android Develop',],
-        ['游戏开发', 'Game Develop',],]
+        ['游戏', 'Game Develop',],]
 );
 const membersList = [
     {
@@ -243,4 +272,5 @@ export {
     membersList,
     historyYearList,
     groupInfoList,
+    departmentSelectionList,
 }

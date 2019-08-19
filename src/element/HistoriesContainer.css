@@ -16,7 +16,7 @@
     #HistoriesContainer .window .container {
       width: 2600px;
       height: 100%;
-      /* 瑙﹀彂 hasLayout */
+      /* 触发 hasLayout */
       zoom: 1; }
       #HistoriesContainer .window .container:after {
         content: " ";

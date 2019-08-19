@@ -3,7 +3,6 @@ import {CloseButton} from "../../element/CloseButton";
 import {connect} from 'react-redux';
 import Loading from "../../element/Loading";
 import {Motion, spring} from 'react-motion';
-import {membersList} from "../../config/list.config";
 import {colorMembers} from "../../config/style.config";
 import android from '../../static/icons8-android-64.png';
 import './MemberDetailed.css';
@@ -12,6 +11,7 @@ function map(state) {
     return {
         memberMotionIndex: state.memberMotionIndex,
         isMemberCoverMotive: state.isMemberCoverMotive,
+        memberCoverYear: state.memberCoverYear,
     }
 }
 
@@ -154,7 +154,7 @@ class MemberDetailed extends PureComponent {
                     <div className="title_large">
                         <span>
                             {
-                                `20${membersList[this.props.memberMotionIndex].year}届 The 20${membersList[this.props.memberMotionIndex].year} th`
+                                `${this.props.memberCoverYear}届 The ${this.props.memberCoverYear} th`
                             }
                         </span>
                     </div>
