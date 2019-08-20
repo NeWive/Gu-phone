@@ -46,12 +46,6 @@ class JoinUsForm extends PureComponent {
         this.setIsRequesting = this.setIsRequesting.bind(this);
         this.requestForValidateImg = this.requestForValidateImg.bind(this);
         this.imgClickHandler = this.imgClickHandler.bind(this);
-        this.setIsValidateCodeRequesting = this.requestForValidateImg.bind(this);
-    }
-    setIsValidateCodeRequesting(v) {
-        this.setState({
-            isValidateCodeRequesting: v,
-        })
     }
     imgClickHandler(e) {
         e.preventDefault();
@@ -63,9 +57,11 @@ class JoinUsForm extends PureComponent {
         }
     }
     async requestForValidateImg() {
-        let toRemoveDom = document.getElementById('validateCodeImg');
-        let parent = document.getElementById('validate_code_box');
+        let toRemoveDom = document.getElementById('validateImgForJoinUs');
+        let parent = document.getElementById('validate_code_join_us_box');
         parent.removeChild(toRemoveDom);
+        console.log(toRemoveDom);
+        console.log(parent);
         let {data} = await axios({
             method: 'GET',
             url: urlInterfaceGroup.validateCode.interface,
@@ -76,7 +72,7 @@ class JoinUsForm extends PureComponent {
             window.URL.revokeObjectURL(imgDom.src);
         };
         imgDom.src = window.URL.createObjectURL(data);
-        imgDom.id = 'validateCodeImg';
+        imgDom.id = 'validateImgForJoinUs';
         parent.appendChild(imgDom);
     }
     setIsRequesting(v) {
@@ -124,9 +120,9 @@ class JoinUsForm extends PureComponent {
                             <label htmlFor="" style={item.name === 'ps' ? { verticalAlign: 'top'} : {}}>
                                 {
                                     item.name !== 'validateCode' ? item.label :
-                                        <div id={'validate_code_box'} onClick={this.imgClickHandler}>
+                                        <div id={'validate_code_join_us_box'} onClick={this.imgClickHandler}>
                                             <img src={this.validImgInterface}
-                                                 alt="" id={'validateCodeImg'}
+                                                 alt="" id={'validateImgForJoinUs'}
                                                  width={'75px'}
                                                  height={'32px'}/></div>
                                 }

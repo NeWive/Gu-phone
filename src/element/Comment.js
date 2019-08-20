@@ -145,7 +145,7 @@ class Comment extends PureComponent {
                                     backgroundColor: '#58C4FF',
                                     cursor: this.state.isRequesting ? 'not-allowed' : 'pointer'
                                 }}
-                                clickHandler={this.submitHandler}>
+                                clickHandler={this.state.isRequesting ? () => {} : this.submitHandler}>
                         {
                             this.state.isRequesting ? <LoadingForButton/> : '发送'
                         }

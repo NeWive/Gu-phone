@@ -47,7 +47,7 @@ const inputList = [
     },
     {
         type: 'input',
-        label: '专业年级',
+        label: '年级专业',
         placeholder: '例如，2019级电子信息工程',
         name: 'major',
     },
