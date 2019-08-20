@@ -59,8 +59,6 @@ class JoinUsForm extends PureComponent {
         let toRemoveDom = document.getElementById('validateImgForJoinUs');
         let parent = document.getElementById('validate_code_join_us_box');
         parent.removeChild(toRemoveDom);
-        console.log(toRemoveDom);
-        console.log(parent);
         let {data} = await axios({
             method: 'GET',
             url: urlInterfaceGroup.validateCode.interface,
@@ -93,11 +91,9 @@ class JoinUsForm extends PureComponent {
             formObj[this.mapToPostParam[item]] = this.props[item];
         }
         this.setIsRequesting(true);
-        console.log(JSON.stringify(formObj));
         try {
             axios.defaults.withCredentials = true;
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.require.interface, JSON.stringify(formObj));
-            // console.log(status);
             if(status === 'ok') {
                 this.props.jumpHandler(1);
             }else {

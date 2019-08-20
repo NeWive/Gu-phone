@@ -104,9 +104,7 @@ class WorksDetailed extends PureComponent {
             // eslint-disable-next-line no-restricted-globals
             // console.log(event.target);
             if(index === 0 || index === 8) {
-                console.log(document.getElementById('images').style.left);
                 document.getElementById('images').style.left = index === 0 ? `${workDetailedStyles.leftList[3]}px` : `${workDetailedStyles.leftList[5]}px`;
-                console.log(document.getElementById('images').style.left);
                 ctx.setIndex(index === 0 ? 3 : 5);
             }else if(index === this.state.index) {
                 window.location.href = url.url;

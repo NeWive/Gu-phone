@@ -20,7 +20,6 @@ class Index extends PureComponent{
     }
     scrollHandler(e) {
         if(e.nativeEvent.deltaY < 0 && !this.props.motive) {
-            console.log('up');
             this.props.dispatch({
                 type: 'SET_MOTIVE'
             });

@@ -57,7 +57,6 @@ class MemberDetailed extends PureComponent {
         }
     }
     memberHandler(members) {
-        console.log(members);
         let pages = [];
         let total = members.length;
         let j = 0;

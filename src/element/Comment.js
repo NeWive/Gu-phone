@@ -89,7 +89,6 @@ class Comment extends PureComponent {
             formObj[this.mapToPostParam[item]] = this.props[item];
         }
         this.setIsRequesting(true);
-        console.log(JSON.stringify(formObj));
         try {
             axios.defaults.withCredentials=true;
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.comment.interface, JSON.stringify(formObj));

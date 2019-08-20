@@ -31,10 +31,6 @@ class JoinUs extends PureComponent {
         this.exchangeOpacity = this.exchangeOpacity.bind(this);
         this.setSuccessful = this.setSuccessful.bind(this);
         this.clearAllHandler = this.clearAllHandler.bind(this);
-        this.clearJoinUsType = {
-            'CLEAR_JOIN_US_FORM': ['SET_MAJOR', 'SET_EMAIL', 'SET_PS', 'SET_YOUR_NAME', 'SET_VALIDATE_CODE', 'SET_PHONE_NUMBER'],
-            'CLEAR_JOIN_US_STATUS': ['SET_EMAIL_FOR_STATUS'],
-        };
     }
     clearAllHandler() {
         this.props.dispatch({
@@ -163,7 +159,6 @@ class JoinUs extends PureComponent {
                                                     }
                                                     case 1:
                                                     {
-                                                        console.log(2);
                                                         return <Status/>;
                                                     }
                                                     default:

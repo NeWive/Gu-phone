@@ -63,7 +63,6 @@ class HistoryChild extends PureComponent {
             historyList[item.year].push(item);
         }
         historyList = HistoryChild.pageHandler(historyList);
-        console.log(historyList);
         await this.props.dispatch({
             type: 'SET_HISTORY_BY_YEAR',
             value: historyList,

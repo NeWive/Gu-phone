@@ -33,7 +33,6 @@ class MembersChild extends PureComponent {
     }
     async requestForMembersByYear() {
         let { 'data': { 'member': list } } = await axios.get(urlInterfaceGroup.memberList.interface);
-        console.log(list);
         if(list) {
             list = list.slice(0, 5);
             this.setMemberList(list);
@@ -47,7 +46,6 @@ class MembersChild extends PureComponent {
     clickHandler(index, year) {
         let ctx = this;
         return () => {
-            console.log(year);
             this.state.memberList.map((item) => {
                 if(item.year === year) {
                     this.departListByYear = item.departments_id;

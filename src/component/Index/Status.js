@@ -60,7 +60,6 @@ class Status extends PureComponent {
                     alert('查无信息');
                 } else if (status === 'ok') {
                     // alert('查询成功');
-                    console.log(statusList);
                     this.setStatusList(statusList)
                 }
             }catch (e) {
