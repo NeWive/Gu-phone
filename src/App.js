@@ -1,5 +1,6 @@
 import React from 'react';
 import { Lost } from './component/Lost';
+import { Success } from "./component/Success";
 import Index from "./component/Index";
 import { Switch, Route } from 'react-router-dom';
 import { routeConfig } from './config/route.config';
@@ -10,6 +11,7 @@ class App extends React.Component {
         this.componentsMap = {
             'app': Index,
             '404': Lost,
+            'success': Success,
         }
     }
     render() {
