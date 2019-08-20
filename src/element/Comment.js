@@ -41,7 +41,7 @@ class Comment extends PureComponent {
     }
     clearHandler() {
         this.props.dispatch({
-            type: 'SET_COMMENT',
+            type: 'SET_SINGLE_COMMENT',
             value: '',
         });
         this.props.dispatch({
@@ -106,7 +106,7 @@ class Comment extends PureComponent {
             if(status !== 'ok') {
                 alert('验证码错误');
             }else {
-                // alert('发送成功');
+                alert('发送成功');
                 let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
                 this.setComment(list);
                 document.getElementById('commentValidate').value = '';
