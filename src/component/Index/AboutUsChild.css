@@ -34,8 +34,13 @@
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
         border-radius: 100%;
-        background: #46B2ED url("../../static/icon.png") no-repeat center;
         margin-right: 32px; }
+      #AboutUsChild .ElementPanel .up .left0 {
+        background: #46B2ED url("../../static/icon_1.png") no-repeat center; }
+      #AboutUsChild .ElementPanel .up .left1 {
+        background: #46B2ED url("../../static/icon_2.png") no-repeat center; }
+      #AboutUsChild .ElementPanel .up .left2 {
+        background: #46B2ED url("../../static/icon_3.png") no-repeat center; }
       #AboutUsChild .ElementPanel .up .right .title span {
         color: #32ADEC;
         font-size: 24px;

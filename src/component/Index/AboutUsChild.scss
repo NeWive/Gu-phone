@@ -21,9 +21,18 @@
         width: 76px;
         height: 76px;
         @include radius(100%);
-        background: #46B2ED url("../../static/icon.png") no-repeat center;
         margin-right: 32px;
       }
+      .left0 {
+        background: #46B2ED url("../../static/icon_1.png") no-repeat center;
+      }
+      .left1 {
+        background: #46B2ED url("../../static/icon_2.png") no-repeat center;
+      }
+      .left2 {
+        background: #46B2ED url("../../static/icon_3.png") no-repeat center;
+      }
+
       .right {
         .title {
           span {

@@ -9,10 +9,10 @@ class AboutUsChild extends PureComponent {
         return (
             <div id="AboutUsChild">
                 {
-                    featuresList.map((item) => (
+                    featuresList.map((item, index) => (
                         <ElementPanel style={aboutUsDetail} key={item.key} name={item.key}>
                             <div className="up" key={item.key}>
-                                <div className="left"/>
+                                <div className={`left left${index}`}/>
                                 <div className="right">
                                     <div className="title">
                                         <span>

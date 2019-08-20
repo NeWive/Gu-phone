@@ -29,6 +29,7 @@ class Comment extends PureComponent {
         this.setComment = this.setComment.bind(this);
         this.imgClickHandler = this.imgClickHandler.bind(this);
         this.setIsRequesting = this.setIsRequesting.bind(this);
+        this.clearHandler = this.clearHandler.bind(this);
         this.inputListName = [ 'commentSingle', 'commentValidate' ];
         this.mapToPostParam = {
             'commentSingle': 'content',
@@ -37,6 +38,16 @@ class Comment extends PureComponent {
         this.state = {
             isRequesting: false,
         };
+    }
+    clearHandler() {
+        this.props.dispatch({
+            type: 'SET_COMMENT',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_COMMENT_VALIDATE',
+            value: '',
+        });
     }
     setIsRequesting(v) {
         this.setState({
@@ -73,7 +84,7 @@ class Comment extends PureComponent {
         this.props.dispatch({
             type: 'SET_COMMENT',
             value: list,
-        })
+        });
     }
     async submitHandler() {
         let formObj = {};
@@ -92,7 +103,6 @@ class Comment extends PureComponent {
         try {
             axios.defaults.withCredentials=true;
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.comment.interface, JSON.stringify(formObj));
-            console.log(status);
             if(status !== 'ok') {
                 alert('验证码错误');
             }else {
@@ -101,15 +111,8 @@ class Comment extends PureComponent {
                 this.setComment(list);
                 document.getElementById('commentValidate').value = '';
                 document.getElementById('commentSingle').value = '';
-                this.requestForValidateImg();
-                this.props.dispatch({
-                    type: 'SET_COMMENT',
-                    value: '',
-                });
-                this.props.dispatch({
-                    type: 'SET_COMMENT_VALIDATE',
-                    value: '',
-                });
+                await this.requestForValidateImg();
+                await this.clearHandler();
             }
         }catch (e) {
             console.log(e);

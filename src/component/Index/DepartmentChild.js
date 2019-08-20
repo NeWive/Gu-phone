@@ -3,10 +3,10 @@ import axios from 'axios';
 import ElementPanel from "../../element/ElementPanel";
 import { colorDepartment } from "../../config/style.config";
 import android from '../../static/icons8-android-64.png';
-import js from '../../static/icons8-js-64.png';
+import js from '../../static/icons8-source-code-64.png';
 import navigation from '../../static/icons8-navigation-toolbar-bottom-64.png';
 import python from '../../static/icons8-python-64.png';
-import unity from '../../static/icons8-unity-50.png';
+import unity from '../../static/icons8-game-controller-64.png';
 import { urlInterfaceGroup } from "../../config/url.config";
 import { connect } from 'react-redux';
 import './DepartmentChild.css';
@@ -26,8 +26,8 @@ class DepartmentChild extends PureComponent {
             '3': navigation,
             '2': js,
             '1': python,
-            '5': android,
-            '4': unity,
+            '5': unity,
+            '4': android,
         };
         this.state = {
             departmentList: [],

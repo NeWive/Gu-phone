@@ -34,7 +34,7 @@ class MembersChild extends PureComponent {
     async requestForMembersByYear() {
         let { 'data': { 'member': list } } = await axios.get(urlInterfaceGroup.memberList.interface);
         if(list) {
-            list = list.slice(0, 5);
+            list = list.slice(2);
             this.setMemberList(list);
         }else {
             this.setMemberList([]);

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { CloseButton } from "../../element/CloseButton";
 import { connect } from 'react-redux';
 import { departmentList } from "../../config/list.config";
-import Loading from "../../element/Loading";
+// import Loading from "../../element/Loading";
 import './DepartmentDetailed.css';
 import {Motion, spring} from "react-motion/lib/react-motion";
 
@@ -83,25 +83,21 @@ class DepartmentDetailed extends PureComponent {
                 </div>
                 <div className="content">
                     {
-                        this.props.isDepartmentReady && this.state.isMotive && !this.state.toClose ? (
-                            <Motion
-                                style={{opacity: spring(this.state.end)}}
-                                defaultStyle={{opacity: this.state.start}}>
-                                {
-                                    ({ opacity }) => (
-                                        <p style={{
-                                            opacity: opacity
-                                        }}>
-                                            {
-                                                `${this.props.departmentDescription[Number(this.props.departmentId) - 1].info}`
-                                            }
-                                        </p>
-                                    )
-                                }
-                            </Motion>
-                        ) : (
-                            <Loading/>
-                        )
+                        <Motion
+                            style={{opacity: spring(this.state.end)}}
+                            defaultStyle={{opacity: this.state.start}}>
+                            {
+                                ({ opacity }) => (
+                                    <p style={{
+                                        opacity: opacity
+                                    }}>
+                                        {
+                                            `${this.props.departmentDescription[Number(this.props.departmentId) - 1].info}`
+                                        }
+                                    </p>
+                                )
+                            }
+                        </Motion>
                     }
                 </div>
             </div>
