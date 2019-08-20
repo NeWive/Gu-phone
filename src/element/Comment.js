@@ -100,6 +100,17 @@ class Comment extends PureComponent {
                 alert('发送成功');
                 let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
                 this.setComment(list);
+                document.getElementById('commentValidate').value = '';
+                document.getElementById('commentSingle').value = '';
+                this.requestForValidateImg();
+                this.props.dispatch({
+                    type: 'SET_COMMENT',
+                    value: '',
+                });
+                this.props.dispatch({
+                    type: 'SET_COMMENT_VALIDATE',
+                    value: '',
+                });
             }
         }catch (e) {
             console.log(e);

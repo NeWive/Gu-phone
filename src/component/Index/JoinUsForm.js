@@ -9,7 +9,6 @@ import { validate } from '../../function/Validate';
 import { setFormHandler } from "../../function/OnChangeHandler";
 import { urlInterfaceGroup } from "../../config/url.config";
 import LoadingForButton from "../../element/LoadingForButton";
-// import { urlInterfaceGroup } from '../../config/url.config';
 
 function mapStataToProps(state) {
     return {

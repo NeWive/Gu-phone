@@ -98,9 +98,6 @@ class DisplayTable extends PureComponent {
                             marginTop: this.state.marginTop,
                         }}>
                         {
-                            console.log(this.props.comments)
-                        }
-                        {
                             this.props.comments ? this.props.comments.map((item, index) => (
                                 <div className="comment_sel"
                                     key={index}>

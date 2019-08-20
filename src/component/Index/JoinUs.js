@@ -36,26 +36,35 @@ class JoinUs extends PureComponent {
             'CLEAR_JOIN_US_STATUS': ['SET_EMAIL_FOR_STATUS'],
         };
     }
-    clearAllHandler(type) {
-        if(type === 'ALL') {
-            for(let item in this.clearJoinUsType) {
-                if(this.clearJoinUsType.hasOwnProperty(item)) {
-                    for (let t of this.clearJoinUsType[item]) {
-                        this.props.dispatch({
-                            type: t,
-                            value: '',
-                        });
-                    }
-                }
-            }
-        }else {
-            for(let t of this.clearJoinUsType[type]) {
-                this.props.dispatch({
-                    type: t,
-                    value: '',
-                });
-            }
-        }
+    clearAllHandler() {
+        this.props.dispatch({
+            type: 'SET_PHONE_NUMBER',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_MAJOR',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_EMAIL',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_PS',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_YOUR_NAME',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_VALIDATE_CODE',
+            value: '',
+        });
+        this.props.dispatch({
+            type: 'SET_EMAIL_FOR_STATUS',
+            value: '',
+        });
     }
     setSuccessful(value) {
         this.setState({
@@ -74,9 +83,9 @@ class JoinUs extends PureComponent {
             return () => {
                 switch (index) {
                     case 0:
-                        context.clearAllHandler('CLEAR_JOIN_US_STATUS');break;
+                        context.clearAllHandler();break;
                     case 1:
-                        context.clearAllHandler('CLEAR_JOIN_US_FORM');break;
+                        context.clearAllHandler();break;
                     default:
                         break;
                 }
@@ -86,9 +95,10 @@ class JoinUs extends PureComponent {
             }
         }
     }
-    clickLayerHandler(e) {
+    async clickLayerHandler(e) {
         e.stopPropagation();
         if(e.target.className === 'popBox') {
+            await this.clearAllHandler();
             this.closePortalHandler();
         }
     }
