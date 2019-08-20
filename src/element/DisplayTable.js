@@ -1,15 +1,20 @@
 import React, { PureComponent } from 'react';
-// import generateDate from "../function/GenerateFormatDate";
 import axios from 'axios';
 import { urlInterfaceGroup } from "../config/url.config";
+import { connect } from 'react-redux';
 import './DisplayTable.css';
+
+function map(state) {
+    return {
+        comments: state.comments,
+    }
+}
 
 class DisplayTable extends PureComponent {
     constructor(props){
         super(props);
         this.state = {
             bottom: 0,
-            comments: [],
             height: 342,
             top: 0,
             marginTop: 0,
@@ -74,13 +79,14 @@ class DisplayTable extends PureComponent {
         await this.setHeight(342/list.length);
     }
     setComments(comments) {
-        this.setState({
-            comments: comments,
-        })
+        this.props.dispatch({
+            type: 'SET_COMMENT',
+            value: comments,
+        });
     }
     componentDidMount() {
         this.commentsHandler().then( () => {
-            this.containerHeight = (this.state.comments.length - 2) * 119 - 15;
+            this.containerHeight = (this.props.comments.length - 2) * 119 - 15;
         });
     }
     render() {
@@ -92,7 +98,10 @@ class DisplayTable extends PureComponent {
                             marginTop: this.state.marginTop,
                         }}>
                         {
-                            this.state.comments.map((item, index) => (
+                            console.log(this.props.comments)
+                        }
+                        {
+                            this.props.comments ? this.props.comments.map((item, index) => (
                                 <div className="comment_sel"
                                     key={index}>
                                     <div className="content_box">
@@ -110,7 +119,7 @@ class DisplayTable extends PureComponent {
                                         </span>
                                     </div>
                                 </div>
-                            ))
+                            )) : ''
                         }
                     </div>
                 </div>
@@ -132,4 +141,4 @@ class DisplayTable extends PureComponent {
     }
 }
 
-export default DisplayTable;
+export default connect(map)(DisplayTable);

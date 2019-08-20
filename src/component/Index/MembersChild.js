@@ -52,6 +52,7 @@ class MembersChild extends PureComponent {
                 if(item.year === year) {
                     this.departListByYear = item.departments_id;
                 }
+                return '';
             });
             ctx.props.dispatch({
                 type: 'SET_MEMBER_MOTION_INDEX',

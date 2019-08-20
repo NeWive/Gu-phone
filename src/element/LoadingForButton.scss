@@ -1,0 +1,20 @@
+.loaderForButton {
+  .loading{
+    margin: 0px auto;
+    border-radius: 50%;
+    border: 4px solid  #f1f1f1;
+    border-top: 4px solid #58c4ff;
+    width: 20px;
+    height: 20px;
+    animation: 1.64s loading infinite linear;
+    transform: translate(-50%, -50%)
+  }
+  @keyframes loading {
+    0%{
+      transform: rotate(0)
+    }
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+}

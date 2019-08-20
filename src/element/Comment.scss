@@ -10,11 +10,19 @@
   }
   .validate_box {
     margin-top: 13px;
-    a, input {
+    #validate_code_box, input {
       vertical-align: middle;
     }
-    a {
+    #validate_code_box {
       margin-right: 15px;
+      display: inline-block;
+      cursor: pointer;
+      width: 75px;
+      height: 32px;
+      img {
+        width: 75px;
+        height: 32px;
+      }
     }
     button {
       float: right;

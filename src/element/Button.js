@@ -8,7 +8,12 @@ class Button extends PureComponent {
                     type={`button`}
                     style={this.props.style || {}}
                     >
-                { this.props.value }
+                {
+                    this.props.value
+                }
+                {
+                    this.props.children
+                }
             </button>
         )
     }

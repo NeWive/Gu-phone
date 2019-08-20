@@ -13,7 +13,11 @@
     justify-content: center;
     margin-bottom: 113px; }
     #Status .input_email_box .join_us_input {
-      margin-right: 16px; }
+      margin-right: 16px;
+      vertical-align: middle; }
+    #Status .input_email_box button {
+      position: relative;
+      vertical-align: middle; }
   #Status .status_detailed {
     float: left;
     margin-right: 88px; }

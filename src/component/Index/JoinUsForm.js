@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { validate } from '../../function/Validate';
 import { setFormHandler } from "../../function/OnChangeHandler";
+import { urlInterfaceGroup } from "../../config/url.config";
+import LoadingForButton from "../../element/LoadingForButton";
 // import { urlInterfaceGroup } from '../../config/url.config';
 
 function mapStataToProps(state) {
@@ -24,20 +26,63 @@ class JoinUsForm extends PureComponent {
     constructor(props){
         super(props);
         this.setFormHandler = setFormHandler.bind(this);
-        this.validImgInterface = 'http://39.96.208.176/captcha/';
+        this.validImgInterface = urlInterfaceGroup.validateCode.interface;
         this.inputListName = [ 'yourName','phoneNumber', 'major', 'email', 'ps', 'validateCode',];
         this.submitHandler = this.submitHandler.bind(this);
         this.mapToPostParam = {
             'phoneNumber': 'phone',
             'email': 'email',
             'yourName': 'name',
-            'major': 'major',
+            'major': 'message',
             'ps': 'department_id',
             'validateCode': 'code',
         };
         this.state = {
             isRequesting: false,
+            isValidateCodeRequesting: false,
+        };
+        this.lastTime = null;
+        this.gapTime = 1000;
+        this.setIsRequesting = this.setIsRequesting.bind(this);
+        this.requestForValidateImg = this.requestForValidateImg.bind(this);
+        this.imgClickHandler = this.imgClickHandler.bind(this);
+        this.setIsValidateCodeRequesting = this.requestForValidateImg.bind(this);
+    }
+    setIsValidateCodeRequesting(v) {
+        this.setState({
+            isValidateCodeRequesting: v,
+        })
+    }
+    imgClickHandler(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let nowTime = +new Date();
+        if(nowTime - this.lastTime > this.gapTime || !this.lastTime) {
+            this.requestForValidateImg();
+            this.lastTime = nowTime;
         }
+    }
+    async requestForValidateImg() {
+        let toRemoveDom = document.getElementById('validateCodeImg');
+        let parent = document.getElementById('validate_code_box');
+        parent.removeChild(toRemoveDom);
+        let {data} = await axios({
+            method: 'GET',
+            url: urlInterfaceGroup.validateCode.interface,
+            responseType: 'blob'
+        });
+        let imgDom = document.createElement('img');
+        imgDom.onload = () => {
+            window.URL.revokeObjectURL(imgDom.src);
+        };
+        imgDom.src = window.URL.createObjectURL(data);
+        imgDom.id = 'validateCodeImg';
+        parent.appendChild(imgDom);
+    }
+    setIsRequesting(v) {
+        this.setState({
+            isRequesting: v,
+        })
     }
     async submitHandler() {
         let formObj = {};
@@ -52,12 +97,22 @@ class JoinUsForm extends PureComponent {
             }
             formObj[this.mapToPostParam[item]] = this.props[item];
         }
-        // console.log(JSON.stringify(formObj));
+        this.setIsRequesting(true);
+        console.log(JSON.stringify(formObj));
         try {
-            let response = await axios.post('http://39.96.208.176/join/api/apply/', JSON.stringify(formObj));
-            console.log(response);
+            axios.defaults.withCredentials = true;
+            let { 'data': { status } } = await axios.post(urlInterfaceGroup.require.interface, JSON.stringify(formObj));
+            // console.log(status);
+            if(status === 'ok') {
+                this.props.jumpHandler(1);
+            }else {
+                alert('Ops~网络开小差惹');
+            }
         }catch (e) {
             console.log(e);
+            alert('Ops~网络开小差惹');
+        }finally{
+            this.setIsRequesting(false);
         }
     }
     render() {
@@ -68,10 +123,12 @@ class JoinUsForm extends PureComponent {
                         <div className={'input_sel'} key={item.name}>
                             <label htmlFor="" style={item.name === 'ps' ? { verticalAlign: 'top'} : {}}>
                                 {
-                                    item.name !== 'validateCode' ?  item.label : <div><img src={ this.validImgInterface }
-                                                                                      alt=""
-                                                                                      width={'75px'}
-                                                                                      height={'32px'}/></div>
+                                    item.name !== 'validateCode' ? item.label :
+                                        <div id={'validate_code_box'} onClick={this.imgClickHandler}>
+                                            <img src={this.validImgInterface}
+                                                 alt="" id={'validateCodeImg'}
+                                                 width={'75px'}
+                                                 height={'32px'}/></div>
                                 }
                             </label>
                             { item.name === 'ps' ? (
@@ -96,7 +153,16 @@ class JoinUsForm extends PureComponent {
                                 />
                             )}
                             {
-                                item.name === 'validateCode' ? (<Button value={'确认'} clickHandler={this.submitHandler}/>) : ''
+                                item.name === 'validateCode' ? (
+                                    <Button clickHandler={this.submitHandler}
+                                            style={{
+                                                cursor: this.state.isRequesting ? 'not-allowed' : 'pointer'
+                                            }}>
+                                        {
+                                            this.state.isRequesting ? <LoadingForButton/> : '确认'
+                                        }
+                                    </Button>
+                                    ) : ''
                             }
                         </div>
                     ))

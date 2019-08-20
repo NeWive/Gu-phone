@@ -29,6 +29,38 @@ class JoinUs extends PureComponent {
         this.clickLayerHandler = this.clickLayerHandler.bind(this);
         this.setMode = this.setMode.bind(this);
         this.exchangeOpacity = this.exchangeOpacity.bind(this);
+        this.setSuccessful = this.setSuccessful.bind(this);
+        this.clearAllHandler = this.clearAllHandler.bind(this);
+        this.clearJoinUsType = {
+            'CLEAR_JOIN_US_FORM': ['SET_MAJOR', 'SET_EMAIL', 'SET_PS', 'SET_YOUR_NAME', 'SET_VALIDATE_CODE', 'SET_PHONE_NUMBER'],
+            'CLEAR_JOIN_US_STATUS': ['SET_EMAIL_FOR_STATUS'],
+        };
+    }
+    clearAllHandler(type) {
+        if(type === 'ALL') {
+            for(let item in this.clearJoinUsType) {
+                if(this.clearJoinUsType.hasOwnProperty(item)) {
+                    for (let t of this.clearJoinUsType[item]) {
+                        this.props.dispatch({
+                            type: t,
+                            value: '',
+                        });
+                    }
+                }
+            }
+        }else {
+            for(let t of this.clearJoinUsType[type]) {
+                this.props.dispatch({
+                    type: t,
+                    value: '',
+                });
+            }
+        }
+    }
+    setSuccessful(value) {
+        this.setState({
+            successful: value,
+        })
     }
     exchangeOpacity() {
         this.setState((pre) => ({
@@ -40,6 +72,14 @@ class JoinUs extends PureComponent {
         const context = this;
         if(this.state.selectedIndex !== index) {
             return () => {
+                switch (index) {
+                    case 0:
+                        context.clearAllHandler('CLEAR_JOIN_US_STATUS');break;
+                    case 1:
+                        context.clearAllHandler('CLEAR_JOIN_US_FORM');break;
+                    default:
+                        break;
+                }
                 context.setState({
                     selected: index,
                 })
@@ -109,7 +149,7 @@ class JoinUs extends PureComponent {
                                                 switch(this.state.selected) {
                                                     case 0:
                                                     {
-                                                        return this.state.successful ? <Successful/> : <JoinUsForm/>;
+                                                        return this.state.successful ? <Successful/> : <JoinUsForm jumpHandler={this.setSuccessful}/>;
                                                     }
                                                     case 1:
                                                     {

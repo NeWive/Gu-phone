@@ -1,4 +1,4 @@
-const url = `http://39.96.208.176`;
+const url = `http://www.itstudio.club`;
 
 let urlInterfaceGroup = {
     validateCode: {

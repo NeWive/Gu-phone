@@ -32,6 +32,7 @@ const initState = {
     historyByYear: '',
     historyYearList: [],
     yearSelected: 2014,
+    comments: [],
 };
 
 const notType = {
@@ -74,6 +75,7 @@ const actionType = {
     'SET_HISTORY_BY_YEAR': 'historyByYear',
     'SET_HISTORY_YEAR_LIST': 'historyYearList',
     'SET_SELECTED_YEAR': 'yearSelected',
+    'SET_COMMENT': 'comments',
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];
@@ -110,7 +112,6 @@ const reducersHandler = (state, action) => {
 };
 
 const reducer = (state = initState, action) => {
-    // console.log(`action: ${action.type}, value: ${action.value}`);
     return reducersHandler(state, action);
 };
 

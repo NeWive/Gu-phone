@@ -11,6 +11,7 @@ import { setCommentHandler } from "../../function/OnChangeHandler";
 import { connect } from 'react-redux';
 import { validate } from "../../function/Validate";
 import { getStatusByEmail } from '../../config/url.config';
+import LoadingForButton from "../../element/LoadingForButton";
 import axios from 'axios';
 
 function map(state) {
@@ -19,28 +20,55 @@ function map(state) {
     }
 }
 
-const status_test = ['0', '1', '2', '0', '1'];
 
 class Status extends PureComponent {
     constructor(props){
         super(props);
         this.state = {
             statusList: ['2', '2', '2', '2', '2'],
+            isRequesting: false,
         };
         this.onChangeHandler = setCommentHandler.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
+        this.setIsRequesting = this.setIsRequesting.bind(this);
+        this.setStatusList = this.setStatusList.bind(this);
+    }
+    setStatusList(list) {
+        this.setState({
+            statusList: list,
+        })
+    }
+    setIsRequesting(value) {
+        this.setState({
+            isRequesting: value,
+        })
     }
     async submitHandler() {
-        let obj = {};
-        obj['value'] = this.props['emailForStatus'];
-        obj['id'] = 'emailForStatus';
-        let msg = validate(obj);
-        if(msg !== 'pass'){
-            alert(msg);
-            return ;
+        if(!this.state.isRequesting) {
+            let obj = {};
+            obj['value'] = this.props['emailForStatus'];
+            obj['id'] = 'emailForStatus';
+            let msg = validate(obj);
+            if (msg !== 'pass') {
+                alert(msg);
+                return;
+            }
+            await this.setIsRequesting(true);
+            try {
+                let {'data': {status, statusList}} = await axios.get(getStatusByEmail(this.props['emailForStatus']));
+                if (status === 'msg_error') {
+                    alert('查无信息');
+                } else if (status === 'ok') {
+                    // alert('查询成功');
+                    console.log(statusList);
+                    this.setStatusList(statusList)
+                }
+            }catch (e) {
+                console.log(e);
+            }finally {
+                await this.setIsRequesting(false);
+            }
         }
-        let response = await axios.get(getStatusByEmail(this.props['emailForStatus']));
-        console.log(response);
     }
     render() {
         return (
@@ -48,17 +76,24 @@ class Status extends PureComponent {
                 <div className="input_email_box">
                     <div className="container">
                         <Input css={{ width: '245px'}} placeHolder={'请输入邮箱地址'} changeHandler={this.onChangeHandler(this)} id={'email_for_status'}/>
-                        <Button value={'确认'} clickHandler={this.submitHandler}/>
+                        <Button clickHandler={this.submitHandler}
+                                style={{
+                                    cursor: this.state.isRequesting ? 'not-allowed' : 'pointer'
+                                }}>
+                            {
+                                this.state.isRequesting ? <LoadingForButton/> : '查询'
+                            }
+                        </Button>
                     </div>
                 </div>
                 {
-                    status_test.map((item, index) => (
+                    this.state.statusList.map((item, index) => (
                         <div key={index} className={'status_detailed'}>
                             <div className="img">
                                 <Circle style={{ width: '130px', height: '130px', borderColor: statusEnumList[item].borderColor}}>
                                     {
                                         (() => {
-                                            switch (item) {
+                                            switch (`${item}`) {
                                                 case '0':
                                                     return <Wrong/>;
                                                 case '1':

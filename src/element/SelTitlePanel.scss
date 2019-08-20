@@ -7,6 +7,7 @@
     .up {
       .left {
         @include selTitleLeft;
+        margin-right: 10px;
       }
       .right {
         @include selTitleRight;

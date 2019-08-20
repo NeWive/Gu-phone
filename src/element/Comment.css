@@ -8,10 +8,17 @@
     background: #FFFFFF; }
   #Comment .validate_box {
     margin-top: 13px; }
-    #Comment .validate_box a, #Comment .validate_box input {
+    #Comment .validate_box #validate_code_box, #Comment .validate_box input {
       vertical-align: middle; }
-    #Comment .validate_box a {
-      margin-right: 15px; }
+    #Comment .validate_box #validate_code_box {
+      margin-right: 15px;
+      display: inline-block;
+      cursor: pointer;
+      width: 75px;
+      height: 32px; }
+      #Comment .validate_box #validate_code_box img {
+        width: 75px;
+        height: 32px; }
     #Comment .validate_box button {
       float: right; }
 

@@ -12,6 +12,7 @@ class SelPanel extends PureComponent{
                                     this.props.description.left
                                 }
                             </span>
+
                             <span className="right">
                                 {
                                     this.props.description.right
