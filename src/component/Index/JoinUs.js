@@ -47,7 +47,7 @@ class JoinUs extends PureComponent {
         });
         this.props.dispatch({
             type: 'SET_PS',
-            value: '',
+            value: '1',
         });
         this.props.dispatch({
             type: 'SET_YOUR_NAME',
