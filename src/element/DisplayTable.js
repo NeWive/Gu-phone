@@ -7,6 +7,8 @@ import './DisplayTable.css';
 function map(state) {
     return {
         comments: state.comments,
+        containerHeight: state.containerHeight,
+        commentListWindowHeight: state.commentListWindowHeight,
     }
 }
 
@@ -35,27 +37,30 @@ class DisplayTable extends PureComponent {
         e.stopPropagation();
         let currentY = this.state.top;
         let y = e.nativeEvent.deltaY / 20;
-        if(currentY + y > 0 && currentY + y < 342 - this.state.height) {
+        if(currentY + y > 0 && currentY + y < 342 - this.props.commentListWindowHeight) {
             this.setState((pre) => (
                 {
                     top: pre.top + y,
-                    marginTop: -(pre.top + y) * this.containerHeight/342,
+                    marginTop: -(pre.top + y) * this.props.containerHeight/342,
                 }
             ));
         }
     }
-    mouseLeaveHandler() {
+    mouseLeaveHandler(e) {
+        e.stopPropagation();
+        console.log('out');
         this.mouseMoveLock = false;
     }
     mouseMoveHandler(e) {
         if(this.lastY && this.mouseMoveLock) {
+            console.log('moving');
             let currentY = this.state.top;
             let y = e.screenY - this.lastY;
-            if(currentY + y >= 0 && currentY + y <= 342 - this.state.height) {
+            if(currentY + y >= 0 && currentY + y <= 342 - this.props.commentListWindowHeight) {
                 this.setState((pre) => (
                     {
                         top: pre.top + y,
-                        marginTop: -(pre.top + y) * this.containerHeight/342,
+                        marginTop: -(pre.top + y) * this.props.containerHeight/342,
                     }
                 ));
             }
@@ -63,15 +68,18 @@ class DisplayTable extends PureComponent {
         this.lastY = e.screenY;
     }
     mouseUpHandler() {
+        console.log('up');
         this.mouseMoveLock = false;
     }
     mouseDownHandler() {
+        console.log('down');
         this.mouseMoveLock = true;
     }
     setHeight(height) {
-        this.setState({
-            height: height
-        })
+        this.props.dispatch({
+            type: 'COMMENT_LIST_WINDOW_HEIGHT',
+            value: height,
+        });
     }
     async commentsHandler() {
         let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
@@ -86,20 +94,23 @@ class DisplayTable extends PureComponent {
     }
     componentDidMount() {
         this.commentsHandler().then( () => {
-            this.containerHeight = (this.props.comments.length - 2) * 119 - 15;
+            this.props.dispatch({
+                type: 'SET_CONTAINER_HEIGHT',
+                value: (this.props.comments.length - 2) * 119 - 15,
+            })
         });
     }
     render() {
         return (
-            <div id="DisplayTable">
+            <div id="DisplayTable"
+                 onMouseMove={this.mouseMoveHandler}
+                 onMouseLeave={this.mouseLeaveHandler}
+                 onMouseUp={this.mouseUpHandler}>
                 <div className="window" onWheel={this.scrollHandler}>
                     <div className="container"
                         style={{
                             marginTop: this.state.marginTop,
                         }}>
-                        {
-                            console.log(this.props.comments)
-                        }
                         {
                             this.props.comments ? this.props.comments.map((item, index) => (
                                 <div className="comment_sel"
@@ -127,13 +138,11 @@ class DisplayTable extends PureComponent {
                     <div className="scroll_container">
                         <div className="scroll_panel"
                             style={{
-                                height: this.state.height,
+                                height: this.props.commentListWindowHeight,
                                 top: this.state.top,
                             }}
                             onMouseDown={this.mouseDownHandler}
-                            onMouseUp={this.mouseUpHandler}
-                            onMouseMove={this.mouseMoveHandler}
-                            onMouseOut={this.mouseLeaveHandler}/>
+                            onMouseUp={this.mouseUpHandler}/>
                     </div>
                 </div>
             </div>

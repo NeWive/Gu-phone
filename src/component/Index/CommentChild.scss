@@ -3,8 +3,11 @@
   @include clearFix;
   .display_table_box {
     float: left;
+    #DisplayTable {
+      padding-right: 56px;
+    }
   }
   .comment_table_box {
-    float: right;
+    float: left;
   }
 }

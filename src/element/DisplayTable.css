@@ -4,6 +4,7 @@
   #DisplayTable .window {
     display: inline-block;
     height: 100%;
+    width: 602px;
     overflow: hidden; }
     #DisplayTable .window .container .comment_sel {
       padding-top: 14px;

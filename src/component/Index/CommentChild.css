@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #CommentChild {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1; }
   #CommentChild:after {
     content: " ";
@@ -10,7 +10,9 @@
     visibility: hidden; }
   #CommentChild .display_table_box {
     float: left; }
+    #CommentChild .display_table_box #DisplayTable {
+      padding-right: 56px; }
   #CommentChild .comment_table_box {
-    float: right; }
+    float: left; }
 
 /*# sourceMappingURL=CommentChild.css.map */

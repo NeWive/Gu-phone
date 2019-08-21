@@ -14,6 +14,7 @@ function map(state) {
     return {
         commentSingle: state.commentSingle,
         commentValidate: state.commentValidate,
+        comments: state.comments,
     }
 }
 
@@ -30,6 +31,8 @@ class Comment extends PureComponent {
         this.imgClickHandler = this.imgClickHandler.bind(this);
         this.setIsRequesting = this.setIsRequesting.bind(this);
         this.clearHandler = this.clearHandler.bind(this);
+        this.setHeight = this.setHeight.bind(this);
+        this.setContainerHeight = this.setContainerHeight.bind(this);
         this.inputListName = [ 'commentSingle', 'commentValidate' ];
         this.mapToPostParam = {
             'commentSingle': 'content',
@@ -38,6 +41,12 @@ class Comment extends PureComponent {
         this.state = {
             isRequesting: false,
         };
+    }
+    setContainerHeight() {
+        this.props.dispatch({
+            type: 'SET_CONTAINER_HEIGHT',
+            value: (this.props.comments.length - 2) * 119 - 15,
+        })
     }
     clearHandler() {
         this.props.dispatch({
@@ -86,6 +95,12 @@ class Comment extends PureComponent {
             value: list,
         });
     }
+    setHeight(height) {
+        this.props.dispatch({
+            type: 'COMMENT_LIST_WINDOW_HEIGHT',
+            value: height,
+        });
+    }
     async submitHandler() {
         let formObj = {};
         for(let item of this.inputListName) {
@@ -108,7 +123,9 @@ class Comment extends PureComponent {
             }else {
                 alert('发送成功');
                 let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
-                this.setComment(list);
+                await this.setComment(list);
+                await this.setHeight(342/list.length);
+                await this.setContainerHeight();
                 document.getElementById('commentValidate').value = '';
                 document.getElementById('commentSingle').value = '';
                 await this.requestForValidateImg();

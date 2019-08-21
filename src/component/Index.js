@@ -17,18 +17,29 @@ class Index extends PureComponent{
     constructor(props){
         super(props);
         this.scrollHandler = this.scrollHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+    }
+    clickHandler(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        if(!this.props.motive) {
+            this.props.dispatch({
+                type: 'SET_MOTIVE',
+            });
+        }
     }
     scrollHandler(e) {
         if(e.nativeEvent.deltaY < 0 && !this.props.motive) {
             this.props.dispatch({
-                type: 'SET_MOTIVE'
+                type: 'SET_MOTIVE',
             });
         }
     }
     render() {
         return (
             <div id={'Index'}
-                 onWheel={this.scrollHandler}>
+                 onWheel={this.scrollHandler}
+                 onClick={this.clickHandler}>
                 {
                     !this.props.isPortalOn ? '' : (
                         <PortalContainer>
