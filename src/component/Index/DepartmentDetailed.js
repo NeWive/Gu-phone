@@ -48,6 +48,7 @@ class DepartmentDetailed extends PureComponent {
     }
     async closeHandler() {
         this.exchangeState();
+        await this.props.setIsFinish();
         this.props.dispatch({
             type: 'SET_IS_DEPARTMENT_READY',
         });
@@ -83,7 +84,6 @@ class DepartmentDetailed extends PureComponent {
                 </div>
                 <div className="content">
                     {
-                        this.props.isFinish ? (
                             <Motion
                                 style={{opacity: spring(this.state.end)}}
                                 defaultStyle={{opacity: this.state.start}}>
@@ -99,9 +99,6 @@ class DepartmentDetailed extends PureComponent {
                                     )
                                 }
                             </Motion>
-                        ) : (
-                            <Loading/>
-                        )
                     }
                 </div>
             </div>

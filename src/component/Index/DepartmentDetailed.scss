@@ -28,6 +28,8 @@
       }
   }
   .content {
+    position: absolute;
+    width: 900px;
     p {
       opacity: 0;
       @include detailedContent;
