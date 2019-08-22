@@ -134,9 +134,7 @@ class MemberDetailed extends PureComponent {
     componentDidMount() {
         setTimeout(async () => {
             await this.setIsListReady(true);
-            let selections = document.getElementsByClassName('departmentSelections');
-            console.log(selections);
-            selections[0].click();
+            document.getElementsByClassName('departmentSelections')[0].click();
         }, 1000);
     }
 
