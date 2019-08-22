@@ -100,6 +100,7 @@ class JoinUsForm extends PureComponent {
             }else if(status === 'code_error'){
                 alert('验证码错误');
                 this.requestForValidateImg();
+                document.getElementById('validateCode').value = '';
             }else if(status === 'phone_error'){
                 alert('Ops~手机号已经被注册过了');
             }else if(status === 'already') {
