@@ -103,7 +103,7 @@ class JoinUsForm extends PureComponent {
                 document.getElementById('validateCode').value = '';
             }else if(status === 'phone_error'){
                 alert('Ops~手机号已经被注册过了');
-            }else if(status === 'already') {
+            }else if(status === 'already_error') {
                 alert('Ops~邮箱已经被注册过了');
             } else {
                 alert('Ops~网络开小差惹');
