@@ -132,8 +132,11 @@ class MemberDetailed extends PureComponent {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setIsListReady(true);
+        setTimeout(async () => {
+            await this.setIsListReady(true);
+            let selections = document.getElementsByClassName('departmentSelections');
+            console.log(selections);
+            selections[0].click();
         }, 1000);
     }
 
@@ -184,7 +187,8 @@ class MemberDetailed extends PureComponent {
                                                             <a href="javascript: void(0)"
                                                                style={this.state.selectedIndex === index ? {color: colorMembers[this.props.memberMotionIndex].backgroundColor} : {}}
                                                                onClick={(e) => {this.changeDepartmentHandler(e, item)}}
-                                                               indexof={index}>
+                                                               indexof={index}
+                                                                className={'departmentSelections'}>
                                                                 {
                                                                     departIdMap[item]
                                                                 }
