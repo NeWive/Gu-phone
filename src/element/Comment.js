@@ -120,6 +120,7 @@ class Comment extends PureComponent {
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.comment.interface, JSON.stringify(formObj));
             if(status !== 'ok') {
                 alert('验证码错误');
+                this.requestForValidateImg();
             }else {
                 alert('发送成功');
                 let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);

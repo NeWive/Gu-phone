@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb2c67bf-2ff8-4e6c-b497-fed836624bb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/JoinUsForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/JoinUsForm.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="129" column="23" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="23" />
+            <state relative-caret-position="305">
+              <caret line="136" column="67" selection-start-line="136" selection-start-column="67" selection-end-line="136" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/component/Index/JoinUsForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,6 +68,7 @@
         <option value="$PROJECT_DIR$/src/element/Comment.js" />
         <option value="$PROJECT_DIR$/src/element/DisplayTable.js" />
         <option value="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/JoinUsForm.js" />
       </list>
     </option>
   </component>
@@ -167,18 +179,18 @@
       <workItem from="1566328715958" duration="481000" />
       <workItem from="1566329644803" duration="4636000" />
       <workItem from="1566431901871" duration="307000" />
-      <workItem from="1566435119873" duration="920000" />
+      <workItem from="1566435119873" duration="1221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28002000" />
+    <option name="totallyTimeSpent" value="28303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20211361" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20211361" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -192,7 +204,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24262735" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24262735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -463,8 +475,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="129" column="23" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="23" />
+        <state relative-caret-position="305">
+          <caret line="136" column="67" selection-start-line="136" selection-start-column="67" selection-end-line="136" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/JoinUsForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

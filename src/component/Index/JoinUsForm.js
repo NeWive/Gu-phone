@@ -96,6 +96,9 @@ class JoinUsForm extends PureComponent {
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.require.interface, JSON.stringify(formObj));
             if(status === 'ok') {
                 this.props.jumpHandler(1);
+            }else if(status === 'code_error'){
+                alert('验证码错误');
+                this.requestForValidateImg();
             }else {
                 alert('Ops~网络开小差惹');
             }
