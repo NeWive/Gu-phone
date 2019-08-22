@@ -74,7 +74,6 @@ class MembersChild extends PureComponent {
                 }
                 return '';
             });
-            console.log(index);
             ctx.props.dispatch({
                 type: 'SET_MEMBER_MOTION_INDEX',
                 value: index,
@@ -111,7 +110,7 @@ class MembersChild extends PureComponent {
                                             key={item.year}
                                             name={item.year}
                                             style={index >= this.state.memberList.length - 5 ? colorMembers[index - this.state.memberList.length + colorMembers.length] : colorMembers[0]}
-                                            clickHandler={this.clickHandler((index % 5), item.year)}
+                                            clickHandler={this.clickHandler((index), item.year)}
                                             isCoverOn={this.props.isMemberSelMotive && this.props.memberMotionIndex === index}
                                             identity={'MemberChild'}
                                             memberList={this.departListByYear}

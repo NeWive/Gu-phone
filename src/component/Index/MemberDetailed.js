@@ -179,12 +179,15 @@ class MemberDetailed extends PureComponent {
                                             <ul>
                                                 {
                                                     this.props.memberList.map((item, index) => (
-                                                        <li key={item.name}
+                                                        <li key={item}
                                                             className={this.state.selectedIndex === index ? 'selected' : ''}>
                                                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,no-script-url */}
-                                                            <a href="javascript: void(0)"
-                                                               style={this.state.selectedIndex === index ? {color: colorMembers[this.props.memberMotionIndex].backgroundColor} : {}}
-                                                               onClick={(e) => {this.changeDepartmentHandler(e, item)}}
+                                                            <a href=""
+                                                               style={this.state.selectedIndex === index ? {color: colorMembers[this.props.memberMotionIndex % 5].backgroundColor} : {}}
+                                                               onClick={(e) => {
+                                                                   e.preventDefault();
+                                                                   this.changeDepartmentHandler(e, item);
+                                                               }}
                                                                indexof={index}
                                                                 className={'departmentSelections'}>
                                                                 {

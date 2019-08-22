@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { CloseButton } from "../../element/CloseButton";
 import { connect } from 'react-redux';
 import { departmentList } from "../../config/list.config";
-import Loading from "../../element/Loading";
 import './DepartmentDetailed.css';
 import {Motion, spring} from "react-motion/lib/react-motion";
 

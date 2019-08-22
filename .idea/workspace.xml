@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="eb2c67bf-2ff8-4e6c-b497-fed836624bb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.d43deb0ba0e8e25876b6c76d88f2260d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.4cb587b802166ce2ad0d71dd2c9b2efa.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.a78d980d.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.a78d980d.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.eb4331eb.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.eb4331eb.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.6ed9f170.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.6ed9f170.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Index/MembersChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MembersChild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/MemberPanelCover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/MemberPanelCover.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,44 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="50" column="27" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.scss">
+        <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            <state relative-caret-position="216">
+              <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentChild.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/element/ElementPanel.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/element/MemberPanelCover.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -71,10 +56,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/element/ElementPanelCover.js">
+        <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="472">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -116,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/element/DisplayTable.scss" />
         <option value="$PROJECT_DIR$/src/component/Index/CommentChild.scss" />
         <option value="$PROJECT_DIR$/src/element/DisplayTable.js" />
-        <option value="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" />
         <option value="$PROJECT_DIR$/src/element/Comment.js" />
         <option value="$PROJECT_DIR$/src/function/OnChangeHandler.js" />
         <option value="$PROJECT_DIR$/src/element/Input.scss" />
@@ -132,25 +116,26 @@
         <option value="$PROJECT_DIR$/src/component/Index.scss" />
         <option value="$PROJECT_DIR$/src/component/Index/IndexBody.scss" />
         <option value="$PROJECT_DIR$/src/config/redux.config.js" />
-        <option value="$PROJECT_DIR$/src/element/MemberPanelCover.js" />
         <option value="$PROJECT_DIR$/src/element/Arrow.css" />
         <option value="$PROJECT_DIR$/src/element/ElementPanel.scss" />
         <option value="$PROJECT_DIR$/src/component/Index/MembersChild.scss" />
         <option value="$PROJECT_DIR$/src/element/Arrow.scss" />
         <option value="$PROJECT_DIR$/src/element/Arrow.js" />
-        <option value="$PROJECT_DIR$/src/component/Index/MembersChild.js" />
         <option value="$PROJECT_DIR$/src/component/Index/JoinUs.scss" />
         <option value="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.scss" />
         <option value="$PROJECT_DIR$/src/element/ElementPanelCover.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/MembersChild.js" />
         <option value="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" />
+        <option value="$PROJECT_DIR$/src/element/MemberPanelCover.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="975" />
-    <option name="height" value="1089" />
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="780" />
+    <option name="height" value="871" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,18 +246,19 @@
       <workItem from="1566328715958" duration="481000" />
       <workItem from="1566329644803" duration="4636000" />
       <workItem from="1566431901871" duration="307000" />
-      <workItem from="1566435119873" duration="19816000" />
+      <workItem from="1566435119873" duration="20185000" />
+      <workItem from="1566459723944" duration="578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46898000" />
+    <option name="totallyTimeSpent" value="47845000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19550858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -286,7 +272,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28150135" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21829522" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -553,16 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/element/MemberPanelCover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/element/ElementPanel.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -623,16 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="99" column="69" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/JoinUs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -650,16 +616,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
+    <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="181" column="63" selection-start-line="181" selection-start-column="60" selection-end-line="181" selection-end-column="63" />
+        <state relative-caret-position="930">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentChild.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="2070">
           <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -669,7 +635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/element/ElementPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="540">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -677,17 +643,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.scss">
+    <entry file="file://$PROJECT_DIR$/src/element/ElementPanelCover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="600">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/element/ElementPanelCover.js">
+    <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        <state relative-caret-position="216">
+          <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -696,8 +672,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="27" />
+        <state relative-caret-position="120">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/element/MemberPanelCover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>

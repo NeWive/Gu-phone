@@ -29,6 +29,14 @@ class MemberPanelCover extends PureComponent {
             type: 'SET_IS_MEMBER_COVER_MOTIVE'
         })
     }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(this.props.memberMotionIndex);
+        console.log(this.props.memberBeginVisible);
+    }
+    componentDidCatch(error, errorInfo) {
+        console.log(this.props.memberMotionIndex);
+        console.log(this.props.memberBeginVisible);
+    }
     render() {
         return (
             <Motion
@@ -42,7 +50,7 @@ class MemberPanelCover extends PureComponent {
                     height: spring(this.props.isMemberCoverMotive ? departmentPanel.baseEndArg.height : departmentPanel.baseStartArgs.height,{
                         precision: 0.01
                     }),
-                    left: spring(this.props.isMemberCoverMotive ? departmentPanel.panelEndArgs[this.props.memberMotionIndex - this.props.memberBeginVisible].left : departmentPanel.panelStartArgs.left, {
+                    left: spring(this.props.isMemberCoverMotive ? departmentPanel.panelEndArgs[Number(this.props.memberMotionIndex - this.props.memberBeginVisible)].left : departmentPanel.panelStartArgs.left, {
                         precision: 0.01
                     })
                 }} onRest={this.restHandler}>
