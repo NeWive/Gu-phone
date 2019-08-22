@@ -155,6 +155,11 @@ class Comment extends PureComponent {
                                 placeHolder={'写点什么...'}
                                 id={'commentSingle'}
                                 changeHandler={this.onChangeHandler(this)}/>
+                    <div className="words_length_table">
+                        {
+                            `${this.props.commentSingle.length}/80`
+                        }
+                    </div>
                 </div>
                 <div className="validate_box">
                     {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}

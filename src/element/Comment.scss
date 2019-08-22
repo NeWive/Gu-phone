@@ -1,12 +1,20 @@
+@import "../sassMixin/fontMixin";
 @import "../sassMixin/radiusMixin";
 #Comment {
   @include radius(20px);
   background: #B7E6FF;
   padding: 20px 15px 13px 19px;
+  position: relative;
   .textarea_box {
     textarea {
       background: #FFFFFF;
     }
+  }
+  .words_length_table {
+    position: absolute;
+    right: 35px;
+    bottom: 80px;
+    @include joinUsPlaceHolder;
   }
   .validate_box {
     margin-top: 13px;

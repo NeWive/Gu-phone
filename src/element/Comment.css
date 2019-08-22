@@ -3,9 +3,19 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
   background: #B7E6FF;
-  padding: 20px 15px 13px 19px; }
+  padding: 20px 15px 13px 19px;
+  position: relative; }
   #Comment .textarea_box textarea {
     background: #FFFFFF; }
+  #Comment .words_length_table {
+    position: absolute;
+    right: 35px;
+    bottom: 80px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: SourceHanSansCN-Regular;
+    line-height: 36px; }
   #Comment .validate_box {
     margin-top: 13px; }
     #Comment .validate_box #validate_code_box, #Comment .validate_box input {
