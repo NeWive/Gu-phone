@@ -25,7 +25,7 @@
       vertical-align: middle; }
   #Status .status_detailed {
     float: left; }
-    @media only screen and (min-device-height: 874px) {
+    @media only screen and (min-device-height: 900px) {
       #Status .status_detailed {
         margin-right: 88px; }
         #Status .status_detailed .circle {
@@ -35,7 +35,7 @@
           #Status .status_detailed .circle .dot {
             width: 20px;
             height: 20px; } }
-    @media only screen and (max-device-height: 873px) {
+    @media only screen and (max-device-height: 899px) {
       #Status .status_detailed {
         margin-right: 50px; }
         #Status .status_detailed .circle {

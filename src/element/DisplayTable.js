@@ -48,12 +48,10 @@ class DisplayTable extends PureComponent {
     }
     mouseLeaveHandler(e) {
         e.stopPropagation();
-        console.log('out');
         this.mouseMoveLock = false;
     }
     mouseMoveHandler(e) {
         if(this.lastY && this.mouseMoveLock) {
-            console.log('moving');
             let currentY = this.state.top;
             let y = e.screenY - this.lastY;
             if(currentY + y >= 0 && currentY + y <= 342 - this.props.commentListWindowHeight) {
@@ -68,11 +66,9 @@ class DisplayTable extends PureComponent {
         this.lastY = e.screenY;
     }
     mouseUpHandler() {
-        console.log('up');
         this.mouseMoveLock = false;
     }
     mouseDownHandler() {
-        console.log('down');
         this.mouseMoveLock = true;
     }
     setHeight(height) {
@@ -118,7 +114,7 @@ class DisplayTable extends PureComponent {
                                     <div className="content_box">
                                         <span>
                                             {
-                                                item.content.length > 63 ? `${item.content.slice(0, 60)}...` : item.content
+                                                item.content
                                             }
                                         </span>
                                     </div>

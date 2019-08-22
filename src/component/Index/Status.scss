@@ -22,7 +22,7 @@
   }
   .status_detailed {
     float: left;
-    @media only screen and (min-device-height: 874px) {
+    @media only screen and (min-device-height: 900px) {
       margin-right: 88px;
       .circle {
         width: 130px;
@@ -34,7 +34,7 @@
         }
       }
     }
-    @media only screen and (max-device-height: 873px) {
+    @media only screen and (max-device-height: 899px) {
       margin-right: 50px;
       .circle {
         width: 100px;

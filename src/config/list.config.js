@@ -121,7 +121,7 @@ const naviList = [
     {
         value: '作品',
         name: 'work',
-        top: 3550,
+        top: 3400,
     },
     {
         value: '留言',

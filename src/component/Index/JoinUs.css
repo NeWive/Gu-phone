@@ -22,12 +22,12 @@
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       border-radius: 20px; }
-      @media only screen and (min-device-height: 874px) {
+      @media only screen and (min-device-height: 900px) {
         #JoinUs .popBox .form_box {
           margin: 120px auto;
           width: 1300px;
           height: 721px; } }
-      @media only screen and (max-device-height: 873px) {
+      @media only screen and (max-device-height: 899px) {
         #JoinUs .popBox .form_box {
           margin: 50px auto;
           width: 900px;
@@ -90,10 +90,10 @@
       #JoinUs .popBox .form_box .mode_func {
         display: flex;
         justify-content: center; }
-        @media only screen and (min-device-height: 874px) {
+        @media only screen and (min-device-height: 900px) {
           #JoinUs .popBox .form_box .mode_func {
             margin-top: 107px; } }
-        @media only screen and (max-device-height: 873px) {
+        @media only screen and (max-device-height: 899px) {
           #JoinUs .popBox .form_box .mode_func {
             margin-top: 70px; } }
   #JoinUs .popBox, #JoinUs .popLayer {

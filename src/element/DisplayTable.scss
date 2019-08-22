@@ -19,8 +19,15 @@
         width: 604px;
         height: 64px;
         .content_box {
-          height: 51px;
+          height: 55px;
           margin-left: 29px;
+          margin-right: 5px;
+          word-wrap: break-word;
+          position: relative;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
           span {
             @include commentContent;
           }

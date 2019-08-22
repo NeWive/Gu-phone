@@ -17,8 +17,15 @@
       width: 604px;
       height: 64px; }
       #DisplayTable .window .container .comment_sel .content_box {
-        height: 51px;
-        margin-left: 29px; }
+        height: 55px;
+        margin-left: 29px;
+        margin-right: 5px;
+        word-wrap: break-word;
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden; }
         #DisplayTable .window .container .comment_sel .content_box span {
           color: #555555;
           font-size: 18px;

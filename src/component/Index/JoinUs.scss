@@ -22,12 +22,12 @@
     width: 100%;
     .form_box {
       margin: 179px auto;
-      @media only screen and (min-device-height: 874px) {
+      @media only screen and (min-device-height: 900px) {
         margin: 120px auto;
         width: 1300px;
         height: 721px;
       }
-      @media only screen and (max-device-height: 873px) {
+      @media only screen and (max-device-height: 899px) {
         margin: 50px auto;
         width: 900px;
         height: 600px;
@@ -80,10 +80,10 @@
       .mode_func {
         display: flex;
         justify-content: center;
-        @media only screen and (min-device-height: 874px) {
+        @media only screen and (min-device-height: 900px) {
           margin-top: 107px;
         }
-        @media only screen and (max-device-height: 873px) {
+        @media only screen and (max-device-height: 899px) {
           margin-top: 70px;
         }
       }
