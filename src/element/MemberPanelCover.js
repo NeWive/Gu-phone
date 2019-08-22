@@ -29,14 +29,6 @@ class MemberPanelCover extends PureComponent {
             type: 'SET_IS_MEMBER_COVER_MOTIVE'
         })
     }
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(this.props.memberMotionIndex);
-        console.log(this.props.memberBeginVisible);
-    }
-    componentDidCatch(error, errorInfo) {
-        console.log(this.props.memberMotionIndex);
-        console.log(this.props.memberBeginVisible);
-    }
     render() {
         return (
             <Motion

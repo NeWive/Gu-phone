@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb2c67bf-2ff8-4e6c-b497-fed836624bb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.4cb587b802166ce2ad0d71dd2c9b2efa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.42be6fec5ee699e40c130dbb590620a1.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.6ed9f170.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.6ed9f170.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Index/MembersChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Index/MembersChild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/element/MemberPanelCover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/MemberPanelCover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.3aa59560.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.3aa59560.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.00ce4646.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.00ce4646.chunk.js.map" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,20 +31,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
+            <state relative-caret-position="336">
+              <caret line="182" column="125" lean-forward="true" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/element/MemberPanelCover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state relative-caret-position="390">
+              <caret line="52" column="130" selection-start-line="52" selection-start-column="113" selection-end-line="52" selection-end-column="130" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -56,10 +53,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/style.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="292">
+              <caret line="112" column="82" selection-start-line="112" selection-start-column="82" selection-end-line="112" selection-end-column="82" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -124,10 +130,10 @@
         <option value="$PROJECT_DIR$/src/component/Index/JoinUs.scss" />
         <option value="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.scss" />
         <option value="$PROJECT_DIR$/src/element/ElementPanelCover.js" />
-        <option value="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" />
-        <option value="$PROJECT_DIR$/src/component/Index/MembersChild.js" />
         <option value="$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js" />
         <option value="$PROJECT_DIR$/src/element/MemberPanelCover.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/MembersChild.js" />
+        <option value="$PROJECT_DIR$/src/component/Index/MemberDetailed.js" />
       </list>
     </option>
   </component>
@@ -247,18 +253,17 @@
       <workItem from="1566329644803" duration="4636000" />
       <workItem from="1566431901871" duration="307000" />
       <workItem from="1566435119873" duration="20185000" />
-      <workItem from="1566459723944" duration="578000" />
+      <workItem from="1566459723944" duration="840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47845000" />
+    <option name="totallyTimeSpent" value="48107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -272,7 +277,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21829522" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21829522" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -561,13 +566,6 @@
         <state relative-caret-position="-180" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/style.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="59" column="14" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -653,23 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Index/DepartmentDetailed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -677,13 +658,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/style.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/element/MemberPanelCover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="390">
+          <caret line="52" column="130" selection-start-line="52" selection-start-column="113" selection-end-line="52" selection-end-column="130" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/MembersChild.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="112" column="82" selection-start-line="112" selection-start-column="82" selection-end-line="112" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Index/MemberDetailed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="182" column="125" lean-forward="true" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
         </state>
       </provider>
     </entry>
