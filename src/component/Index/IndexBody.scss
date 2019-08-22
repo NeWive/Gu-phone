@@ -32,11 +32,9 @@
     }
   }
   .members {
+    overflow: hidden;
     #MembersChild {
       position: relative;
-      .ElementPanel {
-        padding-left: 56px;
-      }
     }
   }
 }

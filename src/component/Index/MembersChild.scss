@@ -5,31 +5,49 @@
   @include clearFix;
   display: flex;
   justify-content: center;
-  .ElementPanel {
-    cursor: pointer;
-    margin-left: 12.5px;
-    margin-right: 12.5px;
+  width: 1300px;
+  height: 299px;
+  //overflow-x: hidden;
+  //overflow-y: visible;
+  .members_child_container {
+    width: 2600px;
+    position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
-    float: left;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    .container {
-      .year_large {
-        margin-top: 48px;
-        margin-bottom: 71px;
-        span {
-          @include memberYearLarge;
-        }
+    //overflow-x: hidden;
+    //overflow-y: visible;
+    .ElementPanel {
+      cursor: pointer;
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+
+      &:last-child {
+        margin-right: 0;
       }
-      .year_small {
-        span {
-          @include departmentName;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .container {
+        margin-left: 56px;
+        .year_large {
+          margin-top: 48px;
+          margin-bottom: 71px;
+
+          span {
+            @include memberYearLarge;
+          }
+        }
+
+        .year_small {
+          span {
+            @include departmentName;
+          }
         }
       }
     }

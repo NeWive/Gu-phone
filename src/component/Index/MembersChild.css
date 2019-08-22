@@ -1,41 +1,50 @@
 @charset "UTF-8";
 #MembersChild {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 1300px;
+  height: 299px; }
   #MembersChild:after {
     content: " ";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden; }
-  #MembersChild .ElementPanel {
-    cursor: pointer;
-    margin-left: 12.5px;
-    margin-right: 12.5px;
+  #MembersChild .members_child_container {
+    width: 2600px;
+    position: absolute;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    float: left; }
-    #MembersChild .ElementPanel:last-child {
-      margin-right: 0; }
-    #MembersChild .ElementPanel:first-child {
-      margin-left: 0; }
-    #MembersChild .ElementPanel .container .year_large {
-      margin-top: 48px;
-      margin-bottom: 71px; }
-      #MembersChild .ElementPanel .container .year_large span {
-        color: #FFFFFF;
-        font-size: 72px;
-        font-weight: normal;
-        font-family: SourceHanSansCN-Regular;
-        line-height: 36px; }
-    #MembersChild .ElementPanel .container .year_small span {
-      color: #FFFFFF;
-      font-size: 30px;
-      font-weight: normal;
-      font-family: SourceHanSansCN-Regular;
-      line-height: 36px; }
+    justify-content: center; }
+    #MembersChild .members_child_container .ElementPanel {
+      cursor: pointer;
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left; }
+      #MembersChild .members_child_container .ElementPanel:last-child {
+        margin-right: 0; }
+      #MembersChild .members_child_container .ElementPanel:first-child {
+        margin-left: 0; }
+      #MembersChild .members_child_container .ElementPanel .container {
+        margin-left: 56px; }
+        #MembersChild .members_child_container .ElementPanel .container .year_large {
+          margin-top: 48px;
+          margin-bottom: 71px; }
+          #MembersChild .members_child_container .ElementPanel .container .year_large span {
+            color: #FFFFFF;
+            font-size: 72px;
+            font-weight: normal;
+            font-family: SourceHanSansCN-Regular;
+            line-height: 36px; }
+        #MembersChild .members_child_container .ElementPanel .container .year_small span {
+          color: #FFFFFF;
+          font-size: 30px;
+          font-weight: normal;
+          font-family: SourceHanSansCN-Regular;
+          line-height: 36px; }
 
 /*# sourceMappingURL=MembersChild.css.map */

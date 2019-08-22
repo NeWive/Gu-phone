@@ -65,36 +65,40 @@ class MembersChild extends PureComponent {
     render() {
         return (
             <div id="MembersChild">
-                {
-                    this.state.memberList.map((item, index) => (
-                        <ElementPanel
-                            key={item.year}
-                            name={item.year}
-                            style={colorMembers[index]}
-                            clickHandler={this.clickHandler(index, item.year)}
-                            isCoverOn={this.props.isMemberSelMotive && this.props.memberMotionIndex === index}
-                            identity={'MemberChild'}
-                            memberList={this.departListByYear}
-                            >
-                            <div className="container">
-                                <div className="year_large">
-                                    <span>
-                                        {
-                                            `${item.year % 2000}’`
-                                        }
-                                    </span>
+                <div className="members_child_container" style={{
+                    // width: `${this.state.memberList.length * 265}px`
+                }}>
+                    {
+                        this.state.memberList.map((item, index) => (
+                            <ElementPanel
+                                key={item.year}
+                                name={item.year}
+                                style={colorMembers[0]}
+                                clickHandler={this.clickHandler(index, item.year)}
+                                isCoverOn={this.props.isMemberSelMotive && this.props.memberMotionIndex === index}
+                                identity={'MemberChild'}
+                                memberList={this.departListByYear}
+                                >
+                                <div className="container">
+                                    <div className="year_large">
+                                        <span>
+                                            {
+                                                `${item.year % 2000}’`
+                                            }
+                                        </span>
+                                    </div>
+                                    <div className="year_small">
+                                        <span>
+                                            {
+                                                `${item.year}届`
+                                            }
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="year_small">
-                                    <span>
-                                        {
-                                            `${item.year}届`
-                                        }
-                                    </span>
-                                </div>
-                            </div>
-                        </ElementPanel>
-                    ))
-                }
+                            </ElementPanel>
+                        ))
+                    }
+                </div>
             </div>
         )
     }

@@ -18,9 +18,9 @@
   #IndexBody .departments #DepartmentChild {
     margin-top: 262px;
     margin-bottom: 69px; }
-  #IndexBody .members #MembersChild {
-    position: relative; }
-    #IndexBody .members #MembersChild .ElementPanel {
-      padding-left: 56px; }
+  #IndexBody .members {
+    overflow: hidden; }
+    #IndexBody .members #MembersChild {
+      position: relative; }
 
 /*# sourceMappingURL=IndexBody.css.map */
