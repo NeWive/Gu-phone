@@ -36,7 +36,7 @@ class DisplayTable extends PureComponent {
     scrollHandler(e) {
         e.stopPropagation();
         let currentY = this.state.top;
-        let y = e.nativeEvent.deltaY / 20;
+        let y = 2.5;
         if(currentY + y > 0 && currentY + y < 342 - this.props.commentListWindowHeight) {
             this.setState((pre) => (
                 {
