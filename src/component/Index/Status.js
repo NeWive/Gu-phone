@@ -58,6 +58,7 @@ class Status extends PureComponent {
                 let {'data': {status, statusList}} = await axios.get(getStatusByEmail(this.props['emailForStatus']));
                 if (status === 'msg_error') {
                     alert('查无信息');
+                    this.setStatusList(['2', '2', '2', '2', '2']);
                 } else if (status === 'ok') {
                     // alert('查询成功');
                     this.setStatusList(statusList)
