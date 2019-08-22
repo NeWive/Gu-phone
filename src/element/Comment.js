@@ -155,7 +155,9 @@ class Comment extends PureComponent {
                                 placeHolder={'写点什么...'}
                                 id={'commentSingle'}
                                 changeHandler={this.onChangeHandler(this)}/>
-                    <div className="words_length_table">
+                    <div className="words_length_table" style={{
+                        color: this.props.commentSingle.length > 80 ? 'red' : ''
+                    }}>
                         {
                             `${this.props.commentSingle.length}/80`
                         }
