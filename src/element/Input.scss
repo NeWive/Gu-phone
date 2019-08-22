@@ -6,6 +6,6 @@
   background: #E6E6E6;
   @include radius(15px);
   padding: 0 0 0 16px;
-  border: 0;
   @include joinUsPlaceHolder;
+  border: 1px solid transparent;
 }

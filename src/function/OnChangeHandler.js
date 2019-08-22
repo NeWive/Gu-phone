@@ -30,7 +30,7 @@ const setFormHandler = (ctx) => {
                 action['value'] = target.value;
                 ctx.props.dispatch(action);
             }
-            target.style.border = '0';
+            target.style.border = '1px solid transparent';
         }
     }
 };

@@ -6,11 +6,11 @@
   -moz-border-radius: 15px;
   border-radius: 15px;
   padding: 0 0 0 16px;
-  border: 0;
   color: #555555;
   font-size: 16px;
   font-weight: normal;
   font-family: SourceHanSansCN-Regular;
-  line-height: 36px; }
+  line-height: 36px;
+  border: 1px solid transparent; }
 
 /*# sourceMappingURL=Input.css.map */

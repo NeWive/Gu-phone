@@ -90,7 +90,7 @@ class JoinUsForm extends PureComponent {
             }
             formObj[this.mapToPostParam[item]] = obj['value'];
         }
-        console.log(formObj);
+        // console.log(formObj);
         this.setIsRequesting(true);
         try {
             axios.defaults.withCredentials = true;
