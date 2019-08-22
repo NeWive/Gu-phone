@@ -4,7 +4,8 @@
   height: 886px;
   position: relative;
   padding-bottom: 92px;
-  background: url("https://i.loli.net/2019/08/21/nxUQwjbNZTivKGB.png") no-repeat; }
+  background: url("https://i.loli.net/2019/08/21/nxUQwjbNZTivKGB.png") no-repeat;
+  background-size: 100% 100%; }
   #Banner .code {
     position: absolute;
     left: 815px;

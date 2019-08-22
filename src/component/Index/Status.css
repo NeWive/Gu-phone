@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #Status {
-  /* 触发 hasLayout */
+  /* 瑙﹀彂 hasLayout */
   zoom: 1; }
   #Status:after {
     content: " ";
@@ -10,8 +10,13 @@
     visibility: hidden; }
   #Status .input_email_box {
     display: flex;
-    justify-content: center;
-    margin-bottom: 113px; }
+    justify-content: center; }
+    @media only screen and (min-device-height: 874px) {
+      #Status .input_email_box {
+        margin-bottom: 113px; } }
+    @media only screen and (max-device-height: 873px) {
+      #Status .input_email_box {
+        margin-bottom: 80px; } }
     #Status .input_email_box .join_us_input {
       margin-right: 16px;
       vertical-align: middle; }
@@ -19,8 +24,27 @@
       position: relative;
       vertical-align: middle; }
   #Status .status_detailed {
-    float: left;
-    margin-right: 88px; }
+    float: left; }
+    @media only screen and (min-device-height: 874px) {
+      #Status .status_detailed {
+        margin-right: 88px; }
+        #Status .status_detailed .circle {
+          width: 130px;
+          height: 130px;
+          border-width: 14px; }
+          #Status .status_detailed .circle .dot {
+            width: 20px;
+            height: 20px; } }
+    @media only screen and (max-device-height: 873px) {
+      #Status .status_detailed {
+        margin-right: 50px; }
+        #Status .status_detailed .circle {
+          width: 100px;
+          height: 100px;
+          border-width: 10px; }
+          #Status .status_detailed .circle .dot {
+            width: 15px;
+            height: 15px; } }
     #Status .status_detailed:last-child {
       margin-right: 0; }
     #Status .status_detailed .img {

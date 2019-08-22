@@ -21,9 +21,17 @@
     overflow: hidden;
     width: 100%;
     .form_box {
-      width: 1300px;
-      height: 721px;
       margin: 179px auto;
+      @media only screen and (min-device-height: 874px) {
+        margin: 179px auto;
+        width: 1300px;
+        height: 721px;
+      }
+      @media only screen and (max-device-height: 873px) {
+        margin: 50px auto;
+        width: 900px;
+        height: 600px;
+      }
       background: #FFFFFF;
       @include radius(20px);
       .button_box {
@@ -70,9 +78,14 @@
         }
       }
       .mode_func {
-        margin-top: 107px;
         display: flex;
         justify-content: center;
+        @media only screen and (min-device-height: 874px) {
+          margin-top: 107px;
+        }
+        @media only screen and (max-device-height: 873px) {
+          margin-top: 70px;
+        }
       }
     }
   }

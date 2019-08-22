@@ -17,17 +17,25 @@
     overflow: hidden;
     width: 100%; }
     #JoinUs .popBox .form_box {
-      width: 1300px;
-      height: 721px;
       margin: 179px auto;
       background: #FFFFFF;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       border-radius: 20px; }
+      @media only screen and (min-device-height: 874px) {
+        #JoinUs .popBox .form_box {
+          margin: 179px auto;
+          width: 1300px;
+          height: 721px; } }
+      @media only screen and (max-device-height: 873px) {
+        #JoinUs .popBox .form_box {
+          margin: 50px auto;
+          width: 900px;
+          height: 600px; } }
       #JoinUs .popBox .form_box .button_box {
         padding-top: 35px;
         padding-right: 38px;
-        /* 触发 hasLayout */
+        /* 瑙﹀彂 hasLayout */
         zoom: 1; }
         #JoinUs .popBox .form_box .button_box:after {
           content: " ";
@@ -41,7 +49,7 @@
         display: flex;
         justify-content: center; }
         #JoinUs .popBox .form_box .form_sel .form_sel_box {
-          /* 触发 hasLayout */
+          /* 瑙﹀彂 hasLayout */
           zoom: 1; }
           #JoinUs .popBox .form_box .form_sel .form_sel_box:after {
             content: " ";
@@ -80,9 +88,14 @@
                 line-height: 36px;
                 line-height: 44px; }
       #JoinUs .popBox .form_box .mode_func {
-        margin-top: 107px;
         display: flex;
         justify-content: center; }
+        @media only screen and (min-device-height: 874px) {
+          #JoinUs .popBox .form_box .mode_func {
+            margin-top: 107px; } }
+        @media only screen and (max-device-height: 873px) {
+          #JoinUs .popBox .form_box .mode_func {
+            margin-top: 70px; } }
   #JoinUs .popBox, #JoinUs .popLayer {
     position: fixed;
     left: 0;

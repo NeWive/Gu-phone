@@ -90,7 +90,7 @@ class Status extends PureComponent {
                     this.state.statusList.map((item, index) => (
                         <div key={index} className={'status_detailed'}>
                             <div className="img">
-                                <Circle style={{ width: '130px', height: '130px', borderColor: statusEnumList[item].borderColor}}>
+                                <Circle style={{ borderColor: statusEnumList[item].borderColor}}>
                                     {
                                         (() => {
                                             switch (`${item}`) {

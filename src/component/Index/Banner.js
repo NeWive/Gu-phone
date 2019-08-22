@@ -11,12 +11,42 @@ function map(state) {
 }
 
 class Banner extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            leftStart: 815,
+            leftEnd: 1141,
+            topStart: 410,
+            topEnd: 187,
+        };
+        this.resizeHandler = this.resizeHandler.bind(this);
+        this.setLeftEnd = this.setLeftEnd.bind(this);
+    }
+    setLeftEnd(value) {
+        this.setState({
+            leftEnd: value,
+        })
+    }
+    resizeHandler() {
+        if(document.body.clientWidth <= 1490) {
+            this.setLeftEnd(document.body.clientWidth - 500);
+        }else if(document.body.clientWidth > 1490) {
+            this.setLeftEnd(1140);
+        }
+    }
+    componentDidMount() {
+        window.addEventListener('resize', this.resizeHandler);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resizeHandler);
+    }
+
     render() {
         return (
             <Motion style={{
                 height: spring(!this.props.motive ? 886 : 648),
-                left: spring(!this.props.motive ? 815 : 1141),
-                top: spring(!this.props.motive ? 410 : 187),
+                left: spring(!this.props.motive ? this.state.leftStart : this.state.leftEnd),
+                top: spring(!this.props.motive ? this.state.topStart : this.state.topEnd),
             }}>
                 {
                     ({height, left, top}) => (

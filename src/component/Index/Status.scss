@@ -5,7 +5,12 @@
   .input_email_box {
     display: flex;
     justify-content: center;
-    margin-bottom: 113px;
+    @media only screen and (min-device-height: 874px) {
+      margin-bottom: 113px;
+    }
+    @media only screen and (max-device-height: 873px) {
+      margin-bottom: 80px;
+    }
     .join_us_input {
       margin-right: 16px;
       vertical-align: middle;
@@ -17,7 +22,30 @@
   }
   .status_detailed {
     float: left;
-    margin-right: 88px;
+    @media only screen and (min-device-height: 874px) {
+      margin-right: 88px;
+      .circle {
+        width: 130px;
+        height: 130px;
+        border-width: 14px;
+        .dot {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    @media only screen and (max-device-height: 873px) {
+      margin-right: 50px;
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-width: 10px;
+        .dot {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
