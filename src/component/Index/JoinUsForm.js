@@ -81,15 +81,16 @@ class JoinUsForm extends PureComponent {
         let formObj = {};
         for(let item of this.inputListName) {
             let obj = {};
-            obj['value'] = this.props[item];
+            obj['value'] = this.props[item] ? this.props[item] : document.getElementById('item');
             obj['id'] = item;
             let msg = validate(obj);
             if(msg !== 'pass'){
                 alert(msg);
                 return ;
             }
-            formObj[this.mapToPostParam[item]] = this.props[item];
+            formObj[this.mapToPostParam[item]] = obj['value'];
         }
+        console.log(formObj);
         this.setIsRequesting(true);
         try {
             axios.defaults.withCredentials = true;
