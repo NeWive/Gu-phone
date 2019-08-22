@@ -36,6 +36,7 @@ class Banner extends PureComponent {
     }
     componentDidMount() {
         window.addEventListener('resize', this.resizeHandler);
+        this.resizeHandler();
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.resizeHandler);

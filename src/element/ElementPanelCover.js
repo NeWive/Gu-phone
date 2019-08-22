@@ -15,11 +15,23 @@ class ElementPanelCover extends PureComponent {
     constructor(props){
         super(props);
         this.restHandler = this.restHandler.bind(this);
+        this.state = {
+            isFinish: false,
+        };
+        this.setIsFinish = this.setIsFinish.bind(this);
+    }
+    setIsFinish() {
+        this.setState((pre) => (
+            {
+                isFinish: !pre.isFinish,
+            }
+        ));
     }
     restHandler() {
         this.props.dispatch({
             type: 'SET_IS_DEPARTMENT_READY'
         });
+        this.setIsFinish();
         if(!this.props.isCoverMotive) {
             this.props.dispatch({
                 type: 'SET_IS_DEPARTMENT_SEL_MOTIVE'
@@ -60,7 +72,7 @@ class ElementPanelCover extends PureComponent {
                             cursor: 'default',
                              }}
                              onClick={(e) => {e.stopPropagation()}}>
-                                <DepartmentDetailed/>
+                                <DepartmentDetailed isFinish={this.state.isFinish}/>
                         </div>
                     )
                 }

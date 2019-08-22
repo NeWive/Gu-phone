@@ -38,8 +38,7 @@ class Index extends PureComponent{
     render() {
         return (
             <div id={'Index'}
-                 onWheel={this.scrollHandler}
-                 onClick={this.clickHandler}>
+                 onWheel={this.scrollHandler}>
                 {
                     !this.props.isPortalOn ? '' : (
                         <PortalContainer>
@@ -50,7 +49,8 @@ class Index extends PureComponent{
                 <div className="navigator_box">
                     <Navigator/>
                 </div>
-                <div className="banner_box">
+                <div className="banner_box"
+                     onClick={this.clickHandler}>
                     <Banner/>
                 </div>
                 <div className="index_body_box" style={{display: !this.props.motive ? 'none' : 'block'}}>
