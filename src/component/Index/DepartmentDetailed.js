@@ -47,8 +47,7 @@ class DepartmentDetailed extends PureComponent {
         this.setContent();
     }
     async closeHandler() {
-        this.exchangeState();
-        await this.props.setIsFinish();
+        await this.exchangeState();
         this.props.dispatch({
             type: 'SET_IS_DEPARTMENT_READY',
         });
