@@ -1,0 +1,31 @@
+.arrow_box_for_page {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  z-index: 10;
+  cursor: pointer;
+  //background: gray;
+  border-radius: 100%;
+  opacity: 0.3;
+  .arrow_for_page_edge {
+    border-radius: 5px;
+    width: 40px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 46px;
+    &:after {
+      content: ' ';
+      border-radius: 5px;
+      width: 40px;
+      height: 5px;
+      background: white;
+      position: absolute;
+      transform: rotate(-90deg);
+      left: -18px;
+      top: -18px;
+    }
+  }
+}

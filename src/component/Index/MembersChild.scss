@@ -7,15 +7,51 @@
   justify-content: center;
   width: 1300px;
   height: 299px;
-  //overflow-x: hidden;
-  //overflow-y: visible;
+  .arrow_page_box {
+    top: 100px;
+    position: absolute;
+  }
+  #arrow_left {
+    left: 0;
+  }
+  #arrow_right {
+    right: 0;
+    .arrow_box_for_page {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      z-index: 10;
+      cursor: pointer;
+      //background: lightgray;
+      border-radius: 100%;
+      .arrow_for_page_edge {
+        border-radius: 5px;
+        width: 40px;
+        height: 5px;
+        background: white;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 20px;
+        top: 46px;
+        &:after {
+          content: ' ';
+          border-radius: 5px;
+          width: 40px;
+          height: 5px;
+          background: white;
+          position: absolute;
+          transform: rotate(90deg);
+          left: 18px;
+          top: -18px;
+        }
+      }
+    }
+  }
   .members_child_container {
-    width: 2600px;
+    left: 0;
     position: absolute;
     display: flex;
     justify-content: center;
-    //overflow-x: hidden;
-    //overflow-y: visible;
     .ElementPanel {
       cursor: pointer;
       margin-left: 12.5px;

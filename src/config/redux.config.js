@@ -35,6 +35,7 @@ const initState = {
     comments: [],
     containerHeight: 0,
     commentListWindowHeight: 342,
+    memberBeginVisible: 0,
 };
 
 const notType = {
@@ -80,6 +81,7 @@ const actionType = {
     'SET_COMMENT': 'comments',
     'SET_CONTAINER_HEIGHT': 'containerHeight',
     'COMMENT_LIST_WINDOW_HEIGHT': 'commentListWindowHeight',
+    'SET_MEMBER_BEGIN_VISIBLE': 'memberBeginVisible',
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];

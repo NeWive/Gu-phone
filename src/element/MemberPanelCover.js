@@ -8,6 +8,7 @@ function map(state) {
     return {
         memberMotionIndex: state.memberMotionIndex,
         isMemberCoverMotive: state.isMemberCoverMotive,
+        memberBeginVisible: state.memberBeginVisible,
     }
 }
 
@@ -41,7 +42,7 @@ class MemberPanelCover extends PureComponent {
                     height: spring(this.props.isMemberCoverMotive ? departmentPanel.baseEndArg.height : departmentPanel.baseStartArgs.height,{
                         precision: 0.01
                     }),
-                    left: spring(this.props.isMemberCoverMotive ? departmentPanel.panelEndArgs[this.props.memberMotionIndex].left : departmentPanel.panelStartArgs.left, {
+                    left: spring(this.props.isMemberCoverMotive ? departmentPanel.panelEndArgs[this.props.memberMotionIndex - this.props.memberBeginVisible].left : departmentPanel.panelStartArgs.left, {
                         precision: 0.01
                     })
                 }} onRest={this.restHandler}>
