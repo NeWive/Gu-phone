@@ -58,6 +58,7 @@ class MembersChild extends PureComponent {
         if(list) {
             // list = list.slice(2);
             this.setMemberList(list);
+            this.setMemberBeginVisible(list.length - 5);
         }else {
             this.setMemberList([]);
         }
