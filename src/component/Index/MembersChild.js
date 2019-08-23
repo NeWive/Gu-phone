@@ -126,7 +126,7 @@ class MembersChild extends PureComponent {
                                                 <div className="year_small">
                                         <span>
                                             {
-                                                `${item.year}届`
+                                                `${item.year}级`
                                             }
                                         </span>
                                                 </div>

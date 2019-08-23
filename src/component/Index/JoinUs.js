@@ -21,7 +21,7 @@ class JoinUs extends PureComponent {
         super(props);
         this.state = {
             selected: 0,
-            successful: 0,
+            successful: 1,
             start: 0,
             end: 1,
         };

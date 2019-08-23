@@ -155,7 +155,7 @@ class MemberDetailed extends PureComponent {
                     <div className="title_large">
                         <span>
                             {
-                                `${this.props.memberCoverYear}届 The ${this.props.memberCoverYear} th`
+                                `${this.props.memberCoverYear}级 The ${this.props.memberCoverYear} th`
                             }
                         </span>
                     </div>

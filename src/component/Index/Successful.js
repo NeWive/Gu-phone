@@ -17,7 +17,7 @@ function Successful() {
                         注册成功
                     </p>
                     <p className={'wait'}>
-                        请静候佳音
+                        激活邮件已经发送至您的邮箱
                     </p>
                 </div>
             </div>
