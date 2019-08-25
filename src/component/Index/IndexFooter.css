@@ -1,14 +1,11 @@
 @charset "UTF-8";
 #IndexFooter {
   margin-top: 15px;
-  background: #F5F5F5;
-  z-index: -1;
+  z-index: 999;
   position: relative;
-  height: 157px; }
+  height: 157px;
+  background: #F5F5F5; }
   #IndexFooter .container {
-    width: 1300px;
-    margin: 0 auto;
-    height: 100%;
     /* 瑙﹀彂 hasLayout */
     zoom: 1; }
     #IndexFooter .container:after {
@@ -49,6 +46,7 @@
           line-height: 0;
           color: #FACE70; }
     #IndexFooter .container .info_box {
+      margin-right: 50px;
       margin-top: 38px;
       float: right;
       text-align: right; }

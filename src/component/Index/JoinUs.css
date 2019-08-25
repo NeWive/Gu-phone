@@ -1,106 +1,65 @@
 @charset "UTF-8";
 #JoinUs {
   opacity: 0; }
-  #JoinUs .popLayer {
-    background: gray;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    z-index: 999;
-    opacity: 0.5; }
-  #JoinUs .popBox {
-    background: transparent;
-    margin: auto;
-    z-index: 999;
-    position: fixed;
-    overflow: hidden;
-    width: 100%; }
-    #JoinUs .popBox .form_box {
-      margin: 179px auto;
-      background: #FFFFFF;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px; }
-      @media only screen and (min-device-height: 900px) {
-        #JoinUs .popBox .form_box {
-          margin: 120px auto;
-          width: 1300px;
-          height: 721px; } }
-      @media only screen and (max-device-height: 899px) {
-        #JoinUs .popBox .form_box {
-          margin: 50px auto;
-          width: 900px;
-          height: 600px; } }
-      #JoinUs .popBox .form_box .button_box {
-        padding-top: 35px;
-        padding-right: 38px;
+  #JoinUs .top_box {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #JoinUs .top_box #Logo {
+      margin-top: 30px;
+      margin-right: 120px;
+      padding-bottom: 30px;
+      vertical-align: middle; }
+      #JoinUs .top_box #Logo .name_box .CN {
+        display: none; }
+  #JoinUs .form_box {
+    background: #FFFFFF; }
+    #JoinUs .form_box .form_sel {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center; }
+      #JoinUs .form_box .form_sel .form_sel_box {
         /* 瑙﹀彂 hasLayout */
         zoom: 1; }
-        #JoinUs .popBox .form_box .button_box:after {
+        #JoinUs .form_box .form_sel .form_sel_box:after {
           content: " ";
           display: block;
           height: 0;
           clear: both;
           visibility: hidden; }
-        #JoinUs .popBox .form_box .button_box #CloseButton {
-          float: right; }
-      #JoinUs .popBox .form_box .form_sel {
-        display: flex;
-        justify-content: center; }
-        #JoinUs .popBox .form_box .form_sel .form_sel_box {
-          /* 瑙﹀彂 hasLayout */
-          zoom: 1; }
-          #JoinUs .popBox .form_box .form_sel .form_sel_box:after {
-            content: " ";
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden; }
-          #JoinUs .popBox .form_box .form_sel .form_sel_box li {
-            float: left; }
-            #JoinUs .popBox .form_box .form_sel .form_sel_box li a {
-              display: inline-block;
-              text-align: center;
-              width: 148px;
-              height: 42px;
-              -webkit-border-radius: 21px;
-              -moz-border-radius: 21px;
-              border-radius: 21px; }
-              #JoinUs .popBox .form_box .form_sel .form_sel_box li a span {
-                color: #232323;
-                font-size: 24px;
-                font-weight: normal;
-                font-family: SourceHanSansCN-Regular;
-                line-height: 36px;
-                line-height: 44px; }
-              #JoinUs .popBox .form_box .form_sel .form_sel_box li a:first-child {
-                margin-right: 63px; }
-              #JoinUs .popBox .form_box .form_sel .form_sel_box li a:last-child {
-                margin-left: 63px; }
-            #JoinUs .popBox .form_box .form_sel .form_sel_box li .selected {
-              background: #00A8EC; }
-              #JoinUs .popBox .form_box .form_sel .form_sel_box li .selected span {
-                color: #FFFFFF;
-                font-size: 24px;
-                font-weight: normal;
-                font-family: SourceHanSansCN-Regular;
-                line-height: 36px;
-                line-height: 44px; }
-      #JoinUs .popBox .form_box .mode_func {
-        display: flex;
-        justify-content: center; }
-        @media only screen and (min-device-height: 900px) {
-          #JoinUs .popBox .form_box .mode_func {
-            margin-top: 107px; } }
-        @media only screen and (max-device-height: 899px) {
-          #JoinUs .popBox .form_box .mode_func {
-            margin-top: 70px; } }
-  #JoinUs .popBox, #JoinUs .popLayer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0; }
+        #JoinUs .form_box .form_sel .form_sel_box li {
+          float: left; }
+          #JoinUs .form_box .form_sel .form_sel_box li a {
+            display: inline-block;
+            text-align: center;
+            width: 148px;
+            height: 42px;
+            -webkit-border-radius: 21px;
+            -moz-border-radius: 21px;
+            border-radius: 21px; }
+            #JoinUs .form_box .form_sel .form_sel_box li a span {
+              color: #232323;
+              font-size: 24px;
+              font-weight: normal;
+              font-family: SourceHanSansCN-Regular;
+              line-height: 36px;
+              line-height: 44px; }
+            #JoinUs .form_box .form_sel .form_sel_box li a:first-child {
+              margin-right: 63px; }
+            #JoinUs .form_box .form_sel .form_sel_box li a:last-child {
+              margin-left: 63px; }
+          #JoinUs .form_box .form_sel .form_sel_box li .selected {
+            background: #00A8EC; }
+            #JoinUs .form_box .form_sel .form_sel_box li .selected span {
+              color: #FFFFFF;
+              font-size: 24px;
+              font-weight: normal;
+              font-family: SourceHanSansCN-Regular;
+              line-height: 36px;
+              line-height: 44px; }
+    #JoinUs .form_box .mode_func {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px; }
 
 /*# sourceMappingURL=JoinUs.css.map */

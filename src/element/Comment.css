@@ -3,14 +3,30 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
   background: #B7E6FF;
-  padding: 20px 15px 13px 19px;
+  padding: 20px 15px 13px 60px;
   position: relative; }
   #Comment .textarea_box textarea {
-    background: #FFFFFF; }
+    width: 80%;
+    height: 75px;
+    background: #FFFFFF;
+    vertical-align: middle;
+    color: #555555;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: SourceHanSansCN-Regular;
+    line-height: 36px; }
+  #Comment .textarea_box button {
+    width: 91px;
+    height: 89px;
+    padding: 4px 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    line-height: 22px; }
   #Comment .words_length_table {
     position: absolute;
-    right: 35px;
-    bottom: 80px;
+    right: 260px;
+    bottom: 70px;
     color: #555555;
     font-size: 16px;
     font-weight: normal;
@@ -28,8 +44,7 @@
       height: 32px; }
       #Comment .validate_box #validate_code_box img {
         width: 75px;
-        height: 32px; }
-    #Comment .validate_box button {
-      float: right; }
+        height: 32px;
+        border-radius: 10px; }
 
 /*# sourceMappingURL=Comment.css.map */

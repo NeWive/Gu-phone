@@ -2,10 +2,13 @@
   padding-top: 20px;
   width: 100%;
   position: relative;
+  //overflow: hidden;
   .navigator_box {
-    margin-bottom: 16px;
+
   }
   .index_body_box {
-
+    .index_footer_box {
+      background: #F5F5F5;
+    }
   }
 }

@@ -1,23 +1,29 @@
 @import "../sassMixin/radiusMixin";
 @import "../sassMixin/fontMixin";
 #DisplayTable {
-  height: 342px;
   position: relative;
+  .button_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .button_blue {
+      margin-right: 10px;
+      font-size: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   .window {
-    display: inline-block;
-    height: 100%;
-    width: 602px;
-    overflow: hidden;
     .container {
       //position: absolute;
+      padding: 0 80px;
       .comment_sel {
         padding-top: 14px;
         padding-bottom: 26px;
         @include radius(20px);
         background: #B7E6FF;
         margin-bottom: 15px;
-        width: 604px;
-        height: 64px;
         .content_box {
           height: 55px;
           margin-left: 29px;
@@ -36,6 +42,8 @@
           margin-right: 17px;
           margin-bottom: 13px;
           text-align: right;
+          position: relative;
+          bottom: -30px;
           span {
             @include commentsTime;
           }
@@ -45,22 +53,11 @@
         }
       }
     }
-  }
-  .scroll {
-    display: inline-block;
-    width: 11px;
-    height: 342px;
-    background: #B7E6FF;
-    @include radius(4px);
-    margin-left: 10px;
-    cursor: pointer;
-    .scroll_panel {
-      cursor: pointer;
-      @include radius(4px);
-      width: 11px;
-      background: #79D0FF;
-      //height: 11px;
-      position: absolute;
+    .loading_box {
+      .loader-inner {
+        position: relative;
+
+      }
     }
   }
 }

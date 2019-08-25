@@ -1,61 +1,29 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { naviList } from '../config/list.config';
-import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 import './SelList.css';
+import {Button} from "./Button";
 
-function mapStateToProps(state) {
-    return {
-        isPortalOn: state.isPortalOn,
-        motive: state.motive,
-    }
-}
 
-class SelList extends PureComponent{
-    constructor(props){
-        super(props);
-        this.clickHandler = this.clickHandler.bind(this);
-        this.scrollHandler = this.scrollHandler.bind(this);
-    }
-    clickHandler(e) {
-        e.preventDefault();
-        let root = document.getElementById(`root`);
-        root.style.overflow = 'hidden';
-        root.style.height = `${window.innerHeight}px`;
-        this.props.dispatch({
-            type: 'OPERATING_PORTAL'
-        });
-    }
-    async scrollHandler(top) {
-        if(!this.props.motive) {
-            await this.props.dispatch({
-                type: 'SET_MOTIVE'
-            });
-        }
-        window.scrollTo({
-            top: top,
-            behavior: 'smooth',
-        })
-    }
-    render() {
-        return (
-            <div id="SelList">
-                <ul className="list">
-                    {
-                        naviList.map((item) => (
-                            <li className={item.name} key={item.name}>
-                                {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}
-                                <a href='' onClick={item.name === 'joinUs' ? this.clickHandler : (e) => { e.preventDefault();this.scrollHandler(item.top).then(r => {}) }}>
-                                    {
-                                        item.value
-                                    }
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
+function SelList() {
+    return (
+        <div id="SelList">
+            <div className="list">
+                {
+                    naviList.map((item) => (
+                        <Button className={item.name} key={item.name}>
+                            {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}
+                            <Link to={'/join_us'}>
+                                {
+                                    item.value
+                                }
+                            </Link>
+                        </Button>
+                    ))
+                }
             </div>
-        )
-    }
+        </div>
+    );
 }
 
-export default connect(mapStateToProps)(SelList);
+export default SelList;

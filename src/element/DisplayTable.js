@@ -3,84 +3,62 @@ import axios from 'axios';
 import { urlInterfaceGroup } from "../config/url.config";
 import { connect } from 'react-redux';
 import './DisplayTable.css';
+import {Button} from "./Button";
 
 function map(state) {
     return {
         comments: state.comments,
-        containerHeight: state.containerHeight,
-        commentListWindowHeight: state.commentListWindowHeight,
+        isCommentRequesting: state.isCommentRequesting,
+        commentButtonList: state.commentButtonList,
+        buttonIndex: state.buttonIndex,
     }
 }
 
 class DisplayTable extends PureComponent {
     constructor(props){
         super(props);
-        this.state = {
-            bottom: 0,
-            height: 342,
-            top: 0,
-            marginTop: 0,
-        };
         this.commentsHandler = this.commentsHandler.bind(this);
         this.setComments = this.setComments.bind(this);
-        this.setHeight = this.setHeight.bind(this);
-        this.mouseDownHandler = this.mouseDownHandler.bind(this);
-        this.mouseUpHandler = this.mouseUpHandler.bind(this);
-        this.mouseMoveHandler = this.mouseMoveHandler.bind(this);
-        this.mouseLeaveHandler = this.mouseLeaveHandler.bind(this);
-        this.scrollHandler = this.scrollHandler.bind(this);
-        this.mouseMoveLock = false;
-        this.lastY = null;
-        this.containerHeight = 0;
+        this.setIsRequesting = this.setIsRequesting.bind(this);
+        this.setBegin = this.setBegin.bind(this);
+        this.setIndex = this.setIndex.bind(this);
     }
-    scrollHandler(e) {
-        e.stopPropagation();
-        let currentY = this.state.top;
-        let y = 2.5;
-        if(currentY + y > 0 && currentY + y < 342 - this.props.commentListWindowHeight) {
-            this.setState((pre) => (
-                {
-                    top: pre.top + y,
-                    marginTop: -(pre.top + y) * this.props.containerHeight/342,
-                }
-            ));
-        }
-    }
-    mouseLeaveHandler(e) {
-        e.stopPropagation();
-        this.mouseMoveLock = false;
-    }
-    mouseMoveHandler(e) {
-        if(this.lastY && this.mouseMoveLock) {
-            let currentY = this.state.top;
-            let y = e.screenY - this.lastY;
-            if(currentY + y >= 0 && currentY + y <= 342 - this.props.commentListWindowHeight) {
-                this.setState((pre) => (
-                    {
-                        top: pre.top + y,
-                        marginTop: -(pre.top + y) * this.props.containerHeight/342,
-                    }
-                ));
-            }
-        }
-        this.lastY = e.screenY;
-    }
-    mouseUpHandler() {
-        this.mouseMoveLock = false;
-    }
-    mouseDownHandler() {
-        this.mouseMoveLock = true;
-    }
-    setHeight(height) {
+    setIndex(i) {
         this.props.dispatch({
-            type: 'COMMENT_LIST_WINDOW_HEIGHT',
-            value: height,
-        });
+            type: 'SET_BUTTON_INDEX',
+            value: i,
+        })
     }
-    async commentsHandler() {
-        let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
+    setBegin(b) {
+        this.props.dispatch({
+            type: 'SET_BUTTON_LIST',
+            value: b,
+        })
+
+    }
+    setIsRequesting(v) {
+        this.props.dispatch({
+            type: 'SET_IS_COMMENT_REQUESTING',
+            value: v,
+        })
+    }
+    async commentsHandler(lastNumber, index) {
+        await this.setIsRequesting(true);
+        await this.setIndex(index);
+        let { 'data': { list, begin } } = await axios.get(`${urlInterfaceGroup.commentList.interface}?${lastNumber ? `last=${lastNumber}` : '' }`);
+        if(this.props.comments.length === 0) {
+            let total = begin/10;
+            let bList = [];
+            for(let i = 0; i < total; i++) {
+                bList.push({
+                    value: i + 1,
+                    last: begin - 10 * i + 1,
+                });
+            }
+            await this.setBegin(bList);
+        }
         await this.setComments(list);
-        await this.setHeight(342/list.length);
+        await this.setIsRequesting(false);
     }
     setComments(comments) {
         this.props.dispatch({
@@ -88,25 +66,17 @@ class DisplayTable extends PureComponent {
             value: comments,
         });
     }
-    componentDidMount() {
-        this.commentsHandler().then( () => {
-            this.props.dispatch({
-                type: 'SET_CONTAINER_HEIGHT',
-                value: (this.props.comments.length - 2) * 119 - 15,
-            })
-        });
+    async componentDidMount() {
+        await this.commentsHandler();
+    }
+    async componentWillUnmount() {
+        await this.setComments([]);
     }
     render() {
         return (
-            <div id="DisplayTable"
-                 onMouseMove={this.mouseMoveHandler}
-                 onMouseLeave={this.mouseLeaveHandler}
-                 onMouseUp={this.mouseUpHandler}>
+            <div id="DisplayTable">
                 <div className="window" onWheel={this.scrollHandler}>
-                    <div className="container"
-                        style={{
-                            marginTop: this.state.marginTop,
-                        }}>
+                    <div className="container">
                         {
                             this.props.comments ? this.props.comments.map((item, index) => (
                                 <div className="comment_sel"
@@ -130,16 +100,20 @@ class DisplayTable extends PureComponent {
                         }
                     </div>
                 </div>
-                <div className="scroll">
-                    <div className="scroll_container">
-                        <div className="scroll_panel"
-                            style={{
-                                height: this.props.commentListWindowHeight,
-                                top: this.state.top,
-                            }}
-                            onMouseDown={this.mouseDownHandler}
-                            onMouseUp={this.mouseUpHandler}/>
-                    </div>
+                <div className="button_box">
+                    {
+                        this.props.commentButtonList.map((item, index) => (
+                            <Button value={item.value} clickHandler={index === this.props.buttonIndex ? () => {} : () => {
+                                this.commentsHandler(item.last, index).then();
+                            }} key={item.value ? item.value : ''}
+                                style={{
+                                    width: 60,
+                                    height: 50,
+                                    cursor: this.props.isCommentRequesting ? 'not-allowed' : 'pointer',
+                                    opacity: index === this.props.buttonIndex ? 0.3 : 1,
+                                }}/>
+                        ))
+                    }
                 </div>
             </div>
         )

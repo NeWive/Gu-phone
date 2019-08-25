@@ -33,9 +33,10 @@ const initState = {
     historyYearList: [],
     yearSelected: 2014,
     comments: [],
-    containerHeight: 0,
-    commentListWindowHeight: 342,
     memberBeginVisible: 0,
+    isCommentRequesting: true,
+    commentButtonList: [],
+    buttonIndex: 0,
 };
 
 const notType = {
@@ -79,9 +80,10 @@ const actionType = {
     'SET_HISTORY_YEAR_LIST': 'historyYearList',
     'SET_SELECTED_YEAR': 'yearSelected',
     'SET_COMMENT': 'comments',
-    'SET_CONTAINER_HEIGHT': 'containerHeight',
-    'COMMENT_LIST_WINDOW_HEIGHT': 'commentListWindowHeight',
     'SET_MEMBER_BEGIN_VISIBLE': 'memberBeginVisible',
+    'SET_IS_COMMENT_REQUESTING': 'isCommentRequesting',
+    'SET_BUTTON_LIST': 'commentButtonList',
+    'SET_BUTTON_INDEX': 'buttonIndex',
 };
 
 const updateGroup = [{ type: actionType, action: 0 }, { type: directType, action: 1 }, { type: notType, action: 2 }];

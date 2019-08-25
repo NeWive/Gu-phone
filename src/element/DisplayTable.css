@@ -1,11 +1,16 @@
 #DisplayTable {
-  height: 342px;
   position: relative; }
-  #DisplayTable .window {
-    display: inline-block;
-    height: 100%;
-    width: 602px;
-    overflow: hidden; }
+  #DisplayTable .button_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; }
+    #DisplayTable .button_box .button_blue {
+      margin-right: 10px;
+      font-size: 25px; }
+      #DisplayTable .button_box .button_blue:last-child {
+        margin-right: 0; }
+  #DisplayTable .window .container {
+    padding: 0 80px; }
     #DisplayTable .window .container .comment_sel {
       padding-top: 14px;
       padding-bottom: 26px;
@@ -13,9 +18,7 @@
       -moz-border-radius: 20px;
       border-radius: 20px;
       background: #B7E6FF;
-      margin-bottom: 15px;
-      width: 604px;
-      height: 64px; }
+      margin-bottom: 15px; }
       #DisplayTable .window .container .comment_sel .content_box {
         height: 55px;
         margin-left: 29px;
@@ -35,7 +38,9 @@
       #DisplayTable .window .container .comment_sel .time_box {
         margin-right: 17px;
         margin-bottom: 13px;
-        text-align: right; }
+        text-align: right;
+        position: relative;
+        bottom: -30px; }
         #DisplayTable .window .container .comment_sel .time_box span {
           color: #555555;
           font-size: 16px;
@@ -44,23 +49,7 @@
           line-height: 36px; }
       #DisplayTable .window .container .comment_sel:last-child {
         margin-bottom: 0; }
-  #DisplayTable .scroll {
-    display: inline-block;
-    width: 11px;
-    height: 342px;
-    background: #B7E6FF;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer; }
-    #DisplayTable .scroll .scroll_panel {
-      cursor: pointer;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      width: 11px;
-      background: #79D0FF;
-      position: absolute; }
+  #DisplayTable .window .loading_box .loader-inner {
+    position: relative; }
 
 /*# sourceMappingURL=DisplayTable.css.map */

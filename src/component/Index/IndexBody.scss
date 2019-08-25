@@ -21,13 +21,7 @@
     }
   }
   .departments {
-    .title_container {
-      position: absolute;
-      left: 0;
-      right: 0;
-    }
     #DepartmentChild {
-      margin-top: 262px;
       margin-bottom: 69px;
     }
   }
@@ -35,6 +29,12 @@
     overflow: hidden;
     #MembersChild {
       position: relative;
+    }
+  }
+  .commentsList {
+    padding-top: 0;
+    .detailed_box {
+      margin: 40px 0 0;
     }
   }
 }

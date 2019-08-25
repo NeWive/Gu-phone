@@ -31,8 +31,9 @@ class Comment extends PureComponent {
         this.imgClickHandler = this.imgClickHandler.bind(this);
         this.setIsRequesting = this.setIsRequesting.bind(this);
         this.clearHandler = this.clearHandler.bind(this);
-        this.setHeight = this.setHeight.bind(this);
-        this.setContainerHeight = this.setContainerHeight.bind(this);
+        this.setIsCommentRequesting = this.setIsCommentRequesting.bind(this);
+        this.setBegin = this.setBegin.bind(this);
+        this.setIndex = this.setIndex.bind(this);
         this.inputListName = [ 'commentSingle', 'commentValidate' ];
         this.mapToPostParam = {
             'commentSingle': 'content',
@@ -42,10 +43,23 @@ class Comment extends PureComponent {
             isRequesting: false,
         };
     }
-    setContainerHeight() {
+    setIndex(i) {
         this.props.dispatch({
-            type: 'SET_CONTAINER_HEIGHT',
-            value: (this.props.comments.length - 2) * 119 - 15,
+            type: 'SET_BUTTON_INDEX',
+            value: i,
+        })
+    }
+    setBegin(b) {
+        this.props.dispatch({
+            type: 'SET_BUTTON_LIST',
+            value: b,
+        })
+
+    }
+    setIsCommentRequesting(v) {
+        this.props.dispatch({
+            type: 'SET_IS_COMMENT_REQUESTING',
+            value: v,
         })
     }
     clearHandler() {
@@ -95,12 +109,6 @@ class Comment extends PureComponent {
             value: list,
         });
     }
-    setHeight(height) {
-        this.props.dispatch({
-            type: 'COMMENT_LIST_WINDOW_HEIGHT',
-            value: height,
-        });
-    }
     async submitHandler() {
         let formObj = {};
         for(let item of this.inputListName) {
@@ -114,30 +122,46 @@ class Comment extends PureComponent {
             }
             formObj[this.mapToPostParam[item]] = this.props[item];
         }
-        this.setIsRequesting(true);
+        await this.setIsRequesting(true);
+        await this.setIsCommentRequesting(true);
         try {
             axios.defaults.withCredentials=true;
             let { 'data': { status } } = await axios.post(urlInterfaceGroup.comment.interface, JSON.stringify(formObj));
-            if(status !== 'ok') {
+            if(status === 'code_error') {
                 alert('验证码错误');
                 document.getElementById('commentValidate').value = '';
-                this.requestForValidateImg();
-            }else {
+                await this.requestForValidateImg();
+            }else if(status === 'ok'){
                 alert('发送成功');
-                let { 'data': { list } } = await axios.get(urlInterfaceGroup.commentList.interface);
+                await this.setIsRequesting(true);
+                await this.setIndex(0);
+                let { 'data': { list, begin } } = await axios.get(`${urlInterfaceGroup.commentList.interface}`);
+                if(this.props.comments.length === 0) {
+                    let total = begin/10;
+                    let bList = [];
+                    for(let i = 0; i < total; i++) {
+                        bList.push({
+                            value: i + 1,
+                            last: begin - 10 * i + 1,
+                        });
+                    }
+                    await this.setBegin(bList);
+                }
+                await this.setIsRequesting(false);
                 await this.setComment(list);
-                await this.setHeight(342/list.length);
-                await this.setContainerHeight();
                 document.getElementById('commentValidate').value = '';
                 document.getElementById('commentSingle').value = '';
                 await this.requestForValidateImg();
                 await this.clearHandler();
+            }else {
+                alert('Ops~网络开小差惹');
             }
         }catch (e) {
             console.log(e);
             alert('Ops~网络开小差惹');
         }finally {
-            this.setIsRequesting(false);
+            await this.setIsRequesting(false);
+            await this.setIsCommentRequesting(false);
         }
     }
     render() {
@@ -145,8 +169,6 @@ class Comment extends PureComponent {
             <div id="Comment">
                 <div className="textarea_box">
                     <TextArea style={{
-                                width: 556,
-                                height: 231,
                                 paddingLeft: 15,
                                 paddingTop: 14,
                                 paddingBottom: 14,
@@ -162,6 +184,15 @@ class Comment extends PureComponent {
                             `${this.props.commentSingle.length}/80`
                         }
                     </div>
+                    <Button style={{
+                        backgroundColor: '#58C4FF',
+                        cursor: this.state.isRequesting ? 'not-allowed' : 'pointer'
+                    }}
+                            clickHandler={this.state.isRequesting ? () => {} : this.submitHandler}>
+                        {
+                            this.state.isRequesting ? <LoadingForButton/> : '发表评论'
+                        }
+                    </Button>
                 </div>
                 <div className="validate_box">
                     {/* eslint-disable-next-line no-script-url,jsx-a11y/anchor-is-valid */}
@@ -169,7 +200,8 @@ class Comment extends PureComponent {
                         <img src={this.validImgInterface}
                              alt="" id={'validateCodeImg'}
                              width={'75px'}
-                             height={'32px'}/></div>
+                             height={'32px'}/>
+                        </div>
                     <Input css={{
                                 width: 147,
                                 height: 37,
@@ -178,17 +210,6 @@ class Comment extends PureComponent {
                             placeHolder={'验证码'}
                             id={'commentValidate'}
                             changeHandler={this.onChangeHandler(this)}/>
-                    <Button style={{
-                                    width: 163,
-                                    height: 37,
-                                    backgroundColor: '#58C4FF',
-                                    cursor: this.state.isRequesting ? 'not-allowed' : 'pointer'
-                                }}
-                                clickHandler={this.state.isRequesting ? () => {} : this.submitHandler}>
-                        {
-                            this.state.isRequesting ? <LoadingForButton/> : '发送'
-                        }
-                    </Button>
                 </div>
             </div>
         )

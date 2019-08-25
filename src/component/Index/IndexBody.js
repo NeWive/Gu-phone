@@ -9,6 +9,7 @@ import MembersChild from "./MembersChild";
 import HistoryChild from "./HistoryChild";
 import WorksDetailed from "./WorksDetailed";
 import CommentChild from "./CommentChild";
+import DisplayTable from "../../element/DisplayTable";
 import './IndexBody.css';
 import IndexFooter from "./IndexFooter";
 
@@ -53,6 +54,12 @@ class IndexBody extends PureComponent {
             case 'comments': {
                 return (
                     <CommentChild/>
+                )
+
+            }
+            case 'commentsList': {
+                return (
+                    <DisplayTable/>
                 )
 
             }

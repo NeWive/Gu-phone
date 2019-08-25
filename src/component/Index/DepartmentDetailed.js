@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { departmentList } from "../../config/list.config";
 import './DepartmentDetailed.css';
 import {Motion, spring} from "react-motion/lib/react-motion";
+// import Loading from "../../element/Loading";
 
 function map(state) {
     return {
@@ -46,6 +47,7 @@ class DepartmentDetailed extends PureComponent {
         this.setContent();
     }
     async closeHandler() {
+        await this.setContent();
         await this.exchangeState();
         this.props.dispatch({
             type: 'SET_IS_DEPARTMENT_READY',
@@ -91,7 +93,7 @@ class DepartmentDetailed extends PureComponent {
                                             opacity: opacity
                                         }}>
                                             {
-                                                `${this.props.departmentDescription[Number(this.props.departmentId) - 1].info}`
+                                                this.state.isMotive ? `${this.props.departmentDescription[Number(this.props.departmentId) - 1].info}` : ''
                                             }
                                         </p>
                                     )

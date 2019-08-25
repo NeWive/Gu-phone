@@ -11,16 +11,15 @@
   #IndexBody .SelPanel:first-child .detailed_box .detailed {
     text-align: left;
     text-indent: 2em; }
-  #IndexBody .departments .title_container {
-    position: absolute;
-    left: 0;
-    right: 0; }
   #IndexBody .departments #DepartmentChild {
-    margin-top: 262px;
     margin-bottom: 69px; }
   #IndexBody .members {
     overflow: hidden; }
     #IndexBody .members #MembersChild {
       position: relative; }
+  #IndexBody .commentsList {
+    padding-top: 0; }
+    #IndexBody .commentsList .detailed_box {
+      margin: 40px 0 0; }
 
 /*# sourceMappingURL=IndexBody.css.map */

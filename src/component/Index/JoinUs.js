@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { CloseButton } from "../../element/CloseButton";
 import { connect } from 'react-redux';
 import { joinUsSelList } from "../../config/list.config";
 import JoinUsForm from '../../component/Index/JoinUsForm';
@@ -7,8 +6,9 @@ import Status from './Status';
 import './JoinUs.css';
 import Successful from "./Successful";
 import { Motion, spring } from "react-motion/lib/react-motion";
-
-//窗口滚动监听touchmove
+import { Logo } from "../../element/Logo";
+import { Button } from "../../element/Button";
+import {Link} from "react-router-dom";
 
 function mapStateToProps(state) {
     return {
@@ -21,7 +21,7 @@ class JoinUs extends PureComponent {
         super(props);
         this.state = {
             selected: 0,
-            successful: 1,
+            successful: 0,
             start: 0,
             end: 1,
         };
@@ -65,7 +65,7 @@ class JoinUs extends PureComponent {
     setSuccessful(value) {
         this.setState({
             successful: value,
-        })
+        });
     }
     exchangeOpacity() {
         this.setState((pre) => ({
@@ -91,26 +91,13 @@ class JoinUs extends PureComponent {
             }
         }
     }
-    async clickLayerHandler(e) {
-        e.stopPropagation();
-        if(e.target.className === 'popBox') {
-            await this.clearAllHandler();
-            this.closePortalHandler();
-        }
+    async clickLayerHandler() {
+        await this.clearAllHandler();
+        await this.closePortalHandler();
     }
     async closePortalHandler() {
         await this.exchangeOpacity();
-        this.props.dispatch({
-            type: 'OPERATING_PORTAL'
-        });
-        const modalRoot = document.getElementById('modal-root');
-        const child = modalRoot.childNodes[0];
-        modalRoot.removeChild(child);
-        let root = document.getElementById(`root`);
-        root.style.overflow = 'auto';
-        root.style.height = '';
     }
-
     render() {
         return (
             <Motion defaultStyle={{
@@ -122,51 +109,56 @@ class JoinUs extends PureComponent {
                     ({ opacity }) => (
                         <div id="JoinUs"
                              onWheel={(e) => {e.stopPropagation()}}
-                            style={{
+                             style={{
                                 opacity: opacity,
-                            }}>
-                            <div className="popLayer"/>
-                            <div className="popBox" onClick={this.clickLayerHandler}>
-                                <div className="form_box">
-                                    <div className="button_box">
-                                        <CloseButton clickHandler={this.closePortalHandler}/>
-                                    </div>
-                                    <div className="form_sel">
-                                        <ul className="form_sel_box">
-                                            {
-                                                joinUsSelList.map((item, index) => (
-                                                    <li key={item.name}>
-                                                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,no-script-url */}
-                                                        <a href="javascript:void(0)" className={index === this.state.selected ? 'selected' : ''} onClick={this.setMode(index)}>
-                                                <span>
-                                                    {
-                                                        item.value
-                                                    }
-                                                </span>
-                                                        </a>
-                                                    </li>
-                                                ))
-                                            }
-                                        </ul>
-                                    </div>
-                                    <div className="mode_func">
+                             }}>
+                            <div className="top_box">
+                                <Logo/>
+                                <Link to={'/'}>
+                                    <Button
+                                        value={'返回首页'}
+                                        clickHandler={this.clickLayerHandler}
+                                        style={{
+                                            width: 89,
+                                        }}/>
+                                </Link>
+                            </div>
+                            <div className="form_box">
+                                <div className="form_sel">
+                                    <ul className="form_sel_box">
                                         {
-                                            (() => {
-                                                switch(this.state.selected) {
-                                                    case 0:
-                                                    {
-                                                        return this.state.successful ? <Successful/> : <JoinUsForm jumpHandler={this.setSuccessful}/>;
-                                                    }
-                                                    case 1:
-                                                    {
-                                                        return <Status/>;
-                                                    }
-                                                    default:
-                                                        break;
-                                                }
-                                            })()
+                                            joinUsSelList.map((item, index) => (
+                                                <li key={item.name}>
+                                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,no-script-url */}
+                                                    <a href="javascript:void(0)" className={index === this.state.selected ? 'selected' : ''} onClick={this.setMode(index)}>
+                                                        <span>
+                                                            {
+                                                                item.value
+                                                            }
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            ))
                                         }
-                                    </div>
+                                    </ul>
+                                </div>
+                                <div className="mode_func">
+                                    {
+                                        (() => {
+                                            switch(this.state.selected) {
+                                                case 0:
+                                                {
+                                                    return this.state.successful ? <Successful/> : <JoinUsForm jumpHandler={this.setSuccessful}/>;
+                                                }
+                                                case 1:
+                                                {
+                                                    return <Status/>;
+                                                }
+                                                default:
+                                                    break;
+                                            }
+                                        })()
+                                    }
                                 </div>
                             </div>
                         </div>

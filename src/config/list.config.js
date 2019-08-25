@@ -104,31 +104,6 @@ const resultEnumList = ['报名', '初审', '面试', '笔试', '录取'];
 
 const naviList = [
     {
-        value: '部门',
-        name: 'department',
-        top: 1500,
-    },
-    {
-        value: '成员',
-        name: 'member',
-        top: 2180,
-    },
-    {
-        value: '历史',
-        name: 'history',
-        top: 2850,
-    },
-    {
-        value: '作品',
-        name: 'work',
-        top: 3400,
-    },
-    {
-        value: '留言',
-        name: 'comment',
-        top: 4100,
-    },
-    {
         value: '加入',
         name: 'joinUs'
     }
@@ -202,6 +177,14 @@ const selTitleList = [
         },
         name: 'comments'
     },
+    {
+        description: {
+            left: '留言列表',
+            right: 'CommentsList',
+            down: ''
+        },
+        name: 'commentsList'
+    },
 ];
 const featuresList = [
     {
@@ -228,7 +211,7 @@ const departmentList = new Map(
         ['前端开发', 'FrontEnd Develop',],
         ['程序开发', 'BackEnd Develop',],
         ['APP开发', 'Android Develop',],
-        ['游戏', 'Game Develop',],]
+        ['游戏开发', 'Game Develop',],]
 );
 const membersList = [
     {

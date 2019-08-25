@@ -3,17 +3,30 @@
 #Comment {
   @include radius(20px);
   background: #B7E6FF;
-  padding: 20px 15px 13px 19px;
+  padding: 20px 15px 13px 60px;
   position: relative;
   .textarea_box {
     textarea {
+      width: 80%;
+      height: 75px;
       background: #FFFFFF;
+      vertical-align: middle;
+      @include joinUsPlaceHolder
+    }
+    button {
+      width: 91px;
+      height: 89px;
+      padding: 4px 25px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 50px;
+      line-height: 22px;
     }
   }
   .words_length_table {
     position: absolute;
-    right: 35px;
-    bottom: 80px;
+    right: 260px;
+    bottom: 70px;
     @include joinUsPlaceHolder;
   }
   .validate_box {
@@ -30,10 +43,8 @@
       img {
         width: 75px;
         height: 32px;
+        border-radius: 10px;
       }
-    }
-    button {
-      float: right;
     }
   }
 }

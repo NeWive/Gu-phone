@@ -7,6 +7,7 @@ class Button extends PureComponent {
                     onClick={this.props.clickHandler || null}
                     type={`button`}
                     style={this.props.style || {}}
+                    key={this.props.va? this.props.va: ''}
                     >
                 {
                     this.props.value

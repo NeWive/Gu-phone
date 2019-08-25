@@ -3,12 +3,13 @@
 @import "../../sassMixin/fontMixin";
 #IndexFooter {
   margin-top: 15px;
-  background: #F5F5F5;
-  z-index: -1;
+  z-index: 999;
   position: relative;
   height: 157px;
+  background: #F5F5F5;
+  //padding: 0 150px;
   .container {
-    @include containerMixin;
+    //@include containerMixin;
     @include clearFix;
     //display: flex;
     //align-items: center;
@@ -55,6 +56,7 @@
       }
     }
     .info_box {
+      margin-right: 50px;
       margin-top: 38px;
       float: right;
       //display: inline-block;
